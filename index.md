@@ -5,9 +5,7 @@ title: "Curs d'implantació de sistemes operatius"
 
 Este repositori conté contingut del curs d'implantació de sistemes operatius per Lluc Jornet Ferré
 
-- Índice y enlaces a las unidades del curso.
-- Recursos en formato PDF, vídeos, y Google Colab.
-- Código y ejemplos prácticos.
+- Enllaços als sprints del projecte 1.
 
 ## Contingut del curs
 
