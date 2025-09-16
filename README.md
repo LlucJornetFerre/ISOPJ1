@@ -2,7 +2,7 @@
 
 Este repositori conté continguts del curs d'implantació de sistemes operatius de **Lluc Jornet Ferré**.
 
-# Visita l'índex
+## [Visita l'índex](index.md)
 
 ---
 
