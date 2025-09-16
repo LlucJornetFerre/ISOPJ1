@@ -1,17 +1,38 @@
 # Curs d'implantació de sistemes operatius de Lluc Jornet Ferré
 
-Este repositori conté continguts del curs d'implantació de sistemes operatius de Lluc Jornet Ferré.
+Este repositori conté continguts del curs d'implantació de sistemes operatius de **Lluc Jornet Ferré**.
 
-## Contingut
+# Visita l'índex
 
-- Cosa 1
-- Cosa 2
-- Cosa 3
+---
 
-## Ús
+## Tipu de text
 
-Si.
+Este text és normal.
 
+~~Este text està malament~~
+
+_Este text està en italic._
+
+**Este text està en negreta**
+
+***Este text està en negreta i en italic***
+
+---
+
+### Llista numerada
+
+1. Element 1
+2. Element 2
+3. Element 3
+
+---
+
+## Llista amb punts
+
+- Element 4
+* Element 5
++ Element 6
 
 ---
 
