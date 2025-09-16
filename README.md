@@ -1,25 +1,19 @@
-# Curso de Machine Learning
+# Curs d'implantació de sistemes operatius de Lluc Jornet Ferré
 
-Este repositorio contiene el material del curso de Machine Learning desarrollado por Mireia Consarnau.
+Este repositori conté continguts del curs d'implantació de sistemes operatius de Lluc Jornet Ferré.
 
-## Contenido
+## Contingut
 
-- Índice y enlaces a las unidades del curso.
-- Recursos en formato PDF, vídeos, y Google Colab.
-- Código y ejemplos prácticos.
+- Cosa 1
+- Cosa 2
+- Cosa 3
 
-## Uso
+## Ús
 
-Este repositorio está preparado para ser publicado con GitHub Pages.  
-Puedes ver la versión web pública en:  
-https://mireiaconsarnau.github.io/machine_learning/
-
-## Licencia
-
-El contenido está bajo licencia [Creative Commons BY-NC-SA 3.0 ES](LICENSE.md).
+Si.
 
 
 ---
 
-© 2025 Mireia Consarnau
+© 2025 Lluc Jornet Ferré
 
