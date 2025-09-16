@@ -17,3 +17,4 @@ Si.
 
 © 2025 Lluc Jornet Ferré
 
+![Victor Manuel Cid](https://github.com/user-attachments/assets/a42a0505-22c2-4777-b283-4e95eaa560ed)
