@@ -44,7 +44,32 @@ Podem crear una nova xarxa NAT a Eines > Xarxa > Xarxa NAT i crear
 
 ## Configuració del sistema operatiu Ubuntu
 
-Amb la màquina creada, toca 
+Obrim la màquina virtual, i seleccionem *Try or install Ubuntu* **(Aquesta opció es selecciona automàticament si no triem res)**
+<img width="707" height="276" alt="image" src="https://github.com/user-attachments/assets/3a840cb8-bc6e-48e4-975e-b11b01f66f24" />
+
+Ara, seguim el procés d'instal·lació fins que arribem a la secció de les particions. Aqui, crearem les següents particions:
+
+/home: La mida d'aquesta partició serà de 16GB, ja que només crearé un usuar, i l'espai és una mica limitat.
+
+/boot: Ja que, en un futur, farem un dualboot, posarem 1GB d'espai per a aquesta partició.
+
+/swap: 4GB
+
+- Justificació per ChatGPT: Per què val la pena tenir swap
+
+Suport quan s’omple la RAM: si els 4 GB de RAM es queden curts, el sistema pot descarregar dades menys utilitzades a la swap i evitar que les aplicacions es pengin.
+
+Estabilitat: ajuda a mantenir el sistema estable en moments de càrrega alta.
+
+Hibernació (opcional): permet guardar el contingut de la RAM al disc i reprendre després.
+
+- Per què 4 GB de swap és suficient amb 4 GB de RAM
+
+La swap no substitueix la RAM: només s’usa com a “coixí” quan cal.
+
+Amb 4 GB de RAM, un swap de 4 GB dona prou marge per a usos normals (navegar, ofimàtica, programació lleugera) i fins i tot permet hibernar si cal.
+
+Més de 4–6 GB en aquest cas no aporta gaire, tret que facis coses molt exigents (com màquines virtuals o edició de vídeo).
 
 ## Llicenciament
 Crear una llicència per al github.
