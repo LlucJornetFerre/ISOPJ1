@@ -34,9 +34,12 @@ Finalment, revisem que totes les dades del resum de la màquina son correctes, i
 Abans d'acabar la configuració de la màquina, cal seleccionar un adaptador de xarxa per a aquesta. Ho farem seleccionant la màquina virtual, i clicant sobre la rodeta de configuració. Després, anirem a la secció de Xarxa/Network.
 <img width="796" height="458" alt="image" src="https://github.com/user-attachments/assets/336fde30-5ff4-41d1-b326-f61a1eb320ae" />
 
-En el meu cas, he decidit triar adaptador pont. Amb aquest adaptador, simulem que la màquina virtual és un altre ordinador de l'aula, i rep una adreça IP privada del mateix rang que la màquina real, per a poder passar fitxers entre les dues, i també dona accés a internet.
+En el meu cas, he decidit triar Xarxa NAT. Amb aquest adaptador, puc combinar els avantatges del NAT (sortida a internet), manté l'equip aillat de la resta de dispositius de la LAN, tot i permetent comunicar-se amb els dispositius de la mateixa xarxa NAT.
 
-<img width="625" height="205" alt="image" src="https://github.com/user-attachments/assets/6ffcc0eb-179c-40bd-a4d0-c875ce75d74e" />
+<img width="427" height="203" alt="image" src="https://github.com/user-attachments/assets/aab16eff-3ba6-4441-b1b0-82433454e24c" />
+
+Podem crear una nova xarxa NAT a Eines > Xarxa > Xarxa NAT i crear
+<img width="498" height="245" alt="image" src="https://github.com/user-attachments/assets/06666d26-8d9e-4d92-bb3f-c029ed090342" />
 
 
 ## Configuració del sistema operatiu Ubuntu
