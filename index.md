@@ -1,8 +1,3 @@
----
-layout: default
-title: "Curs d'implantació de sistemes operatius"
----
-
 Este repositori conté contingut del curs d'implantació de sistemes operatius per Lluc Jornet Ferré
 
 - Enllaços als sprints del projecte 1.
