@@ -35,6 +35,7 @@ Abans d'acabar la configuració de la màquina, cal seleccionar un adaptador de 
 <img width="796" height="458" alt="image" src="https://github.com/user-attachments/assets/336fde30-5ff4-41d1-b326-f61a1eb320ae" />
 
 En el meu cas, he decidit triar adaptador pont. Amb aquest adaptador, simulem que la màquina virtual és un altre ordinador de l'aula, i rep una adreça IP privada del mateix rang que la màquina real, per a poder passar fitxers entre les dues, i també dona accés a internet.
+
 <img width="625" height="205" alt="image" src="https://github.com/user-attachments/assets/6ffcc0eb-179c-40bd-a4d0-c875ce75d74e" />
 
 
