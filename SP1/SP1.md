@@ -47,13 +47,23 @@ Podem crear una nova xarxa NAT a Eines > Xarxa > Xarxa NAT i crear
 Obrim la màquina virtual, i seleccionem *Try or install Ubuntu* **(Aquesta opció es selecciona automàticament si no triem res)**
 <img width="707" height="276" alt="image" src="https://github.com/user-attachments/assets/3a840cb8-bc6e-48e4-975e-b11b01f66f24" />
 
-Ara, seguim el procés d'instal·lació fins que arribem a la secció de les particions. Aqui, crearem les següents particions:
+Ara, seguim el procés d'instal·lació fins que arribem a la secció de les particions. 
+<img width="776" height="496" alt="image" src="https://github.com/user-attachments/assets/a4f03ad9-939a-441a-b286-25d6f126e928" />
+
+Aqui, crearem les següents particions al disc:
 
 /home: La mida d'aquesta partició serà de 16GB, ja que només crearé un usuar, i l'espai és una mica limitat.
+<img width="776" height="496" alt="image" src="https://github.com/user-attachments/assets/e4801df9-76c9-4763-8967-a94cd4eadec1" />
 
 /boot: Ja que, en un futur, farem un dualboot, posarem 1GB d'espai per a aquesta partició.
+<img width="602" height="255" alt="image" src="https://github.com/user-attachments/assets/778d206d-c561-42f8-8ac0-d85772f14970" />
+
+/: 16GB
+<img width="602" height="318" alt="image" src="https://github.com/user-attachments/assets/8ff5ac37-f551-42fc-a49e-dbe267616b83" />
 
 /swap: 4GB
+<img width="510" height="391" alt="image" src="https://github.com/user-attachments/assets/27ddaa9c-b5bc-4701-97a0-e28487fe5f04" />
+
 
 - Justificació per ChatGPT: Per què val la pena tenir swap
 
@@ -72,9 +82,14 @@ Amb 4 GB de RAM, un swap de 4 GB dona prou marge per a usos normals (navegar, of
 Més de 4–6 GB en aquest cas no aporta gaire, tret que facis coses molt exigents (com màquines virtuals o edició de vídeo).
 
 ## Llicenciament
-Crear una llicència per al github.
 
-Expicar la llicència del sistema operatiu Ubuntu que fem servir (GNU, robusta).
+Ubuntu és un sistema operatiu lliure de codi obert que es basa en Linux. Té una llicència de programari lliure, anomenada GNU (GPL, en anglès). Aquesta llicència permet:
+ - Fer servir el programa lliurement.
+ - Copiar-lo, i redistribuir-lo.
+ - Modificar-lo, i distribuir aquestes copies, sempre que també siguin lliures.
+
+ <img width="720" height="358" alt="image" src="https://github.com/user-attachments/assets/f18c5ad3-a386-4644-8522-53d434d687e8" />
+
 
 ## Gestors d'arrencada per a instal·lacions DUALS
 
