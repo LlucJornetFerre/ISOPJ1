@@ -81,6 +81,21 @@ Amb 4 GB de RAM, un swap de 4 GB dona prou marge per a usos normals (navegar, of
 
 Més de 4–6 GB en aquest cas no aporta gaire, tret que facis coses molt exigents (com màquines virtuals o edició de vídeo).
 
+---
+
+## Instal·lar Windows al mateix disc i recuperar el menú grub.
+
+Primer, anem a la VM d'Ubuntu, i li afegim la ISO de Windows 10 enterpise.
+
+<img width="246" height="140" alt="image" src="https://github.com/user-attachments/assets/40994469-1364-46c8-8087-fa6d7a06fe5a" />
+
+Ara, anem a l'apartat de Sistema de la màquina virtual, i activem l'opció: "Enable EFI"
+
+<img width="242" height="34" alt="image" src="https://github.com/user-attachments/assets/cbe29fd0-bce6-4675-bf05-c72945f815dd" />
+
+Ara, ja podem obrir la màquina virtual. Quan ho fem, haurem de prémer la tecla "ESC", cosa que ens portarà al boot menú. Allà, triem CD-ROM, i ja podem començar la instal·lació de Windows.
+
+
 ## Llicenciament
 
 Ubuntu és un sistema operatiu lliure de codi obert que es basa en Linux. Té una llicència de programari lliure, anomenada GNU (GPL, en anglès). Aquesta llicència permet:
@@ -98,3 +113,8 @@ Ubuntu és un sistema operatiu lliure de codi obert que es basa en Linux. Té un
 
 
 ## Comandes generals i instal·lació
+
+
+Fotos de Windows
+
+<img width="630" height="470" alt="image" src="https://github.com/user-attachments/assets/1d2cdb89-8ad2-445c-8d85-a2744e2c9f03" />
