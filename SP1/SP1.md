@@ -105,9 +105,15 @@ Seguim la instal·lació fins al punt de les particions, on seleccionem l'espai 
 
 Windows ha esborrat el menú que ens permet seleccionar quin sistema operatiu volem bootar, per tant, ara el recuperarem.
 
-Primer, 
+Primer, entrem a Ubuntu, i executem grub-install /dev/sda.
 
+<img width="561" height="74" alt="image" src="https://github.com/user-attachments/assets/141e1773-6e41-473b-99cd-1864d7ed90a9" />
 
+Tot seguit, executem grub-update.
+
+<img width="690" height="274" alt="image" src="https://github.com/user-attachments/assets/9cd74e79-7aae-4972-98ec-91cd588ef169" />
+
+Finalment, reiniciem la màquina, i veurem que el menú grub torna a funcionar.
 
 
 
