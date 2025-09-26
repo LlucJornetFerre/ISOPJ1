@@ -133,9 +133,33 @@ Finalment, reiniciem la màquina, i el grub ja torna a funcionar.
 
 ## Instal·lar Windows i Ubuntu en discs diferents.
 
+El primer pas és crear un nou disc, on instal·larem Windows, treiem el disc on Ubuntu està instal·lat, posem la ISO de Windows, i iniciem la màquina.
 
+<img width="248" height="163" alt="image" src="https://github.com/user-attachments/assets/dbe097b9-5229-4af2-b42b-2bec3b52228c" />
 
+Ara, fem la instal·lació de Window.
 
+<img width="582" height="410" alt="image" src="https://github.com/user-attachments/assets/f8020dce-a859-4062-aac5-457be852d3d7" />
+
+Amb Windows instal·lat, tornem a posar el disc d'Ubuntu, i entrarem des del boot menu.
+
+<img width="244" height="113" alt="image" src="https://github.com/user-attachments/assets/29ddb4c4-f55d-4ef3-bb8c-80099d866038" />
+
+Tornem a editar el fitxer /etc/default/grub, i executem update-grub.
+
+<img width="344" height="153" alt="image" src="https://github.com/user-attachments/assets/990014f1-479d-4c33-a642-e81a7b7a798d" />
+
+Ara, modificarem l'arranc EFI per a indcar que, per defecte, s'obri Ubuntu primer.
+
+Podem veure que Windows és 0004, i Ubuntu 0006.
+
+<img width="512" height="268" alt="image" src="https://github.com/user-attachments/assets/eecd3406-dafa-441d-b577-6fc60635d3b8" />
+
+Amb aquesta informació, podem modificar l'ordre d'arranc executant: "efibootmgr -o 0006, 0004".
+
+<img width="635" height="267" alt="image" src="https://github.com/user-attachments/assets/ac1e1178-d157-49b6-81e9-f5eeef740080" />
+
+Finalment, podem comprovar que els canvis s'han aplicat correctament obrint la màquina virtual, i no seleccionant cap opció al menú grub, per a confirmar que aquest triarà Ubuntu.
 
 ## Llicenciament
 
