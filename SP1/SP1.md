@@ -145,11 +145,9 @@ Amb Windows instal·lat, tornem a posar el disc d'Ubuntu, i entrarem des del boo
 
 <img width="244" height="113" alt="image" src="https://github.com/user-attachments/assets/29ddb4c4-f55d-4ef3-bb8c-80099d866038" />
 
-Tornem a editar el fitxer /etc/default/grub, i executem update-grub.
+Ara, repetim els passos per a recuperar el grub.
 
-<img width="344" height="153" alt="image" src="https://github.com/user-attachments/assets/990014f1-479d-4c33-a642-e81a7b7a798d" />
-
-Ara, modificarem l'arranc EFI per a indcar que, per defecte, s'obri Ubuntu primer.
+Tot seguit, modificarem l'arranc EFI per a indcar que, per defecte, s'obri Ubuntu primer.
 
 Podem veure que Windows és 0004, i Ubuntu 0006.
 
