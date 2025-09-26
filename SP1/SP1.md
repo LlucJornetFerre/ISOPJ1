@@ -95,6 +95,11 @@ Ara, anem a l'apartat de Sistema de la màquina virtual, i activem l'opció: "En
 
 Ara, ja podem obrir la màquina virtual. Quan ho fem, haurem de prémer la tecla "ESC", cosa que ens portarà al boot menú. Allà, triem CD-ROM, i ja podem començar la instal·lació de Windows.
 
+<img width="226" height="100" alt="image" src="https://github.com/user-attachments/assets/a2399b8b-0084-4aed-857d-0575bd62db99" /><img width="314" height="103" alt="image" src="https://github.com/user-attachments/assets/de58f704-7768-4ddd-9e68-6f44935ce706" />
+
+Seguim la instal·lació fins al punt de les particions, on haurem de seleccionar la partició que hem creat abans en format ntfs, amb 40GB d'espai.
+
+<img width="630" height="470" alt="image" src="https://github.com/user-attachments/assets/1d2cdb89-8ad2-445c-8d85-a2744e2c9f03" />
 
 ## Llicenciament
 
@@ -114,7 +119,3 @@ Ubuntu és un sistema operatiu lliure de codi obert que es basa en Linux. Té un
 
 ## Comandes generals i instal·lació
 
-
-Fotos de Windows
-
-<img width="630" height="470" alt="image" src="https://github.com/user-attachments/assets/1d2cdb89-8ad2-445c-8d85-a2744e2c9f03" />
