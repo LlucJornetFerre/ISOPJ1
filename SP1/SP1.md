@@ -97,7 +97,7 @@ Ara, ja podem obrir la màquina virtual. Quan ho fem, haurem de prémer la tecla
 
 <img width="226" height="100" alt="image" src="https://github.com/user-attachments/assets/a2399b8b-0084-4aed-857d-0575bd62db99" /><img width="314" height="103" alt="image" src="https://github.com/user-attachments/assets/de58f704-7768-4ddd-9e68-6f44935ce706" />
 
-Seguim la instal·lació fins al punt de les particions, on haurem de seleccionar la partició que hem creat abans en format ntfs, amb 40GB d'espai.
+Seguim la instal·lació fins al punt de les particions, on seleccionem l'espai lliure, i el formatem com a partició, on instal·larem el sistema.
 
 <img width="630" height="470" alt="image" src="https://github.com/user-attachments/assets/1d2cdb89-8ad2-445c-8d85-a2744e2c9f03" />
 
