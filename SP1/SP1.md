@@ -113,7 +113,27 @@ Tot seguit, executem grub-update.
 
 <img width="690" height="274" alt="image" src="https://github.com/user-attachments/assets/9cd74e79-7aae-4972-98ec-91cd588ef169" />
 
-Finalment, reiniciem la màquina, i veurem que el menú grub torna a funcionar.
+Grub no està configurat per a detectar altres sistemes operatius. Per tant, accedirem a /etc/default/grub amb un nano.
+
+<img width="625" height="26" alt="image" src="https://github.com/user-attachments/assets/bbb2211b-4c31-4f2b-81df-2c1ecde76bec" />
+
+Dintre del fitxer, busquem la línia "GRUB_DISABLE_OS_PROBER=false", i la descomentem/escrivim, si no la tenim.
+
+<img width="800" height="287" alt="image" src="https://github.com/user-attachments/assets/2a13d9a3-5496-4802-a875-8d6016f61b99" />
+
+Guardem i sortim, i tornem a executar "sudo update-grub". Podem veure que, aquesta vegada, ha detectat Windows, i li ha afegit una entrada al menú.
+
+<img width="724" height="96" alt="image" src="https://github.com/user-attachments/assets/4a8d2970-fb6d-423b-a035-e8b2951ed62c" />
+
+Finalment, reiniciem la màquina, i el grub ja torna a funcionar.
+
+<img width="299" height="82" alt="image" src="https://github.com/user-attachments/assets/6dfaa842-5089-489b-86b8-ffe0e69d5982" />
+
+---
+
+## Instal·lar Windows i Ubuntu en discs diferents.
+
+
 
 
 
