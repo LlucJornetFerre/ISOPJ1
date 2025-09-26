@@ -83,7 +83,7 @@ Més de 4–6 GB en aquest cas no aporta gaire, tret que facis coses molt exigen
 
 ---
 
-## Instal·lar Windows al mateix disc i recuperar el menú grub.
+## Instal·lar Windows al mateix disc.
 
 Primer, anem a la VM d'Ubuntu, i li afegim la ISO de Windows 10 enterpise.
 
@@ -100,6 +100,16 @@ Ara, ja podem obrir la màquina virtual. Quan ho fem, haurem de prémer la tecla
 Seguim la instal·lació fins al punt de les particions, on seleccionem l'espai lliure, i el formatem com a partició, on instal·larem el sistema.
 
 <img width="630" height="470" alt="image" src="https://github.com/user-attachments/assets/1d2cdb89-8ad2-445c-8d85-a2744e2c9f03" />
+
+### Recuperar el menú grub.
+
+Windows ha esborrat el menú que ens permet seleccionar quin sistema operatiu volem bootar, per tant, ara el recuperarem.
+
+Primer, 
+
+
+
+
 
 ## Llicenciament
 
