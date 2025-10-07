@@ -83,6 +83,17 @@ Més de 4–6 GB en aquest cas no aporta gaire, tret que facis coses molt exigen
 
 ---
 
+## Llicenciament
+
+Ubuntu és un sistema operatiu lliure de codi obert que es basa en Linux. Té una llicència de programari lliure, anomenada GNU (GPL, en anglès). Aquesta llicència permet:
+ - Fer servir el programa lliurement.
+ - Copiar-lo, i redistribuir-lo.
+ - Modificar-lo, i distribuir aquestes copies, sempre que també siguin lliures.
+
+ <img width="720" height="358" alt="image" src="https://github.com/user-attachments/assets/f18c5ad3-a386-4644-8522-53d434d687e8" />
+
+
+## Gestors d'arrencada per a instal·lacions DUALS
 ## Instal·lar Windows al mateix disc.
 
 Primer, anem a la VM d'Ubuntu, i li afegim la ISO de Windows 10 enterpise.
@@ -158,19 +169,6 @@ Amb aquesta informació, podem modificar l'ordre d'arranc executant: "efibootmgr
 <img width="635" height="267" alt="image" src="https://github.com/user-attachments/assets/ac1e1178-d157-49b6-81e9-f5eeef740080" />
 
 Finalment, podem comprovar que els canvis s'han aplicat correctament obrint la màquina virtual, i no seleccionant cap opció al menú grub, per a confirmar que aquest triarà Ubuntu.
-
-## Llicenciament
-
-Ubuntu és un sistema operatiu lliure de codi obert que es basa en Linux. Té una llicència de programari lliure, anomenada GNU (GPL, en anglès). Aquesta llicència permet:
- - Fer servir el programa lliurement.
- - Copiar-lo, i redistribuir-lo.
- - Modificar-lo, i distribuir aquestes copies, sempre que també siguin lliures.
-
- <img width="720" height="358" alt="image" src="https://github.com/user-attachments/assets/f18c5ad3-a386-4644-8522-53d434d687e8" />
-
-
-## Gestors d'arrencada per a instal·lacions DUALS
-
 
 ## Punts de restauració 
 
