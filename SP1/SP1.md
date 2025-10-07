@@ -94,7 +94,7 @@ Ubuntu és un sistema operatiu lliure de codi obert que es basa en Linux. Té un
 
 
 ## Gestors d'arrencada per a instal·lacions DUALS
-## Instal·lar Windows al mateix disc.
+### Instal·lar Windows al mateix disc.
 
 Primer, anem a la VM d'Ubuntu, i li afegim la ISO de Windows 10 enterpise.
 
@@ -112,7 +112,7 @@ Seguim la instal·lació fins al punt de les particions, on seleccionem l'espai 
 
 <img width="630" height="470" alt="image" src="https://github.com/user-attachments/assets/1d2cdb89-8ad2-445c-8d85-a2744e2c9f03" />
 
-### Recuperar el menú grub.
+#### Recuperar el menú grub.
 
 Windows ha esborrat el menú que ens permet seleccionar quin sistema operatiu volem bootar, per tant, ara el recuperarem.
 
@@ -142,7 +142,7 @@ Finalment, reiniciem la màquina, i el grub ja torna a funcionar.
 
 ---
 
-## Instal·lar Windows i Ubuntu en discs diferents.
+### Instal·lar Windows i Ubuntu en discs diferents.
 
 El primer pas és crear un nou disc, on instal·larem Windows, treiem el disc on Ubuntu està instal·lat, posem la ISO de Windows, i iniciem la màquina.
 
