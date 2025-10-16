@@ -268,7 +268,11 @@ Primer, revisem quina versió descarrega el sistema per defecte de python3 amb *
 
 Ara, per a canviar la versió que el sistema instal·la, accedirem a **/etc/apt/preferences.d/** i crearem el fitxer **python3.pref**, on indicarem el nom, la versió i la prioritat.
 
-<img width="643" height="138" alt="image" src="https://github.com/user-attachments/assets/91235ff4-2772-4b24-9d6d-94651cc65832" />
+<img width="572" height="129" alt="image" src="https://github.com/user-attachments/assets/f9741e5a-419a-417d-83e7-4a4d7029aec0" />
 
 Tot seguit, tornem a executar **apt-cache policy python3**, i veiem que la versió que el sistema descarregarà ha canviat a la que nosaltres hem indicat.
+
+<img width="800" height="285" alt="image" src="https://github.com/user-attachments/assets/28b62a76-b0de-414e-bfb7-e8f82bf3003e" />
+
+Finalment, instal·lem python3.
 
