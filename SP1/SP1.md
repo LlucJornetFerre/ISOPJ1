@@ -228,11 +228,15 @@ Per a comprovar que les instantànies funcionen correctament, en fem una manualm
 
 <img width="270" height="166" alt="Screenshot from 2025-10-07 13-02-37" src="https://github.com/user-attachments/assets/d9c5c42d-5b07-4dfb-a876-ccd5df2b7f6f" />
 
-Amb la instantània feta, esborrem la carpeta i document de text que hem creat abans, la restaurem, i comprovem que els fitxers tornen a estar.
+Amb la instantània feta, esborrem la carpeta i document de text que hem creat abans.
 
 <img width="454" height="97" alt="Screenshot from 2025-10-07 13-09-21" src="https://github.com/user-attachments/assets/df16f13e-9eec-4bd7-9194-f50df14cb6f0" />
 
+Obrim timeshift, i restaurem la instantània.
+
 <img width="481" height="287" alt="Screenshot from 2025-10-07 13-09-55" src="https://github.com/user-attachments/assets/674281bb-0773-4f03-9d21-b8ee535b666b" />
+
+Finalment, esperem a que s'acabi de restaurar, obrim un terminal, i comprovem que els elements que haviem esborrat han tornat a apareixer.
 
 <img width="501" height="77" alt="Screenshot from 2025-10-07 13-11-50" src="https://github.com/user-attachments/assets/0cf83c27-3522-4868-b64a-0747d7eba1cd" />
 
