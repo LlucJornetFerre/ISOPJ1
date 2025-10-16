@@ -244,6 +244,7 @@ Finalment, esperem a que s'acabi de restaurar, obrim un terminal, i comprovem qu
 Amb netplan, podem configurar manualment certs paràmetres de xarxa del nostre dispositiu mitjançant la terminal de comandes, com ara el mètode d'obtenció de l'adreça (estàtic, DHCP), l'adreça i màscara concreta (si hem triat estàtica al pas anterior, amb format CIDR), la porta d'enllaç (IP del router) i nameservers (servidors DNS).
 
 Netplan està instal·lat per defecte a tots els dispositius Ubuntu, i podem trobar i modificar el seu fitxer a **/etc/netplan/**. Per a fer una prova, el modificarem amb **nano**.
+
 <img width="617" height="23" alt="image" src="https://github.com/user-attachments/assets/54b6d16d-1345-4653-8ab4-e04ed057ba6a" />
 
 Dintre del fitxer, trobem la configuració per defecte. El primer pas és indicar quin adaptador de xarxa volem configurar (podem veure els adaptadors de xarxa amb ip a).
@@ -261,8 +262,13 @@ Per a guardar aquests canvis, executem la comanda **netplan apply**, i si no reb
 ## Comandes generals i instal·lació
 Comprovar i documentar quina versió del paquet de la nostra elecció s'instal·larà al sistema per defecte amb apt-policy. Modificar el fitxer on es guarda la versió a descarregar del paquet, i canviar a una versió diferent. Instal·lar el programa, i comprovar que s'ha instal·lat la versió que hem posat al document.
 
-Primer, revisem quina versió descarrega el sistema per defecte de Sudoku amb **apt-cache policy sudoku**.
+Primer, revisem quina versió descarrega el sistema per defecte de python3 amb **apt-cache policy python3**.
 
-<img width="780" height="182" alt="image" src="https://github.com/user-attachments/assets/dd03366b-ceef-4ed6-86c6-9a9a39245ce5" />
+<img width="720" height="220" alt="image" src="https://github.com/user-attachments/assets/e9281055-e7d3-499d-82d7-b14741457e5a" />
 
-Ara, per a canviar la versió que el sistema instal·la, modificarem el fitxer 
+Ara, per a canviar la versió que el sistema instal·la, accedirem a **/etc/apt/preferences.d/** i crearem el fitxer **python3.pref**, on indicarem el nom, la versió i la prioritat.
+
+<img width="643" height="138" alt="image" src="https://github.com/user-attachments/assets/91235ff4-2772-4b24-9d6d-94651cc65832" />
+
+Tot seguit, tornem a executar **apt-cache policy python3**, i veiem que la versió que el sistema descarregarà ha canviat a la que nosaltres hem indicat.
+
