@@ -261,3 +261,8 @@ Per a guardar aquests canvis, executem la comanda **netplan apply**, i si no reb
 ## Comandes generals i instal·lació
 Comprovar i documentar quina versió del paquet de la nostra elecció s'instal·larà al sistema per defecte amb apt-policy. Modificar el fitxer on es guarda la versió a descarregar del paquet, i canviar a una versió diferent. Instal·lar el programa, i comprovar que s'ha instal·lat la versió que hem posat al document.
 
+Primer, revisem quina versió descarrega el sistema per defecte de Sudoku amb **apt-cache policy sudoku**.
+
+<img width="780" height="182" alt="image" src="https://github.com/user-attachments/assets/dd03366b-ceef-4ed6-86c6-9a9a39245ce5" />
+
+Ara, per a canviar la versió que el sistema instal·la, modificarem el fitxer 
