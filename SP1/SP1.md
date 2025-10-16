@@ -270,9 +270,12 @@ Ara, per a canviar la versió que el sistema instal·la, accedirem a **/etc/apt/
 
 <img width="572" height="129" alt="image" src="https://github.com/user-attachments/assets/f9741e5a-419a-417d-83e7-4a4d7029aec0" />
 
-Tot seguit, tornem a executar **apt-cache policy python3**, i veiem que la versió que el sistema descarregarà ha canviat a la que nosaltres hem indicat.
+Tot seguit, tornem a executar **apt-cache policy python3**, i veiem que la versió que el candidat a la instal·lació ha canviat, i ja no és la versió **04.1**.
 
 <img width="800" height="285" alt="image" src="https://github.com/user-attachments/assets/28b62a76-b0de-414e-bfb7-e8f82bf3003e" />
 
-Finalment, instal·lem python3.
+Finalment, instal·lem python3. Entre les línies de la instal·lació, podem veure que es desempaqueta la versió que nosaltres hem triat.
+
+<img width="1158" height="559" alt="image" src="https://github.com/user-attachments/assets/280db19c-a611-4796-996e-be54787c7978" />
+
 
