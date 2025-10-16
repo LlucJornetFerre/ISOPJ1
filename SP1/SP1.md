@@ -9,12 +9,15 @@ Documentat - Crear una màquina virtual Ubuntu amb els requisits mínims i fer c
 ## Creació de la màquina virtual
 
 Primer, obrim VirtualBox, i creem una nova màquina virtual.
+
 <img width="135" height="104" alt="image" src="https://github.com/user-attachments/assets/c085511f-302c-47a2-8f55-b4cc9630e0e0" />
 
 A la primera pantalla, triem un nom per a la màquina virtual, i busquem la ISO d'Ubuntu a l'ordinador.
+
 <img width="712" height="385" alt="image" src="https://github.com/user-attachments/assets/367dc753-d4ff-4206-a3c2-85e28749f63f" />
 
 A continuació, podem crear el nostre usuari i el nom de la màquina.
+
 <img width="712" height="293" alt="image" src="https://github.com/user-attachments/assets/9cf80447-7127-45d2-8a62-865c4932dd80" />
 
 Tot seguit, toca assignar una quantitat de RAM a la màquina virtual. Per a determinar la quantitat adequada, podem consultar els requisits mínims per al nostre sistema operatiu a la pàgina principal d'aquest. https://ubuntu.com/download/desktop
@@ -26,12 +29,15 @@ Posarem 4GB, ja que és el mínim recomanat, i 4 cores per a la CPU.
 <img width="714" height="213" alt="image" src="https://github.com/user-attachments/assets/68428e0f-a9b3-48e0-a3c9-34265087d52a" />
 
 Ara, hem de crear el disc. Aquest serà de 80GB.
+
 <img width="714" height="315" alt="image" src="https://github.com/user-attachments/assets/f4e3e869-080a-415e-aa61-e713b65bcd9b" />
 
 Finalment, revisem que totes les dades del resum de la màquina son correctes, i la creem.
+
 <img width="706" height="383" alt="image" src="https://github.com/user-attachments/assets/57fc8161-7131-46e1-a365-19e2b3e34c52" />
 
 Abans d'acabar la configuració de la màquina, cal seleccionar un adaptador de xarxa per a aquesta. Ho farem seleccionant la màquina virtual, i clicant sobre la rodeta de configuració. Després, anirem a la secció de Xarxa/Network.
+
 <img width="796" height="458" alt="image" src="https://github.com/user-attachments/assets/336fde30-5ff4-41d1-b326-f61a1eb320ae" />
 
 En el meu cas, he decidit triar Xarxa NAT. Amb aquest adaptador, puc combinar els avantatges del NAT (sortida a internet), manté l'equip aillat de la resta de dispositius de la LAN, tot i permetent comunicar-se amb els dispositius de la mateixa xarxa NAT.
@@ -39,15 +45,18 @@ En el meu cas, he decidit triar Xarxa NAT. Amb aquest adaptador, puc combinar el
 <img width="427" height="203" alt="image" src="https://github.com/user-attachments/assets/aab16eff-3ba6-4441-b1b0-82433454e24c" />
 
 Podem crear una nova xarxa NAT a Eines > Xarxa > Xarxa NAT i crear
+
 <img width="498" height="245" alt="image" src="https://github.com/user-attachments/assets/06666d26-8d9e-4d92-bb3f-c029ed090342" />
 
 
 ## Configuració del sistema operatiu Ubuntu
 
 Obrim la màquina virtual, i seleccionem *Try or install Ubuntu* **(Aquesta opció es selecciona automàticament si no triem res)**
+
 <img width="707" height="276" alt="image" src="https://github.com/user-attachments/assets/3a840cb8-bc6e-48e4-975e-b11b01f66f24" />
 
 Ara, seguim el procés d'instal·lació fins que arribem a la secció de les particions. 
+
 <img width="776" height="496" alt="image" src="https://github.com/user-attachments/assets/a4f03ad9-939a-441a-b286-25d6f126e928" />
 
 Aqui, crearem les següents particions al disc:
@@ -173,42 +182,54 @@ Finalment, podem comprovar que els canvis s'han aplicat correctament obrint la m
 ## Punts de restauració 
 
 Primer, ens posem en mode superusuari, i descarreguem timeshift.
+
 <img width="720" height="436" alt="Screenshot from 2025-10-07 12-50-47" src="https://github.com/user-attachments/assets/3d5190e1-37f7-4c7c-b9cf-e0ee0fa1a509" />A
 
 Ara, entrem a fdisk seleccionant el disc que hem afegit a la màquina virtual (podem llistar els discs del sistema amb lsblk).
+
 <img width="497" height="39" alt="Screenshot from 2025-10-07 12-53-31" src="https://github.com/user-attachments/assets/d0f46892-4868-44af-a941-476cdeea5040" />
 
 Creem una nova partició.
 <img width="723" height="235" alt="Screenshot from 2025-10-07 12-53-49" src="https://github.com/user-attachments/assets/08979076-3fad-4743-821a-0bfb60694730" />
 
 I confirmem que s'ha creat correctament amb lsblk.
+
 <img width="358" height="57" alt="Screenshot from 2025-10-07 12-54-23" src="https://github.com/user-attachments/assets/584030dd-1e4b-4119-b456-12fae3f3d21d" />
 
 Formatem la partició a .ext4
+
 <img width="719" height="256" alt="Screenshot from 2025-10-07 12-56-00" src="https://github.com/user-attachments/assets/4e88c51c-daf2-41fa-9f80-ef56ddaeda0f" />
 
 A continuació, creem un directori i document de text.
+
 <img width="492" height="121" alt="Screenshot from 2025-10-07 12-56-43" src="https://github.com/user-attachments/assets/d25bb6e7-c229-4191-a59a-1c2281d43bd4" />
 
 Obrim timeshift, i configurem una instantànea.
+
 <img width="238" height="138" alt="Screenshot from 2025-10-07 12-57-29" src="https://github.com/user-attachments/assets/71a1c25b-b719-430b-8a36-58b954274eb6" />
 
 Seleccionem la partició que hem configurat.
+
 <img width="587" height="234" alt="Screenshot from 2025-10-07 12-57-59" src="https://github.com/user-attachments/assets/9f53e866-8613-48ee-a6a8-0b3c2e6a510f" />
 
 Especifiquem quan volem que es facin les instantànies, i quantes en volem conservar abans que es sobreescriguin.
+
 <img width="587" height="304" alt="Screenshot from 2025-10-07 12-59-02" src="https://github.com/user-attachments/assets/5586de25-6338-45fe-acc4-61f5748fdb0c" />
 
 Indiquem quins directoris volem guardar.
+
 <img width="659" height="146" alt="Screenshot from 2025-10-07 12-59-39" src="https://github.com/user-attachments/assets/0f97b62b-4770-4b48-accd-eb2f0e5349cf" />
 
 I ja hem acabat.
+
 <img width="1166" height="286" alt="Screenshot from 2025-10-07 12-59-54" src="https://github.com/user-attachments/assets/19821895-fe32-4422-b10f-4fc0af83936f" />
 
 Per a comprovar que les instantànies funcionen correctament, en fem una manualment.
+
 <img width="270" height="166" alt="Screenshot from 2025-10-07 13-02-37" src="https://github.com/user-attachments/assets/d9c5c42d-5b07-4dfb-a876-ccd5df2b7f6f" />
 
 Amb la instantània feta, esborrem la carpeta i document de text que hem creat abans, la restaurem, i comprovem que els fitxers tornen a estar.
+
 <img width="454" height="97" alt="Screenshot from 2025-10-07 13-09-21" src="https://github.com/user-attachments/assets/df16f13e-9eec-4bd7-9194-f50df14cb6f0" />
 
 <img width="481" height="287" alt="Screenshot from 2025-10-07 13-09-55" src="https://github.com/user-attachments/assets/674281bb-0773-4f03-9d21-b8ee535b666b" />
