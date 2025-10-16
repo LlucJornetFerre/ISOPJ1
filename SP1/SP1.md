@@ -247,6 +247,7 @@ Netplan està instal·lat per defecte a tots els dispositius Ubuntu, i podem tro
 <img width="617" height="23" alt="image" src="https://github.com/user-attachments/assets/54b6d16d-1345-4653-8ab4-e04ed057ba6a" />
 
 Dintre del fitxer, trobem la configuració per defecte. El primer pas és indicar quin adaptador de xarxa volem configurar (podem veure els adaptadors de xarxa amb ip a).
+
 <img width="574" height="197" alt="image" src="https://github.com/user-attachments/assets/5499e5fb-8f54-4c91-9eed-10bacd25753b" />
 
 Tornem al netplan, i escrivim el nom de l'adaptador que hem trobat. Dintre d'aquest, amb un format similar a html, indicarem que no volem dhcp4 o dhcp6, l'adreça IP i la màscara de xarxa, l'adreça IP del router com a via de sortida, i 8.8.8.8 com a nameserver.
