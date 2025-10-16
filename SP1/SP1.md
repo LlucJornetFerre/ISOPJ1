@@ -62,15 +62,19 @@ Ara, seguim el procés d'instal·lació fins que arribem a la secció de les par
 Aqui, crearem les següents particions al disc:
 
 /home: La mida d'aquesta partició serà de 16GB, ja que només crearé un usuar, i l'espai és una mica limitat.
+
 <img width="776" height="496" alt="image" src="https://github.com/user-attachments/assets/e4801df9-76c9-4763-8967-a94cd4eadec1" />
 
 /boot: Ja que, en un futur, farem un dualboot, posarem 1GB d'espai per a aquesta partició.
+
 <img width="602" height="255" alt="image" src="https://github.com/user-attachments/assets/778d206d-c561-42f8-8ac0-d85772f14970" />
 
 /: 16GB
+
 <img width="602" height="318" alt="image" src="https://github.com/user-attachments/assets/8ff5ac37-f551-42fc-a49e-dbe267616b83" />
 
 /swap: 4GB
+
 <img width="510" height="391" alt="image" src="https://github.com/user-attachments/assets/27ddaa9c-b5bc-4701-97a0-e28487fe5f04" />
 
 
@@ -190,6 +194,7 @@ Ara, entrem a fdisk seleccionant el disc que hem afegit a la màquina virtual (p
 <img width="497" height="39" alt="Screenshot from 2025-10-07 12-53-31" src="https://github.com/user-attachments/assets/d0f46892-4868-44af-a941-476cdeea5040" />
 
 Creem una nova partició.
+
 <img width="723" height="235" alt="Screenshot from 2025-10-07 12-53-49" src="https://github.com/user-attachments/assets/08979076-3fad-4743-821a-0bfb60694730" />
 
 I confirmem que s'ha creat correctament amb lsblk.
