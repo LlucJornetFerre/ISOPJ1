@@ -3,7 +3,7 @@
 ## Sistemes de fitxers i particions
  - Mida sector
  - Mida block
- - Fragmentació interna
+ - Fragmentació interna: Espai desaprofitat degut a que arxius es guarden a un bloc, encara que no l'ocupin, perden espai.
  - Fragmentació externa
  - Tipus de formateig
    - Baix nivell
