@@ -46,6 +46,29 @@ Crear el sistema de fitxers amb format ext4 a la partició que hem creat, i espe
 Comprovem amb tune2fs que la partició s'ha creat correctament **amb la mida de bloc que hem especificat anteriorment**. 
 <img width="777" height="465" alt="image" src="https://github.com/user-attachments/assets/d0a08a5b-2d22-4c95-a097-22134074815d" />
 
+Creem un sistema de fixters amb ntfs a /dev/sdb2.
+
+<img width="497" height="136" alt="image" src="https://github.com/user-attachments/assets/b79070a5-4fcd-4906-9ddf-9d1d216512f3" />
+
+I comprovem que les particions apareixen a gparted.
+
+<img width="725" height="53" alt="Screenshot from 2025-10-23 14-13-26" src="https://github.com/user-attachments/assets/945d7536-bca4-4fad-b9b0-a0a19a287ddc" />
+
+<img width="459" height="203" alt="Screenshot from 2025-10-23 14-14-40" src="https://github.com/user-attachments/assets/64b79419-82c1-48b2-806f-16230eb508a5" />
+
+<img width="475" height="93" alt="Screenshot from 2025-10-23 14-16-46" src="https://github.com/user-attachments/assets/85e13fc7-9d7b-4071-91f9-ede359451d63" />
+
+Si tornem a muntar, veiem que tornen a apareixer els fitxers.
+<img width="726" height="139" alt="image" src="https://github.com/user-attachments/assets/d13b5911-da56-4479-aa79-1f1680365e44" />
+
+Per a fer el mount permanent, editem el fitxer /etc/fstab, on introduirem les mateixes dades que posavem amb la comanda manual, i reiniciem l'equip.
+
+<img width="802" height="314" alt="image" src="https://github.com/user-attachments/assets/60556326-144e-4e92-85f0-69b11bfe4eb9" />
+
+Finalment, veiem que, encara que s'ha reinciat l'equip, la comanda s'executa automàticament al reiniciar l'equip.
+
+<img width="531" height="149" alt="image" src="https://github.com/user-attachments/assets/b3fb0d4c-8f0d-48c4-9756-2d59fbfe4b6b" />
+
 
 
 ## Gestió de processos
