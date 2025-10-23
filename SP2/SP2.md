@@ -4,7 +4,7 @@
  - Mida sector
  - Mida block
  - Fragmentació interna: Espai desaprofitat degut a que arxius es guarden a un bloc, encara que no l'ocupin, perden espai.
- - Fragmentació externa
+ - Fragmentació externa: Fragments d'un mateix arxiu està separat en diferents blocs, cosa que alenteix el sistema a l'hora d'executar-lo.
  - Tipus de formateig
    - Baix nivell
    - Mig nivell
