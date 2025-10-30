@@ -72,6 +72,44 @@ Finalment, veiem que, encara que s'ha reinciat l'equip, la comanda s'executa aut
 
 
 ## Gestió de processos
+
+El saltem, de moment.
+
 ## Gestió d'usuaris i grups i permisos
+
+**sudo nano /etc/passwd** Aquest fitxer conté informació de tots els usuaris del sistema, aquells que inicien sessió gràficament, i els del sistema. També podem veure si un usuari té contrassenya (tot i que aquesta no es guarda en aquest fitxer), el seu grup principal i el seu directori **home**.
+
+<img width="1205" height="766" alt="image" src="https://github.com/user-attachments/assets/95b63605-f328-4f87-871e-c28c3ad8d381" />
+
+**sudo nano /etc/shadow** Dintre d'aquest fitxer podem veure tots els usuaris del sistema, amb la seva contrasenya encriptada, si en tenen. Els altres camps mostren la caducitat de la contrasenya de cada usuari, i quan es va canviar per última vegada. Podem resumir aquest fitxer com el fitxer que recull tota l'informació sobre les contrasenyes dels usuaris.
+
+<img width="1205" height="766" alt="image" src="https://github.com/user-attachments/assets/27b4eff1-1c27-4e10-9d24-feffdbc5b129" />
+
+**sudo nano /etc/group** Aquest fitxer conté tots els grups del sistema, i també mostra quins usuaris formen part dels grups declarats.
+
+<img width="1205" height="766" alt="image" src="https://github.com/user-attachments/assets/6f1eaf79-c72e-4296-84d3-6511f574b1ca" />
+
+**sudo nano /etc/gshadow** Aquest fitxer conté la mateixa informació que l'anterior, però a diferència de l'anterior, dintre d'aquest fitxer podem veure l'usuari administrador de cada grup.
+
+<img width="1205" height="766" alt="image" src="https://github.com/user-attachments/assets/4908fc18-7428-4b30-868d-7ab5752ddff2" />
+
+
+# Fitxers importants
+
+# Comandes bàsiques
+
+# Directoris i fitxers importants
+
+# Gestió avançada
+
+# PAM
+
+
+
+
+
+
+
+
 ## Còpies de segurett i automatització de tasques
 ## Quotes d'usuaris
