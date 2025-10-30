@@ -93,6 +93,68 @@ El saltem, de moment.
 
 <img width="1205" height="766" alt="image" src="https://github.com/user-attachments/assets/4908fc18-7428-4b30-868d-7ab5752ddff2" />
 
+Ara, crearem un nou usuari al sistema amb l'assistent amb la comanda **adduser**.
+
+<img width="713" height="471" alt="image" src="https://github.com/user-attachments/assets/08d594c1-6c31-4e9c-b3be-360ef658a36a" />
+
+Amb l'usuari creat, revisem que han aparegut noves entrades per a l'usuari als fitxers que hem vist abans.
+
+<img width="1004" height="252" alt="image" src="https://github.com/user-attachments/assets/6e8d56ea-a00f-4fc1-8d92-1a46a3b255da" />
+
+Si esborrem l'usuari amb **userdel -r alumnat**, veurem que les entrades i el seu directori local han desaparegut.
+
+<img width="615" height="209" alt="image" src="https://github.com/user-attachments/assets/ab42530f-407f-4943-8b1c-6a4ab4511d2a" />
+
+Tot seguit, creem un nou usuari, aquesta vegada amb la comanda **useradd**. Després, busquem l'entrada del nou usuari a **/etc/passwd**, i podrem veure que se li han assignat uns quants paràmetres per defecte, com ara l'interpret de comandes, i el home directory. Cal mencionar que, tot i que se li ha assignat un directori home, aquest no s'ha creat.
+
+<img width="606" height="138" alt="image" src="https://github.com/user-attachments/assets/b7312f68-7921-41a1-b4a7-b79f25a1f21e" />
+
+No ens agraden els paràmetres per defecte, per tant, executarem la comanda **usermod alumnat2** per a modificar els paràmetres de l'usuari que especifiquem. També crearem la carpeta que se li ha assignat com a home, i **li donarem permisos a l'usuari alumnat2**, ja que si no en te, no podrà fer res al seu directori local.
+
+<img width="592" height="27" alt="image" src="https://github.com/user-attachments/assets/920b2832-9c7e-46e8-8b29-ed2df04195e3" />
+
+<img width="709" height="507" alt="image" src="https://github.com/user-attachments/assets/55b2667d-0678-4da3-a65d-92fdaef98f1d" />
+
+Finalment, li assignarme una contrsenya a l'usuari amb **passwd alumnat2**, i ja podrà iniciar sessió amb interfície gràfica.
+
+<img width="632" height="133" alt="image" src="https://github.com/user-attachments/assets/60db3162-17f0-491f-81b6-d538dc0f4648" />
+
+Per a prohibir l'accés a un usuari al sistema, executarem la comanda **usermod -L alumnat2**. Aquesta comanda bloqueja l'accés a l'usuari especificat, i rebrà un missatge de contrasenya equivocada si intenta entrar. Podem comprovar que l'usuari està bloquejat ja que, a **/etc/passwd**, té una exclamació davant de la contrasenya encriptada.
+
+Per a revertir aquesta comanda, executem **usermod -U alumnat2** i ja podrà accedir al sistema.
+
+<img width="1023" height="201" alt="image" src="https://github.com/user-attachments/assets/4baacad4-807c-41d8-a6ab-085100ab8a93" />
+
+## Creació de grups
+
+Podem crear un grup amb la comanda **addgroup asix**, i podem modificar els paràmetres d'aquest amb **groupmod.**
+
+<img width="717" height="210" alt="image" src="https://github.com/user-attachments/assets/8f41c4f2-a8d9-4bf1-83ab-f75aa1b3cb5a" />
+
+Podem afegir usuaris a grups de diverses maneres, per exemple:
+
+**adduser**
+
+<img width="517" height="71" alt="image" src="https://github.com/user-attachments/assets/eaa9dab6-b9c1-40c2-9619-bdc1bae11a0a" />
+
+**gpasswd**
+
+<img width="546" height="46" alt="image" src="https://github.com/user-attachments/assets/58f84078-9d5b-44e0-973b-7ba4e5d0021e" />
+
+**usermod**
+
+<img width="573" height="71" alt="image" src="https://github.com/user-attachments/assets/c7b78d1a-45f6-4cea-8166-1e83d618b54c" />
+
+Per a eliminar un usuari d'un grup, executem la comanda **deluser alumnat2 asixA**
+
+<img width="537" height="75" alt="image" src="https://github.com/user-attachments/assets/0c1b2950-88fe-46c8-88f3-90d112fa4fd8" />
+
+# Accedir al terminal real d'Ubuntu
+
+Amb la combinació de tecles **Ctrl dret + F5** accedim al sistema operatiu sense interfície gràfica. Aquest és el terminal real del sistema, a diferència dels **pseudo-terminals** que obrim amb la interfície gràfica. **Per a tornar a la interfície gràfica, hem de fer Ctrl+F2**
+
+<img width="299" height="74" alt="image" src="https://github.com/user-attachments/assets/a001d78b-8836-4edc-a5ad-42ad10c4604c" />
+
 
 # Fitxers importants
 
