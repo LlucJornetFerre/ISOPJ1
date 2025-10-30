@@ -77,7 +77,7 @@ El saltem, de moment.
 
 ## Gestió d'usuaris i grups i permisos
 
-# Gestió de fitxers importants.
+### Fitxers importants del sistema.
 
 **sudo nano /etc/passwd** Aquest fitxer conté informació de tots els usuaris del sistema, aquells que inicien sessió gràficament, i els del sistema. També podem veure si un usuari té contrassenya (tot i que aquesta no es guarda en aquest fitxer), el seu grup principal i el seu directori **home**.
 
@@ -92,6 +92,8 @@ El saltem, de moment.
 <img width="1205" height="766" alt="image" src="https://github.com/user-attachments/assets/6f1eaf79-c72e-4296-84d3-6511f574b1ca" />
 
 **sudo nano /etc/gshadow** Aquest fitxer conté la mateixa informació que l'anterior, però a diferència de l'anterior, dintre d'aquest fitxer podem veure l'usuari administrador de cada grup.
+
+### Gestió d'usuaris
 
 <img width="1205" height="766" alt="image" src="https://github.com/user-attachments/assets/4908fc18-7428-4b30-868d-7ab5752ddff2" />
 
@@ -127,7 +129,11 @@ Per a revertir aquesta comanda, executem **usermod -U alumnat2** i ja podrà acc
 
 <img width="1023" height="201" alt="image" src="https://github.com/user-attachments/assets/4baacad4-807c-41d8-a6ab-085100ab8a93" />
 
-# Gestió de grups
+Per a canviar el nom d'un usuari, cal fer-ho amb una comanda específica **I NO MODIFICANT MANUALMENT ELS FITXERS DE CONFIGURACIÓ**, ja que molts fitxers depenen d'aquest paràmetre, i canviar-lo manualment a un fitxer com ara **/etc/passwd** faria que l'usuari deixés de funcionar. La comanda és **usermod -l alumnat2 alumnat3** 
+
+<img width="579" height="54" alt="image" src="https://github.com/user-attachments/assets/81bb47d9-1b35-4484-a368-bc0ea6b9dabb" />
+
+### Gestió de grups
 
 Podem crear un grup amb la comanda **addgroup asix**, i podem modificar els paràmetres d'aquest amb **groupmod.**
 
@@ -151,15 +157,11 @@ Per a eliminar un usuari d'un grup, executem la comanda **deluser alumnat2 asixA
 
 <img width="537" height="75" alt="image" src="https://github.com/user-attachments/assets/0c1b2950-88fe-46c8-88f3-90d112fa4fd8" />
 
-# Accedir al terminal real d'Ubuntu
+### Accedir al terminal real d'Ubuntu
 
 Amb la combinació de tecles **Ctrl dret + F5** accedim al sistema operatiu sense interfície gràfica. Aquest és el terminal real del sistema, a diferència dels **pseudo-terminals** que obrim amb la interfície gràfica. **Per a tornar a la interfície gràfica, hem de fer Ctrl+F2**
 
 <img width="299" height="74" alt="image" src="https://github.com/user-attachments/assets/a001d78b-8836-4edc-a5ad-42ad10c4604c" />
-
-Per a canviar el nom d'un usuari, cal fer-ho amb una comanda específica **I NO MODIFICANT MANUALMENT ELS FITXERS DE CONFIGURACIÓ**, ja que molts fitxers depenen d'aquest paràmetre, i canviar-lo manualment a un fitxer com ara **/etc/passwd** faria que l'usuari deixés de funcionar. La comanda és **usermod -l alumnat2 alumnat3** 
-
-<img width="579" height="54" alt="image" src="https://github.com/user-attachments/assets/81bb47d9-1b35-4484-a368-bc0ea6b9dabb" />
 
 Exercici: "Quina comanda o comandes he de fer servir quan vull canviar un nom d'usuari correctament"
 
