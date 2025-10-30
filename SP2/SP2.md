@@ -159,26 +159,15 @@ Per a eliminar un usuari d'un grup, executem la comanda **deluser alumnat2 asixA
 
 ### Accedir al terminal real d'Ubuntu
 
-Amb la combinació de tecles **Ctrl dret + F5** accedim al sistema operatiu sense interfície gràfica. Aquest és el terminal real del sistema, a diferència dels **pseudo-terminals** que obrim amb la interfície gràfica. **Per a tornar a la interfície gràfica, hem de fer Ctrl+F2**
+Amb la combinació de tecles **Ctrl dret + F5** accedim al sistema operatiu sense interfície gràfica. Aquest és el terminal real del sistema, a diferència dels **pseudo-terminals** que obrim amb la interfície gràfica. **Per a tornar a la interfície gràfica, hem de fer Ctrl dret + F2**
 
 <img width="299" height="74" alt="image" src="https://github.com/user-attachments/assets/a001d78b-8836-4edc-a5ad-42ad10c4604c" />
 
 Exercici: "Quina comanda o comandes he de fer servir quan vull canviar un nom d'usuari correctament"
 
-Exercici2: "Especificar tots els paràmetres d'un usuari que creem amb useradd".
+Exercici2: "Especificar tots els paràmetres d'un usuari que creem amb useradd". 
 
-# Fitxers importants
-
-# Comandes bàsiques
-
-# Directoris i fitxers importants
-
-# Gestió avançada
-
-# PAM
-
-
-
+Tot i que és impossible resumir tots els passos de la creació de l'usuari en una sola comanda, podem fer-ne la majoría. Amb la comanda **useradd -s /bin/bash**
 
 
 
