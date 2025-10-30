@@ -77,6 +77,8 @@ El saltem, de moment.
 
 ## Gestió d'usuaris i grups i permisos
 
+# Gestió de fitxers importants.
+
 **sudo nano /etc/passwd** Aquest fitxer conté informació de tots els usuaris del sistema, aquells que inicien sessió gràficament, i els del sistema. També podem veure si un usuari té contrassenya (tot i que aquesta no es guarda en aquest fitxer), el seu grup principal i el seu directori **home**.
 
 <img width="1205" height="766" alt="image" src="https://github.com/user-attachments/assets/95b63605-f328-4f87-871e-c28c3ad8d381" />
@@ -125,7 +127,7 @@ Per a revertir aquesta comanda, executem **usermod -U alumnat2** i ja podrà acc
 
 <img width="1023" height="201" alt="image" src="https://github.com/user-attachments/assets/4baacad4-807c-41d8-a6ab-085100ab8a93" />
 
-## Creació de grups
+# Gestió de grups
 
 Podem crear un grup amb la comanda **addgroup asix**, i podem modificar els paràmetres d'aquest amb **groupmod.**
 
@@ -155,6 +157,13 @@ Amb la combinació de tecles **Ctrl dret + F5** accedim al sistema operatiu sens
 
 <img width="299" height="74" alt="image" src="https://github.com/user-attachments/assets/a001d78b-8836-4edc-a5ad-42ad10c4604c" />
 
+Per a canviar el nom d'un usuari, cal fer-ho amb una comanda específica **I NO MODIFICANT MANUALMENT ELS FITXERS DE CONFIGURACIÓ**, ja que molts fitxers depenen d'aquest paràmetre, i canviar-lo manualment a un fitxer com ara **/etc/passwd** faria que l'usuari deixés de funcionar. La comanda és **usermod -l alumnat2 alumnat3** 
+
+<img width="579" height="54" alt="image" src="https://github.com/user-attachments/assets/81bb47d9-1b35-4484-a368-bc0ea6b9dabb" />
+
+Exercici: "Quina comanda o comandes he de fer servir quan vull canviar un nom d'usuari correctament"
+
+Exercici2: "Especificar tots els paràmetres d'un usuari que creem amb useradd".
 
 # Fitxers importants
 
