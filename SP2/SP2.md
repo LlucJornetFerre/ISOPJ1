@@ -70,8 +70,6 @@ Finalment, veiem que, encara que s'ha reinciat l'equip, la comanda s'executa aut
 
 <img width="531" height="149" alt="image" src="https://github.com/user-attachments/assets/b3fb0d4c-8f0d-48c4-9756-2d59fbfe4b6b" />
 
-
-
 ## Gestió de processos
 
 El saltem, de moment.
@@ -158,7 +156,7 @@ Per a eliminar un usuari d'un grup, executem la comanda **deluser alumnat2 asixA
 
 <img width="537" height="75" alt="image" src="https://github.com/user-attachments/assets/0c1b2950-88fe-46c8-88f3-90d112fa4fd8" />
 
-### Accedir al terminal real d'Ubuntu
+### Accedir al terminal real d'Ubuntu/TTY
 
 Amb la combinació de tecles **Ctrl dret + F5** accedim al sistema operatiu sense interfície gràfica. Aquest és el terminal real del sistema, a diferència dels **pseudo-terminals** que obrim amb la interfície gràfica. **Per a tornar a la interfície gràfica, hem de fer Ctrl dret + F2**
 
@@ -170,9 +168,39 @@ Exercici2: "Especificar tots els paràmetres d'un usuari que creem amb useradd".
 
 Tot i que és impossible resumir tots els passos de la creació de l'usuari en una sola comanda, podem fer-ne la majoría. Amb la comanda **useradd -s /bin/bash**
 
-### ACL
+### - 1 Permisos "normals" UOG
 
-Primer, executem **getacl numeros** per a veure permissos i excepcions d'ACL aplicades al directori **numeros**
+Dintre del sistema operatiu, tots els arxius i directoris tenen un set de permisos, que determinen quins usuaris, o grups, podem realitzar certes accions sobre aquests. Els permisos es poden desglossar en 3 valors:
+
+ - r: Significa **read**, o llegir, i indica si l'usuari pot visualitzar els continguts d'un fitxer o directori.
+
+ - w: Significa **write**, o escriure, i determina si l'usuari pot fer canvis al directori o fitxer.
+
+ - x: Significa **execute**, o executar, i ens permet saber si l'usuari pot executar l'arxiu.
+
+Els permisos de certs usuaris o grups sobre el directori o fitxer es determinen mitjançant una combinació dels 3 valors anteriors, que s'apliquen a 3 grups o usuaris diferents. 
+
+Com podem comprovar si executem la comanda **ll | grep test**, el sistema ens mostra el següent: drwxr-xr-x. 
+
+<img width="634" height="68" alt="image" src="https://github.com/user-attachments/assets/afa37d64-bfa9-4b62-a2dc-8a7548999226" />
+
+Primer, podem veure una **d**. Aquest valor ens indica que l'objectiu de la comanda és un directori. En el cas d'un arxiu, aquest valor es mostra com un **-**. Com podem veure, els 3 valors anteriors, (r, w, x) es repeteixen 3 vegades sobre el mateix directori. Això és degut a que el sistema otorga 3 combinacions de permisos al mateix arxiu, cadascun per a algú diferent. La primera combinació representa els permisos de **l'usuari propietari**, que sovin té els 3 valors habilitats. El propietari de la carpeta és **root**, per tant, provarem a crear, eliminar i llistar el contingut de la carpeta per a confirmar que els permisos s'apliquen correctament.
+
+<img width="320" height="157" alt="image" src="https://github.com/user-attachments/assets/f7126fd7-0aee-4322-abd5-347249d2ad67" />
+
+Tot seguit, tenim els del grup del propietari. Els usuaris que formin part del grup propietari del fitxer tindran els permisos r i x sobre l'arxiu, es a dir, han de poder llistar el contingut del directori i executar arxius dintre d'aquest, però no tenen permès crear, editar o esborrar el contingut de la carpeta. Ho comprovarem amb l'usuari **lluc2**, que forma part del grup **estudiants**, el grup propietari de la carpeta test.
+
+<img width="737" height="269" alt="image" src="https://github.com/user-attachments/assets/704325aa-749d-46fa-a921-f7d235e53013" />
+
+Finalment, tenim els permisos per a la resta d'usuaris del sistema. Aquests són els mateixos que els del cas anterior, i els comprovarem amb un usuari que no forma part del grup estudiants.
+
+<img width="737" height="269" alt="image" src="https://github.com/user-attachments/assets/9a0ba11f-4de8-46b7-8ecf-c7d6ae81f83b" />
+
+Aquests permisos es representen amb números, 1 per a cada combinació, que surt de la suma dels 3 valors assignats. Representats a la taula següent es veuen les possibles combinacions, entenent que **x** -> 1 **w** -> 2 i **r** -> 4. Per tant, si volem donar permisos totals al propietari, grup del propietari i a la resta d'usuaris del sistema, posarem 777.
+
+### 4 - ACL
+
+Primer, executem **getacl numeros** per a veure permisos i excepcions d'ACL aplicades al directori **numeros**
 
 <img width="323" height="168" alt="image" src="https://github.com/user-attachments/assets/efc12cdf-7659-409e-9a0d-b8ff094cccee" />
 
