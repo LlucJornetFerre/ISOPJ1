@@ -169,9 +169,31 @@ Exercici2: "Especificar tots els paràmetres d'un usuari que creem amb useradd".
 
 Tot i que és impossible resumir tots els passos de la creació de l'usuari en una sola comanda, podem fer-ne la majoría. Amb la comanda **useradd -s /bin/bash**
 
+### ACL
+
+Primer, executem **getacl numeros** per a veure permissos i excepcions d'ACL aplicades al directori **numeros**
+
+<img width="323" height="168" alt="image" src="https://github.com/user-attachments/assets/efc12cdf-7659-409e-9a0d-b8ff094cccee" />
+
+Tot seguit, eliminarem els permisos de l'usuari **segon** sobre la carpeta **numeros**. Aplicarem una excepció a la carpeta **numeros**, que permet **r**, **w** i **x** a **others** (es a dir, tots els usuaris del sistema), per a que no els apliqui a l'usuari segon, i que se li apliquin els permisos que establirem amb la comanda, en aquest cas, res.
+
+<img width="485" height="222" alt="image" src="https://github.com/user-attachments/assets/20405cdd-98c6-4328-a0e3-faaed8112739" />
+
+Ara, entrarem amb l'usuari **primer**, i comprovarem que té permisos sobre la carpeta (recordem, la carpeta numeros permet read, write i execute a tots els usuaris del sistema).
+
+<img width="391" height="148" alt="image" src="https://github.com/user-attachments/assets/353a4563-b6f1-4f64-b2cd-4746e084508a" />
+
+A continuació, comprovem que l'excepció dels permisos de la carpeta numeros de l'usuari segon funciona correctament.
+
+<img width="591" height="145" alt="image" src="https://github.com/user-attachments/assets/a3e1bfec-db00-403e-bc95-75fda8816dbb" />
+
+Finalment, podem esborrar les excepcions aplicades sobre un directori o fitxer, executem la comanda **setfacl -b numeros**.
+
+<img width="355" height="181" alt="image" src="https://github.com/user-attachments/assets/afb059de-cc51-4413-a8f5-70faa6f17ae0" />
 
 
 
 
-## Còpies de segurett i automatització de tasques
+
+## Còpies de seguretat i automatització de tasques
 ## Quotes d'usuaris
