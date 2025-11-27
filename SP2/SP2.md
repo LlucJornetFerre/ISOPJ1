@@ -59,6 +59,7 @@ I comprovem que les particions apareixen a gparted.
 <img width="475" height="93" alt="Screenshot from 2025-10-23 14-16-46" src="https://github.com/user-attachments/assets/85e13fc7-9d7b-4071-91f9-ede359451d63" />
 
 Si tornem a muntar, veiem que tornen a apareixer els fitxers.
+
 <img width="726" height="139" alt="image" src="https://github.com/user-attachments/assets/d13b5911-da56-4479-aa79-1f1680365e44" />
 
 Per a fer el mount permanent, editem el fitxer /etc/fstab, on introduirem les mateixes dades que posavem amb la comanda manual, i reiniciem l'equip.
