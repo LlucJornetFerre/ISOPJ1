@@ -242,17 +242,29 @@ Alternativament, tenim els permisos individuals per a cada usuari. Podem trobar-
 
 ### 3 - Permisos especials
 
+A més dels permisos que hem vist al **punt 1** (r, w, x), tenim 3 permisos més que podem aplicar a directoris i fitxers:
 
+ - 1. SUID (Set User ID) – Permís especial per a fitxers executables.
+ - 2. SGID (Set Group ID) – Permís especial per a fitxers executables i directoris.
+ - 3. Sticky bit – Permís especial per a directoris (antigament també fitxers).
 
+**Sticky Bit**
 
+El sticky bit és un permís especial que evita que els usuaris puguin esborrar contingut dintre d'un directori, encara que tinguin permisos d'escriptura sobre aquests. Podem identificar un directori que tingui sticky bit activat quan llistem els seus permisos, ja que veurem una **t** al final dels **permisos normals**.
 
+Per exemple, si creo el directori **xarxes**, activo el sticky bit, i creo el fitxer de text **exemple1.txt** dintre d'aquest, només el podran esborrar o moure els següents usuaris: **el propietari del fitxer, el propietari del directori o l'administrador.**
 
+<img width="602" height="165" alt="image" src="https://github.com/user-attachments/assets/0f483549-05f3-4aea-87c9-95ee47739bd5" />
 
+Ara, per a comprovar que el sticky bit funciona, farem unes quantes proves. El directori xarxes ha sigut creat per **l'usuari root**, per tant, aquest té control sobre tots els directoris o documents dintre del directori. L'usuari **lluc2**, en canvi, no hauria de poder esborrar el fitxer **exemple1**, ja que l'sticky bit ho impedeix, encara que tingui permisos d'escriptura i lectura.
 
+<img width="607" height="175" alt="image" src="https://github.com/user-attachments/assets/1908cc3a-47cf-4a60-a5e5-24ba10a91a29" />
 
+<img width="680" height="262" alt="image" src="https://github.com/user-attachments/assets/28e84592-392e-4c16-869a-8050c094a1c2" />
 
+Finalment, comprovem que **lluc2** pot esborrar els fitxers i directoris que crea.
 
-
+<img width="477" height="157" alt="image" src="https://github.com/user-attachments/assets/7ea621f4-6554-4e70-adb3-408099337cbe" />
 
 ### 4 - ACL
 
