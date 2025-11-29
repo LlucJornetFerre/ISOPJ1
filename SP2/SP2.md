@@ -231,15 +231,16 @@ Fitxers creats: 666 – 022 = 644 (rw-r--r--)
 Directoris creats: 777 – 022 = 755 (rwxr-xr-x)
 ```
 
-El sistema ens permet gestionar el valor d'UMASK per a tots els usuaris del sistema, però també podem modificar manualment el valor d'un usuari en concret. Per a modificar el valor per defecte d'UMASK per a tots els usuaris del sistema, accedirem a **/etc/login.defs**. Allà, trobarem el valor UMASK que el sistema assigna per defecte a tots els usuaris, i el podrem modificar lliurement.
+El sistema ens permet gestionar el valor d'UMASK per a tots els usuaris del sistema, però també podem modificar manualment el valor d'un usuari en concret. Per a modificar el valor per defecte d'UMASK per a tots els usuaris del sistema, accedirem a **/etc/login.defs**. Allà, trobarem el valor UMASK que el sistema assigna per defecte a tots els usuaris, i el podrem modificar lliurement. El valor per defecte per a tots els usuaris és 022
+
+<img width="210" height="76" alt="image" src="https://github.com/user-attachments/assets/478fa9f5-2ed4-4f19-81e2-29c708a35bde" />
+
+Alternativament, tenim els permisos individuals per a cada usuari. Podem trobar-lo a un fitxer ocult del sistema, dintre del directori home de l'usuari: **/home/nomusuari/.profile**. Quan obrim el fitxer, podrem veure que, per defecte, la línia que especifica UMASK dintre d'aquest fitxer **està comentada**, es a dir, que no fa efecte. Per tant, si no canviem aquest valor manualmetn als fitxers dels usuaris, aquests faran servir l'UMASK especificat a **/etc/login.defs**.
+
+<img width="805" height="276" alt="image" src="https://github.com/user-attachments/assets/d165dc45-5e71-4b6f-a1b4-c549898ad372" />
 
 
-
-
-
-
-
-### 3 - 
+### 3 - Permisos especials
 
 
 
