@@ -198,6 +198,61 @@ Finalment, tenim els permisos per a la resta d'usuaris del sistema. Aquests són
 
 Aquests permisos es representen amb números, 1 per a cada combinació, que surt de la suma dels 3 valors assignats. Representats a la taula següent es veuen les possibles combinacions, entenent que **x** -> 1 **w** -> 2 i **r** -> 4. Per tant, si volem donar permisos totals al propietari, grup del propietari i a la resta d'usuaris del sistema, posarem 777.
 
+| valor numèric | representació en lletres |
+| :-----------: | :----------------------: |
+|       0       |         ---              |
+|       1       |         --x              |                      
+|       2       |         -w-              |
+|       3       |         -wx              |
+|       4       |         r--              |
+|       5       |         r-x              |  
+|       6       |         rw-              |
+|       7       |         rxw              |
+
+### 2 - UMASK
+
+UMASK determina **els permisos per defecte que tindran els fitxers i directoris** quan un usuari els crea. Funciona com una màscara de bits que **“resta”** permisos dels valors per defecte:
+
+
+Permisos base per defecte:
+
+Fitxers: 666 (rw-rw-rw-)
+
+Directoris: 777 (rwxrwxrwx)
+
+UMASK substrau permisos dels valors base per obtenir els permisos finals.
+
+**Exemple:**
+
+```UMASK = 022
+
+Fitxers creats: 666 – 022 = 644 (rw-r--r--)
+
+Directoris creats: 777 – 022 = 755 (rwxr-xr-x)
+```
+
+El sistema ens permet gestionar el valor d'UMASK per a tots els usuaris del sistema, però també podem modificar manualment el valor d'un usuari en concret. Per a modificar el valor per defecte d'UMASK per a tots els usuaris del sistema, accedirem a **/etc/login.defs**. Allà, trobarem el valor UMASK que el sistema assigna per defecte a tots els usuaris, i el podrem modificar lliurement.
+
+
+
+
+
+
+
+### 3 - 
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### 4 - ACL
 
 Primer, executem **getacl numeros** per a veure permisos i excepcions d'ACL aplicades al directori **numeros**
