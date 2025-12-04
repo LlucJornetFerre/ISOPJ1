@@ -293,4 +293,94 @@ Finalment, podem esborrar les excepcions aplicades sobre un directori o fitxer, 
 
 
 ## Còpies de seguretat i automatització de tasques
+1. Teoria Còpies de Seguretat
+2. Teoria comandes Backups
+   1. cp: És una còpia simple no intel·ligent, que només transfereix fitxers localment.És molt simple d'utilitzar, però no optimitza.
+   2. rsync: És una eina intel·ligent que només còpia els fitxers modificats i la sincronització pot ser local o en remot via ssh.
+   3. dd: És una eina per a clonar discos o particions i no és intel·ligent | copia tots els sectors.
+3. Pràctica comandes Backups
+   1. cp
+   2. rsync
+   3. dd
+4. Pràctica programes Backups
+   1. Deja-up
+   2. Duplicity
+5. Teoria Automatització scripts, cron i anacron
+6. Pràctica automatització
+   1. cron
+   2. anacron
+  
+Documentar
+Que es una còpia
+que es una imtge (iso)
+Que es una instantania
+
+Tipus de còpies (mini taula d'avantatges, i com funcionen)
+
+completa 
+diferencial
+Incremental
+
+
+## Foto discs màquina virtual
+<img width="251" height="204" alt="image" src="https://github.com/user-attachments/assets/1029c9fe-b306-4c2c-8aa7-c40e04031c1e" />
+
+Identificar els discs
+
+fdisk /dev/discidentificat i creem una partició
+
+fdisk /dev/discidentificar2 i creem una partició
+
+mkfs.ext4 /dev/discidentificat 
+
+mkfs.ext4 /dev/discidentificat2 
+
+Tornem a identificar els discs, i comprovem que apareixen les particions creades.
+
+cd Documents
+
+mkdir prova
+
+touch prova2
+
+cd /var
+
+mkdir copies
+
+mount -t ext4 /dev/discidentificar /var/copies
+
+cp -R /home/nomusuari/Dcuments/* /var/copies/
+
+ls copies/
+
+touch /home/nomusuari/Documents/hola 
+
+rm -r /home/nomusuari/Documents/prova
+
+cp -R /home/nomusuari/Dcuments/* /var/copies/
+
+ls copies/
+
+mkdir /home/nomusuari/Documents/adeu
+
+rm -r /home/nomusuari/Documents/hola
+
+rsync -av --delete /home/nomusuari/Documents/ /var/copies/
+
+ls
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Quotes d'usuaris
