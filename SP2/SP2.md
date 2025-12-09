@@ -307,8 +307,8 @@ Finalment, podem esborrar les excepcions aplicades sobre un directori o fitxer, 
    2. Duplicity
 5. Teoria Automatització scripts, cron i anacron
 6. Pràctica automatització
-   1. cron
-   2. anacron
+   1. cron: Executa tasques programades en una data i hora específiques. Si el sistema està apagat, la tasca es perd. Es ideal per a tasques en dates i hores concretes i per a accions específiques d'un usuari.
+   2. anacron: És ideal per a executas tasques periòdiques on no cal una data i hora específiques. Es fa servir per a tasques de manteniment generals del sistema (neteja de temporals, etc). No requereix que el sistema estigui obert, ja que s'executa quan el sistema s'engega; no perd les tasques quan el sistema s'apaga, com cron.
   
 Documentar
 Que es una còpia
@@ -369,7 +369,19 @@ rsync -av --delete /home/nomusuari/Documents/ /var/copies/
 
 ls
 
+ls /var/copies/
 
+cd /var/
+
+mkdir clonacio
+
+mount -t ext4 /dev/sdc1 /var/clonacio
+
+dd if=/dev/sdb1 of=/dev/sdc1 bs=1M status=progress
+
+md5sum /dev/sdb1 /dev/sdc1
+
+ls clonacio
 
 
 
