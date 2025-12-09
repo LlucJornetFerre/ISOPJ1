@@ -383,7 +383,7 @@ md5sum /dev/sdb1 /dev/sdc1
 
 ls clonacio
 
-## Configuració de crontab i anacrontab
+## Configuració de crontab
 
 Podem crear tasques de cron modificant **/etc/crontab**. Les tasques que programem dintre d'aquest fitxer, **s'apliquen a tots els usuaris del sistema**. Per a posar una tasca de crontab només a un usuari, hem de fer **crontab -e -u nomusuari**.
 
@@ -406,6 +406,25 @@ A continuació, obrim **/etc/crontab**, i programem una tasca per a que tots els
 Ens esperem a que arribi l'hora que hem programat per a que crontab executi l'scrip. Confirmem que el crontab s'ha executat, tot i que l'script tenia un error, i l'arxiu no s'ha comprimit amb el nom esperat.
 
 <img width="122" height="120" alt="image" src="https://github.com/user-attachments/assets/5544a812-63df-48b0-ab97-b436e6826a2b" />
+
+## Configuració Anacrontab
+
+Primer, tornem al crontab, i comentem la línia que executa l'script de l'exercici anterior.
+
+<img width="476" height="57" alt="image" src="https://github.com/user-attachments/assets/0248ca80-cb36-4bd5-bba0-e1f1b0d9ca0d" />
+
+Tot seguit, posarem l'script de l'exercici a **/etc/cron.daily/** amb **cp lluc.sh /etc/cron.daily/copies**. 
+
+<img width="953" height="95" alt="image" src="https://github.com/user-attachments/assets/b8cc3142-a1ad-4a0f-b4ee-2d0a8fe43f48" />
+
+Ara, anem a **/etc/anacrontab**. Aqui, podem veure que anacrontab executa cron.daily **5 minuts després d'engegar l'equip.** Canviarem aquest 5 per un 1.
+
+<img width="771" height="107" alt="image" src="https://github.com/user-attachments/assets/5d57b33b-fbe0-47ba-b3a5-58985b6f83cc" />
+
+Finalment, comprovem que anacron executa la tasca. Per a poder fer-ho, però, cal eliminar la marca que anacron **posa diàriament una vegada ha executat cron.daily**. Podem trobar-la a **/var/spool/anacron/cron.daily**, i si obrim el fitxer amb nano, podrem esborrar-la. Com a extra, podem veure que la marca és la data del dia en format YYYY/MM/DD.
+
+<img width="1136" height="99" alt="image" src="https://github.com/user-attachments/assets/cd9fd3f3-9f14-4e59-a066-c0ce68ef1a5f" />
+
 
 
 
