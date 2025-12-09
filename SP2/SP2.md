@@ -325,17 +325,26 @@ Incremental
 ## Foto discs màquina virtual
 <img width="251" height="204" alt="image" src="https://github.com/user-attachments/assets/1029c9fe-b306-4c2c-8aa7-c40e04031c1e" />
 
-Identificar els discs
+Identifiquem els discs amb **lsblk**.
 
-fdisk /dev/discidentificat i creem una partició
+<img width="388" height="162" alt="image" src="https://github.com/user-attachments/assets/f3e533ef-0385-41d5-81c9-1c962cf065e0" />
 
-fdisk /dev/discidentificar2 i creem una partició
+Tot seguit, particionem els discs **sdb i sdc** amb **fdisk /dev/sdb** **fdisk /dev/sdc**
 
-mkfs.ext4 /dev/discidentificat 
+<img width="788" height="722" alt="image" src="https://github.com/user-attachments/assets/e9aec68f-9812-497f-baa0-271947fc122a" />
 
-mkfs.ext4 /dev/discidentificat2 
+<img width="788" height="580" alt="image" src="https://github.com/user-attachments/assets/c6e4a22c-00a5-455e-9e01-819a1c2515d8" />
 
 Tornem a identificar els discs, i comprovem que apareixen les particions creades.
+
+
+Amb els discs particionats, procedim a muntar-los amb **mkfs.ext4 /dev/sdb mkfs.ext4 /dev/sdc**.
+
+<img width="594" height="342" alt="image" src="https://github.com/user-attachments/assets/58658871-09de-4ba3-92cc-599a9da4d89d" />
+
+<img width="594" height="342" alt="image" src="https://github.com/user-attachments/assets/29589a17-4946-4e0c-8586-cedcc17aae2e" />
+
+
 
 cd Documents
 
@@ -424,8 +433,5 @@ Ara, anem a **/etc/anacrontab**. Aqui, podem veure que anacrontab executa cron.d
 Finalment, comprovem que anacron executa la tasca. Per a poder fer-ho, però, cal eliminar la marca que anacron **posa diàriament una vegada ha executat cron.daily**. Podem trobar-la a **/var/spool/anacron/cron.daily**, i si obrim el fitxer amb nano, podrem esborrar-la. Com a extra, podem veure que la marca és la data del dia en format YYYY/MM/DD.
 
 <img width="1136" height="99" alt="image" src="https://github.com/user-attachments/assets/cd9fd3f3-9f14-4e59-a066-c0ce68ef1a5f" />
-
-
-
 
 ## Quotes d'usuaris
