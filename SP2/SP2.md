@@ -383,15 +383,29 @@ md5sum /dev/sdb1 /dev/sdc1
 
 ls clonacio
 
+## Configuració de crontab i anacrontab
 
+Podem crear tasques de cron modificant **/etc/crontab**. Les tasques que programem dintre d'aquest fitxer, **s'apliquen a tots els usuaris del sistema**. Per a posar una tasca de crontab només a un usuari, hem de fer **crontab -e -u nomusuari**.
 
+Si anem a **/etc**, i executem **ls | grep cron**. Aquests fitxers els fa servir anacron. Per exemple, si posem un script a **cron.daily**, s'executarà cada dia. Podem veure que anacron executa aquests fitxers a **/etc/anacrontab**
 
+<img width="363" height="66" alt="image" src="https://github.com/user-attachments/assets/a25b6a28-0498-4f58-a700-3e7cdb6b60ba" />
 
+Ara, anem a /home/usuari, i creem un script de còpies amb **touch copies.sh**.
 
+<img width="1047" height="118" alt="image" src="https://github.com/user-attachments/assets/09e79e06-7760-49a0-8daf-466349fe24d0" />
 
+Tot seguit, li donem permisos d'execució a l'script amb **chmod +x lluc.sh**
 
+<img width="627" height="94" alt="image" src="https://github.com/user-attachments/assets/c643b94e-8f67-435c-80f0-a35f0c0974e7" />
 
+A continuació, obrim **/etc/crontab**, i programem una tasca per a que tots els 9 de Desembre a les 13:35, s'executi com a **root** l'script /home/alumnat/lluc.sh
 
+<img width="1027" height="162" alt="image" src="https://github.com/user-attachments/assets/3431fd92-6eea-426d-a07e-aaf715db7863" />
+
+Ens esperem a que arribi l'hora que hem programat per a que crontab executi l'scrip. Confirmem que el crontab s'ha executat, tot i que l'script tenia un error, i l'arxiu no s'ha comprimit amb el nom esperat.
+
+<img width="122" height="120" alt="image" src="https://github.com/user-attachments/assets/5544a812-63df-48b0-ab97-b436e6826a2b" />
 
 
 
