@@ -344,8 +344,6 @@ Amb els discs particionats, procedim a muntar-los amb **mkfs.ext4 /dev/sdb mkfs.
 
 <img width="594" height="342" alt="image" src="https://github.com/user-attachments/assets/29589a17-4946-4e0c-8586-cedcc17aae2e" />
 
-
-
 cd Documents
 
 mkdir prova
@@ -355,6 +353,10 @@ touch prova2
 cd /var
 
 mkdir copies
+
+Ara, creem un parell d'elements de prova a **Documents**, i una carpeta **copies** a **/var**.
+
+<img width="440" height="94" alt="image" src="https://github.com/user-attachments/assets/070d1fdb-8d62-410c-85a9-235fa38b6dd1" />
 
 mount -t ext4 /dev/discidentificar /var/copies
 
