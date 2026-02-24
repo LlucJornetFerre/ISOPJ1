@@ -140,6 +140,123 @@ Si volem finalitzar un procés en Linux, podem utilitzar la comanda kill, que pe
 | Interrupció (Ctrl+C)       | SIGINT  | Envia la mateixa senyal que es genera amb Ctrl+C                          | `kill -2 PID`      |
 | Avortament                 | SIGABRT | Indica un error greu i pot generar un fitxer de diagnòstic (core dump)    | `kill -6 PID`      |
 
+Podem provar la comanda **kill** obtenint el **PID** d'un programa, i matant-lo.
+
+<img width="1113" height="164" alt="image" src="https://github.com/user-attachments/assets/6618eb61-97b6-4770-877c-bab2a6562936" />
+
+També podem fer servir **pidof** per a obtenir el **PID** del procés que vulguem finalitzar.
+
+<img width="539" height="72" alt="image" src="https://github.com/user-attachments/assets/e0c5f6e5-8da0-4b05-8fec-4514e06ede76" />
+
+**top** és una altra de les comandes que ens permet veure tots els processos actius, ordenats segons el seu consum de recursos del sistema.
+
+<img width="1003" height="570" alt="image" src="https://github.com/user-attachments/assets/ecd6217b-488d-435e-8922-079cab73b893" />
+
+A la captura de dalt podem veure que **top** ens ofereix la següent informació:
+
+**load average:** indica la càrrega mitjana del sistema durant els últims 1, 5 i 15 minuts.
+
+**Tasks:** mostra el nombre total de processos i el seu estat (en execució, en espera, aturats o zombis).
+
+**%Cpu(s):** reflecteix el percentatge d’ús de la CPU, diferenciant entre temps d’usuari (user), del sistema (system), inactiu (idle), etc.
+
+**Mem i Swap:** detalla la memòria RAM i la memòria d’intercanvi (swap), especificant quanta n’hi ha de total, utilitzada i disponible.
+
+| Columna  | Descripció |
+|----------|------------|
+| PID      | Número identificador únic assignat al procés. |
+| USER     | Nom de l’usuari que ha llançat el procés. |
+| PR       | Nivell de prioritat del procés (valors més baixos o negatius indiquen més prioritat). |
+| NI       | Valor *nice* que ajusta la prioritat, amb un rang entre -20 (màxima prioritat) i +19 (mínima). |
+| VIRT     | Quantitat total de memòria virtual que el procés té reservada. |
+| RES      | Memòria física (RAM) que el procés està utilitzant realment. |
+| SHR      | Part de la memòria que es comparteix amb altres processos. |
+| S        | Estat actual del procés (per exemple: R = executant-se, S = en espera, Z = zombi). |
+| %CPU     | Percentatge de temps de CPU que està consumint el procés. |
+| %MEM     | Percentatge de memòria RAM que està utilitzant. |
+| TIME+    | Temps acumulat de CPU que el procés ha consumit des que es va iniciar. |
+| COMMAND  | Nom o ruta del programa associat al procés. |
+
+Podem trobar els següents estats dels processos:
+
+**Running (R)**: El procés s’està executant en aquell moment o està preparat per utilitzar la CPU tan aviat com el planificador li assigni temps.
+
+**Waiting (W):** El procés es troba a l’espera que es compleixi alguna condició, com ara la disponibilitat d’un recurs o la finalització d’una operació.
+
+**Stopped (S):** El procés està suspès, habitualment perquè ha rebut un senyal; és freqüent en situacions de depuració.
+
+**Zombie (Z):** El procés ja ha acabat la seva execució, però encara manté una entrada a la taula de processos fins que el procés pare en reculli l’estat.
+
+**Traced/Stopped (T):** Procés aturat per una ordre de depuració o després de rebre un senyal específic de control.
+
+**Uninterruptible sleep (D):** Procés en espera d’una operació d’entrada/sortida (I/O); no pot ser interromput fins que aquesta operació finalitzi.
+
+**Idle (I):** Procés completament inactiu, sense ús de CPU; és habitual en alguns fils interns del nucli del sistema.
+
+Un cop hem executat la comanda, podem fer servir les fletxes del teclat per a moure'ns dintre de la llista de processos, i tecla **k** per a matar el procés sobre el qual estem, o escriure el **PID** del procés. Per a sortir de la comanda, hem d'executar la combinació de tecles **Ctrl + C**, o tancar el terminal.
+
+<img width="809" height="178" alt="image" src="https://github.com/user-attachments/assets/448af3fe-549b-4ebc-b602-1558b1c3957c" />
+
+<img width="809" height="559" alt="image" src="https://github.com/user-attachments/assets/41e66152-c32f-4d32-943b-0e884a19ae6c" />
+
+En la columna **PR**, un valor més baix (incloent números negatius) indica **major prioritat**. Aquest valor no es pot modificar directament, ja que el determina el sistema segons el planificador i el valor *nice* associat.
+
+El que sí podem ajustar és el **NI (nice value)**:
+
+- Si **augmentem el NI**, la prioritat del procés **disminueix**.
+- Si **disminuïm el NI**, la prioritat **augmenta**.
+- El rang del *nice* va de **-20** (prioritat més alta) a **+19** (prioritat més baixa).
+
+Per donar més prioritat a un procés que ja està en execució, podem utilitzar la comanda:
+
+**renice -n -19 -p PID**
+
+- **-n**: Indica el nou valor de "niceness".
+- **-19**: El valor que volem establir.
+- **-p**: Indiquem a la comanda que farem servir un **PID** per a indicar-li quin procés volem afectar.
+
+<img width="727" height="179" alt="image" src="https://github.com/user-attachments/assets/9bb2188a-18b8-4765-8463-6b0e0282f3e4" />
+
+Podem observar els canvis amb **htop** quan fem canvis a un procés.
+
+<img width="2546" height="1410" alt="image" src="https://github.com/user-attachments/assets/5ee1245b-8749-4510-8c04-f6eca1159616" />
+
+A Linux, un procés pot executar-se en **primer pla (foreground)** o en **segon pla (background)**.
+
+- **Primer pla**
+El procés ocupa la terminal i impedeix escriure altres ordres fins que finalitza o es trasllada al segon pla.
+
+- **Segon pla**
+El procés continua executant-se, però la terminal queda disponible per introduir altres ordres.
+
+Quan executem una ordre, podem utilitzar **Ctrl + Z** per aturar-la temporalment (només durant la sessió). El procés queda suspès i es pot veure com a treball en segon pla amb la comanda **jobs**, que mostra els processos en background o en estat aturat.
+
+En eines com **top** o **htop**, l’estat d’un procés aturat es representa amb la lletra **T**, indicant que no està en execució activa.
+
+Si posem en pausa un procés **(Ctrl + Z mentre aquest s'executa)**, podem observar que encara apareix com a **job**, i el podem veure amb **htop**, amb una lletra **T**, es a dir, aturat. Podem 
+
+<img width="404" height="226" alt="image" src="https://github.com/user-attachments/assets/8aaa443b-dc74-4db5-8b62-713932ae8465" />
+
+<img width="774" height="105" alt="image" src="https://github.com/user-attachments/assets/877e6be5-58c7-4ec8-807f-be2a4bcdfed5" />
+
+Podem fer que els processos aturats es resumeixin amb **fg %ID**. 
+
+<img width="258" height="139" alt="image" src="https://github.com/user-attachments/assets/80de64c0-94c6-4066-98de-93c55d679f3d" />
+
+També podem fer servir **bg**. Aquest resumeix un procés suspès (STOP).
+
+<img width="479" height="266" alt="image" src="https://github.com/user-attachments/assets/51700a68-bd97-4adf-9675-249306f4b31c" />
+
+Podem iniciar processos en segon pla directament, per a conservar el terminal lliure fent servir el **metacaràcter &**, que serveix per a posar processos en segon pla.
+
+<img width="802" height="470" alt="image" src="https://github.com/user-attachments/assets/c129cedb-ff48-4c32-9625-35ac2ecf8052" />
+
+Finalment, tenim **htop**. Htop és una versió més "user-friendly" de **top**, ja que és interactiu, bastant intuitïu i útil. Inclou gairebé tota la informació que les altres comandes sense necessitat d'afegir arguments, i també té colors per a destacar informació important.
+
+<img width="2540" height="1365" alt="image" src="https://github.com/user-attachments/assets/3aec7833-702c-42e0-8636-04eaa515e943" />
+
+
+
 ## Gestió d'usuaris i grups i permisos
 
 ### Fitxers importants del sistema.
