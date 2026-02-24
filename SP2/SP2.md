@@ -72,7 +72,38 @@ Finalment, veiem que, encara que s'ha reinciat l'equip, la comanda s'executa aut
 
 ## Gestió de processos
 
-El saltem, de moment.
+Un procés és un programa en execució. És a dir, quan un programa (com ara un navegador o un editor de text) s’està executant, el sistema operatiu crea un procés per gestionar-lo. Dintre del sistema, són identificats per un **process ID (PID)**, que permet al sistema i a l'usuari identificar-los, en cas de voler interactuar amb aquests. El sistema operatiu s'encarrega de crear i eliminar-los, i també els assigna recursos (memòria) i temps de la CPU.
+
+Com a usuaris, tenim unes quantes èines a la nostra disposició per a interactuar amb els processos, com ara:
+
+- **ps** Mostra els processos actius.
+
+- **ps aux**: Mostra tots els processos del sistema amb detall.
+
+- **kill PID**: Envia un senyal a un procés.
+
+- **kill -9 PID**: Força la finalització.
+
+- **nice**: Inicia un procés amb una prioritat específica.
+
+- **renice**: Canvia la prioritat d’un procés en execució.
+
+- **pidof nom**: Mostra el PID d’un procés.
+
+- **uptime**: Mostra el temps que el sistema porta en funcionament.
+
+**pstree** és una d'aquestes comandes. La seva funció principal és mostrar totes els processos actius del sistema en forma d'arbre, tot i que podem fer servir **arguments** per a filtrar el resultat de la comanda, o fins i tot modificar la informació que ens dona de cada procés.
+
+**-p**:	Mostra el PID de cada procés.
+**-u**: Mostra el propietari de cada procés.
+**-h**:	Destaca el procés actual i els seus predecessors.
+**-n**:	Ordena segons el PID dintre de cada arbre.
+**-a**:	Mostra els arguments complets del procés.
+
+Exemple d'execució de la comanda **pstree** amb els arguments **-p i -h** sobre els processos de l'usuari **alumnat**.
+
+<img width="747" height="885" alt="image" src="https://github.com/user-attachments/assets/099fe11c-1bd4-4c46-ab8f-e88a91fc76d5" />
+
 
 ## Gestió d'usuaris i grups i permisos
 
