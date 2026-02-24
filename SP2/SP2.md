@@ -104,6 +104,41 @@ Exemple d'execució de la comanda **pstree** amb els arguments **-p i -h** sobre
 
 <img width="747" height="885" alt="image" src="https://github.com/user-attachments/assets/099fe11c-1bd4-4c46-ab8f-e88a91fc76d5" />
 
+Executar la comanda sense arguments com a superusuari ens mostra els processos d'aquest.
+
+<img width="807" height="467" alt="image" src="https://github.com/user-attachments/assets/a1c6090d-fb6c-4797-b849-42ff12397aaf" />
+
+També podem combinar **pstree** amb la comanda **grep**, per a filtrar els processos pel seu nom. Per exemple, provarem de filtrar els processos relacionats amb **Spotify**.
+
+<img width="784" height="182" alt="image" src="https://github.com/user-attachments/assets/1cacbf05-21ed-4536-9175-4ebc0c9cdedd" />
+
+**ps** és una altra de les comandes que fem servir per a interactuar amb els processos del sistema. Aquesta ens permet veure tots els processos actius del sistema relacionats amb l'usuari. També ofereix informació dels processos llistats, com ara el seu **PID**, **el terminal on s'ha executat** i **el temps que porta actiu**. Els principals arguments que acompanyen aquesta comanda són:
+
+**-a**: Mostra tots els processos actuals, no només els del terminal on s'ha executat la comanda.
+**-u**: Mostra informació en format d’usuari, amb columnes com CPU, MEM, USER.
+**-x**: Inclou altres processos que no tenen un terminal associat (serveis i daemons).
+**-e**: Mostra tots els processos del sistema, similar a -A.
+**-o**: Permet a l'usuari personalitzar com es mostra la informació de la sortida (columnes).
+
+Una combinació d'arguments és **ps -aux**, que mostra molta informació important per a l'usuari, com ara tots els processos del sistema, processos que no estan relacionats a un terminal i informació en format d'usuari.
+
+<img width="810" height="424" alt="image" src="https://github.com/user-attachments/assets/bdcc3f12-852c-46a5-82b3-f04618cfdde8" />
+
+Podem aplicar filtres per a obtenir resultats més concrets amb **grep**.
+
+<img width="1756" height="119" alt="image" src="https://github.com/user-attachments/assets/2946b2d7-8f3b-443e-bafe-8b800a97621f" />
+
+Si volem finalitzar un procés en Linux, podem utilitzar la comanda kill, que permet enviar diferents senyals segons el tipus d’acció que vulguem fer. Cada senyal té una funció concreta. Aquests són els tipus principals:
+
+| Tipus d’acció              | Senyal  | Explicació                                                                 | Exemple de comanda |
+|----------------------------|---------|----------------------------------------------------------------------------|--------------------|
+| Finalització normal        | SIGTERM | Indica al procés que acabi de manera ordenada, alliberant recursos        | `kill PID`         |
+| Finalització immediata     | SIGKILL | Tanca el procés a la força, sense donar-li opció a netejar recursos       | `kill -9 PID`      |
+| Recarregar configuració    | SIGHUP  | Fa que el procés torni a llegir el fitxer de configuració                 | `kill -1 PID`      |
+| Aturar execució            | SIGSTOP | Suspèn el procés temporalment                                              | `kill -STOP PID`   |
+| Reprendre execució         | SIGCONT | Reactiva un procés que estava aturat                                       | `kill -CONT PID`   |
+| Interrupció (Ctrl+C)       | SIGINT  | Envia la mateixa senyal que es genera amb Ctrl+C                          | `kill -2 PID`      |
+| Avortament                 | SIGABRT | Indica un error greu i pot generar un fitxer de diagnòstic (core dump)    | `kill -6 PID`      |
 
 ## Gestió d'usuaris i grups i permisos
 
