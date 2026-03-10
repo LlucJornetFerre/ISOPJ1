@@ -51,4 +51,12 @@ Per evitar que ocupin massa espai, Linux utilitza logrotate, que permet:
 
 - Crear nous fitxers de log
 
-- Els fitxers de configuració de rotació es troben a:
+Els fitxers de configuració de rotació es troben a **/etc/logrotate.d/**.
+
+Per veure els fitxers disponibles: **ls /etc/logrotate.d/**.
+
+Cada fitxer defineix com es gestionen els logs d’un servei concret.
+
+## Exemple de configuració de rotació
+
+
