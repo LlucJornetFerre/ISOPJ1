@@ -83,9 +83,15 @@ foto
 
 Aquí podem modificar opcions com:
 
-rotate 4
-weekly
+rotate 7
+daily
 compress
 missingok
 
 <img width="474" height="404" alt="image" src="https://github.com/user-attachments/assets/264f44f7-7497-4112-af41-81a9e4a4340b" />
+
+Per a aplicar els canvis fets, executem la comanda: **systemctl restartsyslog**.
+
+<img width="557" height="55" alt="image" src="https://github.com/user-attachments/assets/1869a991-228e-4b42-8dcc-f8e423a68708" />
+
+## Enviament de logs a un altre servidor
