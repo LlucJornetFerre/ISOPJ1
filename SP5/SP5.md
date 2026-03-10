@@ -25,3 +25,30 @@ Els logs del sistema són fitxers que registren esdeveniments del sistema operat
 Normalment es troben al directori: **/var/log**.
 
 Per veure el contingut d’aquest directori: **cd /var/log** i **ls**.
+
+Cada servei pot tenir el seu propi fitxer de registre.
+
+## Consultar el fitxer syslog
+
+El fitxer syslog conté informació general del sistema, com:
+
+- Errors
+
+- Missatges del kernel
+
+- Activitat de serveis
+
+Per veure el contingut del syslog podem executar **cat /var/log/syslog**
+
+## Rotació de logs
+
+Els logs poden créixer molt amb el temps.
+Per evitar que ocupin massa espai, Linux utilitza logrotate, que permet:
+
+- Comprimir logs antics
+
+- Eliminar logs vells
+
+- Crear nous fitxers de log
+
+- Els fitxers de configuració de rotació es troben a:
