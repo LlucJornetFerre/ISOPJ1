@@ -40,6 +40,8 @@ El fitxer syslog conté informació general del sistema, com:
 
 Per veure el contingut del syslog podem executar **cat /var/log/syslog**
 
+<img width="1920" height="863" alt="image" src="https://github.com/user-attachments/assets/c0b7975c-b44b-45bd-833e-011c309c4072" />
+
 ## Rotació de logs
 
 Els logs poden créixer molt amb el temps.
@@ -55,8 +57,35 @@ Els fitxers de configuració de rotació es troben a **/etc/logrotate.d/**.
 
 Per veure els fitxers disponibles: **ls /etc/logrotate.d/**.
 
+<img width="1617" height="71" alt="image" src="https://github.com/user-attachments/assets/037a504f-4341-4c9b-8344-456dbb3d6549" />
+
 Cada fitxer defineix com es gestionen els logs d’un servei concret.
 
 ## Exemple de configuració de rotació
 
+Podem veure la configuració d’un servei amb **cat /etc/logrotate.d/rsyslog**.
 
+<img width="546" height="421" alt="image" src="https://github.com/user-attachments/assets/f9a90c12-413a-4280-9753-4532324b3c63" />
+
+Aquest fitxer defineix:
+
+- cada quant es roten els logs
+
+- quants fitxers es conserven
+
+- si es comprimeixen o no
+
+## Modificar la configuració de logrotate
+
+Per editar un fitxer de configuració **sudo nano /etc/logrotate.d/rsyslog**.
+
+foto
+
+Aquí podem modificar opcions com:
+
+rotate 4
+weekly
+compress
+missingok
+
+<img width="474" height="404" alt="image" src="https://github.com/user-attachments/assets/264f44f7-7497-4112-af41-81a9e4a4340b" />
