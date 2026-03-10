@@ -1,4 +1,7 @@
 # Sprint 5: Monitoratge, Auditories i Programari Client/Servidor
+
+Lluc i Ivan
+
 ## Directoris importants
 
 En sistemes Linux hi ha diversos directoris que contenen informació essencial sobre el funcionament del sistema.
