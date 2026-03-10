@@ -103,3 +103,40 @@ Un exercici habitual és configurar **dues màquines Ubuntu** perquè:
 - l’altra **els rebi**
 
 ### Configurar el servidor de logs
+
+Editar el fitxer de configuració: **sudo nano /etc/rsyslog.conf**.
+
+I afegim:
+
+**module(load="imudp")
+input(type="imudp" port="514")**
+
+<img width="1092" height="480" alt="image" src="https://github.com/user-attachments/assets/c8b25677-f91b-41a3-b45c-dffc9af847e8" />
+
+Finalment, reiniciem el servei i comprovem l'estat.
+
+**sudo systemctl restart rsyslog**
+
+<img width="1435" height="529" alt="image" src="https://github.com/user-attachments/assets/bc40960a-9fff-4f3f-8b44-41bd707c91ee" />
+
+Editar: **sudo nano /etc/rsyslog.conf**
+
+I afegim ***.* @IP_SERVIDOR:514**
+
+<img width="760" height="154" alt="image" src="https://github.com/user-attachments/assets/671dd98c-700c-43e3-b748-ca291cef0590" />
+
+I reiniciem el sistema amb **systemctl restart syslog**.
+
+<img width="1126" height="385" alt="image" src="https://github.com/user-attachments/assets/0bcc2b83-2fa9-425e-9ee4-c0f778b77ab5" />
+
+## Comprovació de funcionament.
+
+Creem un log manualment al client amb **logger "Missatge de prova"**.
+
+<img width="426" height="34" alt="image" src="https://github.com/user-attachments/assets/646745d2-c839-4989-ada3-8f01130d6fe1" />
+
+Ara, comprovem el contingut del fitxer **/var/log/syslog**.
+
+**cat /var/log/syslog | grep Missatge**.
+
+<img width="639" height="67" alt="image" src="https://github.com/user-attachments/assets/452c17d3-4ea8-4df4-96a1-a0f047b98af4" />
