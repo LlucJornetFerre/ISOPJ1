@@ -143,3 +143,46 @@ Ara, comprovem el contingut del fitxer **/var/log/syslog**.
 **cat /var/log/syslog | grep Missatge**.
 
 <img width="639" height="67" alt="image" src="https://github.com/user-attachments/assets/452c17d3-4ea8-4df4-96a1-a0f047b98af4" />
+
+
+
+# Servidor d'actualitzacions
+
+## Configuració del servidor
+
+Un servidor d'actualitzacions és un servidor que es descarrega un repositori d'internet per a després servir-lo a clients de la xarxa, de manera que, en lloc de descarregar-lo d'internet, es connectin al servidor i el descarreguin d'allà. Es pot fer amb repositoris molt pesats.
+
+(Captura) apt install apache2
+
+(Captura) apt install apt-mirror
+
+nano /etc/apt/mirror.list
+
+Comentem tots els repositoris per defecte, i afegim el repositori que nosaltres volem.
+
+<img width="1096" height="556" alt="image" src="https://github.com/user-attachments/assets/1bf00a88-5624-4c6e-86c4-b4928aede247" />
+
+(captura) apt-mirror
+
+<img width="1098" height="960" alt="image" src="https://github.com/user-attachments/assets/97cf0cba-c26b-4ff8-ae78-4163d9c9a3f4" />
+
+Creem un enllaç simbòlic.
+
+<img width="925" height="140" alt="image" src="https://github.com/user-attachments/assets/e1ec64a1-3985-40c0-b3c4-b7c9fa0cc536" />
+
+## Configuració del client
+
+(captura) ping IP del server
+
+(captura) nano /etc/apt/sources.list
+
+deb [arch=amd64] http://IP.DEL.SERVER/dl.google.com/linux/chrome/deb/ stable main
+
+(captura) wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+
+(captura) apt install google-chrome-stable
+
+(captura de google chrome instal·lat al sistema) 
+
+
+### Repetri l'activitat amb un altre paquet
