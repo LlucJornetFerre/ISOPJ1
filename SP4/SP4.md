@@ -48,3 +48,26 @@ Per exemple:
 
 En un RAID 5 amb 4 discos, el sistema operatiu no veu 4 discs separats.
 Veu un únic volum gran, que es pot formatar i utilitzar com si fos un sol disc.
+
+## Implementació d'un RAID. 
+
+Obrim una màquina, amb 2 discs de 2 GB on crearem l'estructura RAID.
+
+Instal·lem el paquet mdadm
+
+<img width="496" height="291" alt="image" src="https://github.com/user-attachments/assets/df592500-7639-4ed7-9b41-f383bd179a1b" />
+
+Identifiquem els discs de 2GB amb **lsblk**, i els particionem.
+
+<img width="639" height="637" alt="image" src="https://github.com/user-attachments/assets/2dca7872-bd0b-4016-b27b-bab372a4623c" />
+
+Disc 1
+
+<img width="747" height="466" alt="image" src="https://github.com/user-attachments/assets/d4afb97e-e3fd-4513-8441-a62d63254e5b" />
+
+Disc 2
+
+<img width="747" height="468" alt="image" src="https://github.com/user-attachments/assets/546f27dc-0bbd-4b27-b128-fe805f9ec348" />
+
+
+
