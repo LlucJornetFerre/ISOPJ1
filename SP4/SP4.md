@@ -69,5 +69,24 @@ Disc 2
 
 <img width="747" height="468" alt="image" src="https://github.com/user-attachments/assets/546f27dc-0bbd-4b27-b128-fe805f9ec348" />
 
+Tornem a executar **lsblk**, i ara veurem les particions creades als discs.
 
+<img width="602" height="141" alt="image" src="https://github.com/user-attachments/assets/fcb437e1-0b81-42bd-8e60-e0e90b221f0b" />
 
+Ara, creem el directori on implementarem el **RAID**.
+
+<img width="485" height="201" alt="image" src="https://github.com/user-attachments/assets/e3335bf6-ed9f-43a8-a904-b8e99698484c" />
+
+I creem el **RAID**.
+
+Amb **--create /dev/md0** creem el raid.
+
+Amb **--level=1** indiquem el nivell del RAID que creem.
+
+Amb **--raid-devices=2 /dev/sdb1 /dev/sdc1** Indiquem quants dispositius conformen el **RAID**, i després posem la ruta d'aquests dintre del sistema.
+
+<img width="967" height="230" alt="image" src="https://github.com/user-attachments/assets/5bff6ad3-fb36-4062-8348-23ee6f0d6ea8" />
+
+Canviem el format del **RAID** a ext4.
+
+<img width="906" height="288" alt="image" src="https://github.com/user-attachments/assets/d76938e5-1806-4359-b5f4-fc89e6c48605" />
