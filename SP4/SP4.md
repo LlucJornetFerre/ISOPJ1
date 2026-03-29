@@ -125,4 +125,11 @@ Si tornem a executar la comanda de comprovació d'estat del **RAID**, veurem que
 
 <img width="697" height="618" alt="image" src="https://github.com/user-attachments/assets/3f4f90e8-18b0-4735-b209-8524ed966de1" />
 
+Comprovem que encara podem accedir als fitxers dintre del **RAID**, i tornem a activar el disc.
+
+<img width="470" height="107" alt="image" src="https://github.com/user-attachments/assets/dc2693aa-e4f7-42b9-a65e-48e035c6fe60" />
+
+Finalment, reactivem el disc i tornem a accedir al directori del **RAID**, veurem que els canvis fets quan un dels discs estava apagat s'han mantingut.
+
+<img width="695" height="799" alt="image" src="https://github.com/user-attachments/assets/3a4b0d0d-0ff5-42ba-9540-67adc8163f99" />
 
