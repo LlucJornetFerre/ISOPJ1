@@ -152,10 +152,6 @@ Ara, comprovem el contingut del fitxer **/var/log/syslog**.
 
 Un servidor d'actualitzacions és un servidor que es descarrega un repositori d'internet per a després servir-lo a clients de la xarxa, de manera que, en lloc de descarregar-lo d'internet, es connectin al servidor i el descarreguin d'allà. Es pot fer amb repositoris molt pesats.
 
-(Captura) apt install apache2
-
-(Captura) apt install apt-mirror
-
 nano /etc/apt/mirror.list
 
 Comentem tots els repositoris per defecte, i afegim el repositori que nosaltres volem.
@@ -172,17 +168,23 @@ Creem un enllaç simbòlic.
 
 ## Configuració del client
 
-(captura) ping IP del server
+Ping IP del server
 
-(captura) nano /etc/apt/sources.list
+<img width="625" height="248" alt="image" src="https://github.com/user-attachments/assets/7da6153b-6c86-4343-9e32-72f90a438759" />
 
-deb [arch=amd64] http://IP.DEL.SERVER/dl.google.com/linux/chrome/deb/ stable main
+Modifiquem el fitxer **sources.list** amb: **nano /etc/apt/sources.list**.
 
-(captura) wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+<img width="1361" height="736" alt="image" src="https://github.com/user-attachments/assets/a82e6139-8651-4443-91e0-1d0f5b6e7069" />
 
-(captura) apt install google-chrome-stable
+Executem **wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -**, i confirmem que tot està ben configurat.
 
-(captura de google chrome instal·lat al sistema) 
+<img width="1040" height="62" alt="image" src="https://github.com/user-attachments/assets/d2c28e95-fbf5-4be4-96f7-aab1dbc82953" />
 
+Instal·lem Google. 
 
-### Repetri l'activitat amb un altre paquet
+<img width="657" height="218" alt="image" src="https://github.com/user-attachments/assets/cd387f00-b578-496f-af9a-584869296c70" />
+
+Finalment, comprovem que s'ha instal·at correctament i el tenim disponible al sistema.
+
+<img width="1022" height="504" alt="image" src="https://github.com/user-attachments/assets/5e8dcdb3-ab3b-49ba-a7b0-2bf0eed9f039" />
+
