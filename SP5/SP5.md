@@ -188,3 +188,43 @@ Finalment, comprovem que s'ha instal·at correctament i el tenim disponible al s
 
 <img width="1022" height="504" alt="image" src="https://github.com/user-attachments/assets/5e8dcdb3-ab3b-49ba-a7b0-2bf0eed9f039" />
 
+### Monitoratge del sistema
+
+La monitorització del sistema a Ubuntu consisteix a observar i mesurar l'ús de recursos del vostre ordinador o servidor en temps real. És important saber si la màquina funciona correctament o si s'està saturant. Les eines de monitorització simplement llegeixen aquestes dades complexes en temps real i les converteixen en números, llistes o gràfics fàcils d'entendre.
+
+<img width="414" height="241" alt="image" src="https://github.com/user-attachments/assets/1e195ae4-8587-4332-98d3-2f96f40849db" />
+
+Aquí, podem veure els processos actius del sistema, amb informació rellevant d'aquests, com hem vist anteriorment.
+
+<img width="2553" height="1402" alt="image" src="https://github.com/user-attachments/assets/8a88c668-b349-4500-96ae-7153dd8e2228" />
+
+Si seleccionem un procés, veurem que podem interactuar amb aquest de diverses maneres, que també hem vist anteriorment, com ara aturar-lo, resumir-lo, esborrar-lo, etc.
+
+<img width="276" height="345" alt="image" src="https://github.com/user-attachments/assets/af80f1cf-da9f-4a3b-9ce1-6ddb9df6373b" />
+
+Per exemple, podem aturar-lo.
+
+<img width="386" height="241" alt="image" src="https://github.com/user-attachments/assets/dca7ecb3-f9fd-49df-b7ea-44f188a18f6e" />
+
+La informació rellevant que ens ofereix l'aplicació és:
+
+CPU
+
+<img width="657" height="192" alt="image" src="https://github.com/user-attachments/assets/ec719af1-7c21-4d06-bb97-51c487d69206" />
+
+RAM
+
+<img width="657" height="161" alt="image" src="https://github.com/user-attachments/assets/26266440-3b7d-4050-b31d-1d1ec2fd2940" />
+
+NETWORK
+
+<img width="657" height="146" alt="image" src="https://github.com/user-attachments/assets/5559813d-b6a1-4205-9d2a-08fc69745184" />
+
+DISK
+
+<img width="657" height="146" alt="image" src="https://github.com/user-attachments/assets/f2a3914a-797d-423b-a912-51a20e8e03bb" />
+
+Finalment, podem veure un resum de l'estat del sistema de fitxers, que mostra el nom, directori arrel, tipus de partició, capacitat total, capacitat disponible, i capacitat en ús del dispositiu, en "GB" i en "%".
+
+<img width="1537" height="103" alt="image" src="https://github.com/user-attachments/assets/5d41944e-4a8b-4ec5-aff5-33c95194afbb" />
+
