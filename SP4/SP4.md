@@ -90,3 +90,25 @@ Amb **--raid-devices=2 /dev/sdb1 /dev/sdc1** Indiquem quants dispositius conform
 Canviem el format del **RAID** a ext4.
 
 <img width="906" height="288" alt="image" src="https://github.com/user-attachments/assets/d76938e5-1806-4359-b5f4-fc89e6c48605" />
+
+Ara, amb la comanda **mdadm --detail /dev/md0**, podem veure l'estat del **RAID**.
+
+<img width="695" height="623" alt="image" src="https://github.com/user-attachments/assets/0ebf553d-b153-473c-bca2-962864aa1457" />
+
+Tot seguit, redirigirem la sortida que ens dona la primera comanda a l'arxiu **mdadm.conf**.
+
+<img width="903" height="92" alt="image" src="https://github.com/user-attachments/assets/cb628e37-231a-4b57-81d3-f4eccd41ecd6" />
+
+El següent pas és assegurar-nos de que el sistema faci el mount del raid automàticament cada vegada que el sistema s'inicia. Ho farem afegint la línia adient a **/etc/fstab**.
+
+<img width="937" height="296" alt="image" src="https://github.com/user-attachments/assets/ca840440-2c70-4923-9b87-c9dc776bfc47" />
+
+Montem el kernel i l'actualitzem.
+
+<img width="636" height="106" alt="image" src="https://github.com/user-attachments/assets/07224dde-08b1-4a53-942d-0ad96ef91dc2" />
+
+Finalment, reiniciem el dispositiu i comprovem que el RAID està funcionant correctament.
+
+<img width="694" height="619" alt="image" src="https://github.com/user-attachments/assets/f9c9e69b-436e-45dd-a53a-b15ec092edd0" />
+
+## Comprovació del funcionament del RAID
