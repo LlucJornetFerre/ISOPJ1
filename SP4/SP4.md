@@ -112,3 +112,17 @@ Finalment, reiniciem el dispositiu i comprovem que el RAID està funcionant corr
 <img width="694" height="619" alt="image" src="https://github.com/user-attachments/assets/f9c9e69b-436e-45dd-a53a-b15ec092edd0" />
 
 ## Comprovació del funcionament del RAID
+
+Per a fer les comprovacions, crearem fitxers dintre dels discs.
+
+<img width="478" height="173" alt="image" src="https://github.com/user-attachments/assets/41557ce0-72f4-4aff-9b27-e83d619305a1" />
+
+Ara, farem fallar el disc, i el treiem.
+
+<img width="596" height="109" alt="image" src="https://github.com/user-attachments/assets/3cdae192-2e9c-4a77-9d10-22f61169139d" />
+
+Si tornem a executar la comanda de comprovació d'estat del **RAID**, veurem que un dels discs està **removed**, i l'altre apareix com a **active**.
+
+<img width="697" height="618" alt="image" src="https://github.com/user-attachments/assets/3f4f90e8-18b0-4735-b209-8524ed966de1" />
+
+
