@@ -1,8 +1,8 @@
-### RAIDS
+# RAIDS
 
 ## Que és un RAID?
 
-# Un RAID (Redundant Array of Independent Disks) és una tecnologia que combina diversos discs durs en un sol sistema per millorar el rendiment, la seguretat de les dades o ambdues coses.
+### Un RAID (Redundant Array of Independent Disks) és una tecnologia que combina diversos discs durs en un sol sistema per millorar el rendiment, la seguretat de les dades o ambdues coses.
 
 Segons com es configuri, el RAID pot:
 
@@ -12,7 +12,7 @@ Equilibrar rendiment i seguretat segons el tipus de RAID utilitzat (com RAID 0, 
 
 En resum, el RAID s’utilitza per fer que els sistemes d’emmagatzematge siguin més ràpids, més segurs o més fiables.
 
-# RAID 1 (Mirroring o “mirall”)
+### RAID 1 (Mirroring o “mirall”)
 Com funciona
 
 RAID 1 consisteix a duplicar exactament les dades en dos (o més) discos.
