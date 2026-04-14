@@ -1,4 +1,4 @@
-<img width="913" height="682" alt="image" src="https://github.com/user-attachments/assets/84ed0645-5d59-4811-96e8-573609777669" /># Fase 1 - Instal·lació del sistema operatiu
+# Fase 1 - Instal·lació del sistema operatiu
 ## Pas 1 - Crear màquina virtual amb VirtualBox
 
 <img width="779" height="231" alt="image" src="https://github.com/user-attachments/assets/67b0b6ea-d3e2-4413-a398-12f68a264823" />
