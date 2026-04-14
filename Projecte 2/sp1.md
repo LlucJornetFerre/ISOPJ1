@@ -56,26 +56,77 @@
 
 <img width="559" height="464" alt="image" src="https://github.com/user-attachments/assets/54c39d16-5d95-4539-8f77-420b250a80e7" />
 
-foto
+<img width="732" height="465" alt="image" src="https://github.com/user-attachments/assets/8258cac2-d83f-4cd2-be0a-e174d86112b4" />
 
 # Fase 3 - Llicències de Windows
 ## Pas 11 - Obrir Configuració → Sistema → Activació
 
+<img width="316" height="694" alt="image" src="https://github.com/user-attachments/assets/55231260-d5fb-4164-8cb1-c2ab27e3a713" />
+
 ## Pas 12 - Veure si Windows està activat
+
+<img width="812" height="680" alt="image" src="https://github.com/user-attachments/assets/71006d16-e1d8-4533-ada8-1355009acd81" />
 
 ## Pas 13 - Executar al cmd: slmgr /xpr
 
+<img width="658" height="472" alt="image" src="https://github.com/user-attachments/assets/99b263c7-5b8b-47b8-a80f-5a1a7a03f101" />
+
 ## Pas 14 - Esbrinar llicenciament Windows i explicar breument
 
-**Retail (FPP)**	Llicència comercial comprada per separat. Pertany a l'usuari i no a la màquina.
-**OEM**	Preinstal·lada en equips nous. Queda vinculada permanentment a la placa base d'aquell PC.
-**Volum**	Orientada a empreses i institucions. Permet activar múltiples ordinadors simultàniament.
-**Digital**	Llicència vinculada al maquinari i al compte de Microsoft, substituint la clau tradicional.
-**Subscripció**: Pagament mensual o anual per usuari (ex. Windows 365), utilitzada principalment al núvol.
+**Retail (FPP)**	Llicència comercial que es compra a part. És de l'usuari i no de l'ordinador.
+**OEM**	Instal·lada per defecte en equips nous. Es vincula de manera permanent a la placa base d'aquell PC.
+**Volum**	Dissenyada per a empreses i institucions. Permet activar múltiples dispositius a la vegada.
+**Digital**	Llicència enllaçada al maquinari **i** al correu de Microsoft, és el substitut de la clau tradicional.
+**Subscripció**: Pagament indefinit (mensual, o anual, com ara Windows 365), utilitzada principalment al núvol.
 
 ## Pas 15 - Concultar preu aproximat d'una llicència Windows (web oficial o botigues)
 
+**Windows 11 Home**	145 €
+**Windows 11 Pro**	259 €
+
 # Fase 4 - Gestor d'arrencada
+## Pas 16 - Obrir Command Prompt com administrador
+
+<img width="812" height="733" alt="image" src="https://github.com/user-attachments/assets/ca455935-a19e-4419-b54d-8911cd69b699" />
+
+## Pas 17 - Executar bcdedit
+
+<img width="529" height="591" alt="image" src="https://github.com/user-attachments/assets/824badbe-5d4e-4e80-a715-2c7aec3a4837" />
+
+## Pas 18 - Identificar els blocs
+### Administrador de arranque de Windows (Boot Manager)
+
+<img width="503" height="232" alt="image" src="https://github.com/user-attachments/assets/f2e83f28-5582-4b4c-808c-962201f37728" />
+
+### Cargador de arranque de Windows (Boot Loader)
+
+<img width="504" height="274" alt="image" src="https://github.com/user-attachments/assets/ef84e714-38d6-4c08-88a3-a5e1a7a9d349" />
+
+## Pas 19 - Interpretar dades concretes
+
+Boot Manager
+default: {current} -> Aquest és el sistema que arrenca per defecte.
+timeout: 30 -> Aquest és el temps d'espera (en segons) abans d'arrencar automàticament.
+
+Boot Loader
+device: partition=C: -> És la partició on està instal·lat Windows.
+path: \WINDOWS\system32\winload.efi -> És el fitxer que carrega el sistema.
+description: Windows 11 -> És el nom del sistema operatiu.
+
+## Pas 20 - Respostes a les preguntes curtes
+Quin sistema s'està arrencant? S'està arrencant Windows 11 (es veu al paràmetre description del Cargador d'arrencada).
+
+A quin disc o partició està instal·lat? Està instal·lat a la partició C: (es veu al paràmetre device del Cargador d'arrencada).
+
+Quant temps espera abans d'arrencar? Espera 30 segons (es veu al paràmetre timeout de l'Administrador d'arrencada).
+
+Quin fitxer inicia Windows? L'inicia el fitxer \WINDOWS\system32\winload.efi (es veu al paràmetre path del Cargador d'arrencada).
+
+## Pas 21 - Interpretació final
+Qui decideix l'arrencada (Boot Manager): És el gestor principal que llegeix la configuració inicial i decideix quin sistema operatiu s'ha d'executar, basant-se en l'opció per defecte i el temps d'espera.
+
+Qui carrega el sistema (Boot Loader): És el programa específic (com winload.efi) que rep l'ordre del Boot Manager i s'encarrega de carregar físicament el nucli de Windows des del disc dur a la memòria RAM per iniciar-lo.
+
 
 
 
