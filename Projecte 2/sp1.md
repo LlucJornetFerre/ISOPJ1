@@ -105,27 +105,70 @@
 ## Pas 19 - Interpretar dades concretes
 
 Boot Manager
-default: {current} -> Aquest és el sistema que arrenca per defecte.
-timeout: 30 -> Aquest és el temps d'espera (en segons) abans d'arrencar automàticament.
+default: {current} -> El sistema que es tria per defecte per a arrencar.
+timeout: 30 -> Els segons que tarda abans d'arrencar automàticament.
 
 Boot Loader
-device: partition=C: -> És la partició on està instal·lat Windows.
-path: \WINDOWS\system32\winload.efi -> És el fitxer que carrega el sistema.
-description: Windows 11 -> És el nom del sistema operatiu.
+device: partition=C: -> partició del disc on està instal·lat el sistema operatiu (Windows).
+path: \WINDOWS\system32\winload.efi -> Fitxer que carrega el sistema.
+description: Windows 11 -> Nom del sistema operatiu.
 
 ## Pas 20 - Respostes a les preguntes curtes
-Quin sistema s'està arrencant? S'està arrencant Windows 11 (es veu al paràmetre description del Cargador d'arrencada).
+Quin sistema s'està arrencant? S'arrenca Windows 10 (es veu al paràmetre description del Cargador de arranque).
 
-A quin disc o partició està instal·lat? Està instal·lat a la partició C: (es veu al paràmetre device del Cargador d'arrencada).
+A quin disc o partició està instal·lat? Es troba a la partició C: (es veu al paràmetre device del Cargador de arranque).
 
-Quant temps espera abans d'arrencar? Espera 30 segons (es veu al paràmetre timeout de l'Administrador d'arrencada).
+Quant temps espera abans d'arrencar? S'espera 30 segons (es veu al paràmetre timeout de l'Administrador de arranque).
 
-Quin fitxer inicia Windows? L'inicia el fitxer \WINDOWS\system32\winload.efi (es veu al paràmetre path del Cargador d'arrencada).
+Quin fitxer inicia Windows? L'inicia el fitxer \WINDOWS\system32\winload.efi (es veu al paràmetre path del Cargador de arranque).
 
 ## Pas 21 - Interpretació final
 Qui decideix l'arrencada (Boot Manager): És el gestor principal que llegeix la configuració inicial i decideix quin sistema operatiu s'ha d'executar, basant-se en l'opció per defecte i el temps d'espera.
 
 Qui carrega el sistema (Boot Loader): És el programa específic (com winload.efi) que rep l'ordre del Boot Manager i s'encarrega de carregar físicament el nucli de Windows des del disc dur a la memòria RAM per iniciar-lo.
+
+# Fase 5 - Xarxa bàsica
+## Pas 22 - Obrir configuració de xarxa
+
+<img width="1019" height="728" alt="image" src="https://github.com/user-attachments/assets/8b0fd242-708f-4243-954e-eb0a8fc61046" />
+
+## Pas 23 - Consultar IP amb: ipconfig
+
+<img width="978" height="512" alt="image" src="https://github.com/user-attachments/assets/76930112-c545-4954-8cc4-5eed60af3505" />
+
+## Pas 24 - Configurar IP dinàmica (DHCP automàtic)
+
+<img width="1013" height="715" alt="image" src="https://github.com/user-attachments/assets/3741875c-d817-4da6-a7ed-0de90807ce66" />
+
+<img width="375" height="111" alt="image" src="https://github.com/user-attachments/assets/1b22ccd5-d875-4b07-843e-97a390b56730" />
+
+## Pas 25 - Configurar IP fixa (manual: IP, màscara, gateway, DNS)
+
+<img width="391" height="185" alt="image" src="https://github.com/user-attachments/assets/e15b6307-1c52-454f-a83e-98fbe25147af" />
+
+<img width="385" height="718" alt="image" src="https://github.com/user-attachments/assets/405090be-4cdb-4084-998c-bbc6292d4a89" />
+
+<img width="348" height="216" alt="image" src="https://github.com/user-attachments/assets/abbc2e35-21d5-4836-b923-5de14244e99d" />
+
+# Pas 26 - Comprovar connexió amb: ping google.com
+# Pas 27 - Obrir PowerShell
+
+<img width="761" height="676" alt="image" src="https://github.com/user-attachments/assets/75e9ea0b-96c6-49b0-902a-7fbaf9d4fc37" />
+
+## Pas 28 - Diferenciar cmd i PowerShell
+### Detalls de l'arrencada
+**BCD (Boot Configuration Data):** És l'arxiu d'on el Boot Manager llegeix la configuració d'arrencada.
+**Kernel:** El Boot Loader (winload.efi) és qui agafa el nucli de Windows (ntoskrnl.exe) i els controladors bàsics i els carrega a la memòria RAM.
+
+### Diferències clau: cmd vs. PowerShell
+| Característica | cmd (Símbol del sistema) | Windows PowerShell |
+|----------------|--------------------------|--------------------|
+| Dades | Treballa amb text pla. | Treballa amb objectes (.NET). |
+| Comandes | Bàsiques i heretades de DOS (dir, ping). | Utilitza Cmdlets amb format Verb-Nom (Get-Process). |
+| Ús principal | Comprovacions ràpides de xarxa o sistema. | Automatització de tasques i scripts per a administradors. |
+
+
+
 
 
 
