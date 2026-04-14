@@ -1,4 +1,4 @@
-# Fase 1 - Instal·lació del sistema operatiu
+<img width="913" height="682" alt="image" src="https://github.com/user-attachments/assets/84ed0645-5d59-4811-96e8-573609777669" /># Fase 1 - Instal·lació del sistema operatiu
 ## Pas 1 - Crear màquina virtual amb VirtualBox
 
 <img width="779" height="231" alt="image" src="https://github.com/user-attachments/assets/67b0b6ea-d3e2-4413-a398-12f68a264823" />
@@ -248,6 +248,43 @@ Qui carrega el sistema (Boot Loader): És el programa específic (com winload.ef
 
 ### systeminfo
  - systeminfo: Mostra informació detallada del maquinari i del sistema operatiu (versió de Windows, memòria RAM, processador, temps d'activitat, etc.).
+
+# Fase 7 - Instal·lació d'aplicacions
+## Pas 34 - Descarregar un programa des del navegador (ex: Chrome o VS Code)
+
+<img width="1006" height="533" alt="image" src="https://github.com/user-attachments/assets/2824e24a-d37d-42f3-ad82-555405d7b762" />
+
+## Pas 35 - Instal·lar-lo seguint l'assistent
+
+<img width="657" height="305" alt="image" src="https://github.com/user-attachments/assets/9ee310ad-8f88-40e4-a6b3-8370f3b40329" />
+
+## Pas 36 - Obrir-lo i comprovar que funciona
+
+<img width="913" height="682" alt="image" src="https://github.com/user-attachments/assets/0671429f-c0e9-4c6c-9e0a-85cf3f00b826" />
+
+## Pas 37 - Instal·lar una aplicació des de Microsoft Store
+
+<img width="913" height="682" alt="image" src="https://github.com/user-attachments/assets/343eefd3-de7d-4ebe-8952-a192c0c2583a" />
+
+## Pas 38 - Obrir-la i comprovar funcionament
+
+<img width="365" height="157" alt="image" src="https://github.com/user-attachments/assets/706d581d-d9b9-4621-9dea-a5487106eb01" />
+
+<img width="1007" height="729" alt="image" src="https://github.com/user-attachments/assets/71571a6e-b59e-4d68-9030-e4f5453b11e8" />
+
+## Pas 39 - Desinstal·lar una aplicació: Configuració → Aplicacions → Desinstal·lar
+
+<img width="1007" height="729" alt="image" src="https://github.com/user-attachments/assets/862dc789-2065-426a-a4cd-2d730d601338" />
+
+<img width="480" height="164" alt="image" src="https://github.com/user-attachments/assets/009c84b5-2dff-43ff-a4ee-5668d12bf7d7" />
+
+## Pas 40 - Verificació: Comprovar que el programa ja no apareix al sistema
+
+<img width="944" height="510" alt="image" src="https://github.com/user-attachments/assets/2516f548-7d3d-4256-b1e5-f47578b5cb19" />
+
+<img width="1021" height="769" alt="image" src="https://github.com/user-attachments/assets/439b251e-4deb-4f1f-ba23-c406429802d4" />
+
+
 
 
 
