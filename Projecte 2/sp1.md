@@ -207,10 +207,47 @@ Qui carrega el sistema (Boot Loader): És el programa específic (com winload.ef
 
 ### whoami → usuari actual
 
+<img width="260" height="65" alt="image" src="https://github.com/user-attachments/assets/2ee298ae-b6ee-461f-9b15-1e7874ff8bdc" />
 
+## Pas 31 - Comandes de xarxa
+### ipconfig → veure configuració IP
 
+<img width="617" height="257" alt="image" src="https://github.com/user-attachments/assets/50893519-a2cb-4af2-8945-cc245addd9f7" />
 
+### ping google.com → comprovar connexió
 
+### netstat -an → connexions obertes
+
+<img width="760" height="673" alt="image" src="https://github.com/user-attachments/assets/5228e494-f3bf-4f5c-96d5-f295cb0439cf" />
+
+## Pas 32 - Comandes interessants (una mica més avançades)
+### tree → veure estructura de carpetes
+
+<img width="357" height="120" alt="image" src="https://github.com/user-attachments/assets/06ba875a-77fa-4af4-8362-f8775c79a3d0" />
+
+### cls → netejar pantalla
+
+<img width="357" height="120" alt="image" src="https://github.com/user-attachments/assets/e1665f25-97bf-41f8-b3fd-b2de763ff517" />
+
+<img width="374" height="346" alt="image" src="https://github.com/user-attachments/assets/f5f1e70a-4c71-408e-ab82-809f0d1fa921" />
+
+### help → veure ajuda
+
+<img width="1006" height="725" alt="image" src="https://github.com/user-attachments/assets/3a7fc44a-3b4f-47fa-bce5-9bc657c14a4f" />
+
+### shutdown /s /t 30 → apagar l'equip en 30 segons
+
+<img width="1006" height="533" alt="image" src="https://github.com/user-attachments/assets/ddeea13c-422b-48cd-81c4-f31cb0b35029" />
+
+## Pas 33 - Mini interpretació
+### tasklist
+ - tasklist: Mostra una llista de tots els processos i programes que s'estan executant actualment al sistema.
+
+### ipconfig
+ - ipconfig: Mostra la configuració bàsica de xarxa de l'equip (adreça IP, màscara de subxarxa, porta d'enllaç, etc.).
+
+### systeminfo
+ - systeminfo: Mostra informació detallada del maquinari i del sistema operatiu (versió de Windows, memòria RAM, processador, temps d'activitat, etc.).
 
 
 
