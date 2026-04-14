@@ -167,6 +167,45 @@ Qui carrega el sistema (Boot Loader): És el programa específic (com winload.ef
 | Comandes | Bàsiques i heretades de DOS (dir, ping). | Utilitza Cmdlets amb format Verb-Nom (Get-Process). |
 | Ús principal | Comprovacions ràpides de xarxa o sistema. | Automatització de tasques i scripts per a administradors. |
 
+## Pas 29 - Comandes bàsiques (provar-les)
+### dir → veure fitxers
+
+<img width="408" height="342" alt="image" src="https://github.com/user-attachments/assets/64d03c8c-d1bc-4cf5-b192-b12e32b41608" />
+
+### cd → moure's per carpetes
+
+<img width="223" height="58" alt="image" src="https://github.com/user-attachments/assets/935a2086-805b-43bc-aa81-90f5ce9ccc4c" />
+
+### mkdir exemple1 → crear carpeta exemple1
+
+<img width="301" height="58" alt="image" src="https://github.com/user-attachments/assets/070b292c-bea8-4d57-8095-70d913a1d542" />
+
+### echo hola > exemple2.txt → crear fitxer exemple2.txt
+
+<img width="389" height="27" alt="image" src="https://github.com/user-attachments/assets/f5b18d34-bcca-4817-9286-b8cf3b47fa98" />
+
+### del exemple2.txt → eliminar el fitxer exemple2.txt
+
+<img width="322" height="53" alt="image" src="https://github.com/user-attachments/assets/f69f1535-f177-46f3-ae67-fcf30da234a7" />
+
+## Pas 30 - Comandes útils del sistema
+### tasklist → veure processos actius
+
+<img width="624" height="674" alt="image" src="https://github.com/user-attachments/assets/c08d8b19-21fd-476e-b803-12000b343c07" />
+
+### taskkill /IM notepad.exe /F → tancar un procés
+
+<img width="480" height="70" alt="image" src="https://github.com/user-attachments/assets/47d68157-7213-4421-9f2b-087b37a50078" />
+
+### systeminfo → informació completa del sistema
+
+<img width="867" height="673" alt="image" src="https://github.com/user-attachments/assets/877524ed-5566-48ba-9037-8e3a3e7a8ad5" />
+
+### hostname → nom de l'equip
+
+<img width="260" height="65" alt="image" src="https://github.com/user-attachments/assets/49777aa7-948b-4cf6-9b99-13f28fae982f" />
+
+### whoami → usuari actual
 
 
 
