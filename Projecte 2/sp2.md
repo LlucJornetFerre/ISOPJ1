@@ -63,7 +63,47 @@ Farem servir les quotes d'usuari per a limitar l'espaiq ue cada usuari pot usar 
 <img width="610" height="556" alt="image" src="https://github.com/user-attachments/assets/6c54d7fa-12c4-4404-807e-12b4c355baf4" />
 
 ### Pas 7. Crear dos usuaris locals: alumne1 i alumne2
+Obrim un terminal **amd privilegis d'administrador**, i executarem la comanda **net user username password /add** per a crear els usuaris alumne1 i alumne2 respectivament.
+
+<img width="473" height="251" alt="image" src="https://github.com/user-attachments/assets/77513caa-1ab5-43cd-a158-fc0736bb6e8b" />
 
 ### Pas 8. Afegir-los a un grup nou anomenat Limitats
+Ara, amb el mateix terminal, crearem el grup **Limitats**, i tot seguit, afegirem els usuaris creats al punt anterior dintre d'aquest.
+<img width="416" height="51" alt="image" src="https://github.com/user-attachments/assets/ea47f164-b4a0-45f8-9892-9f4311d07fb6" />
+
+<img width="462" height="117" alt="image" src="https://github.com/user-attachments/assets/803970f4-9c11-4e25-9c5f-e92228451b81" />
 
 ### Pas 9. Provar la còpia de fitxers dins Dades per veure com actuen les quotes (superar límit)
+Finalment, accedirem a l'usuari **alumne1**, i provarem de crear fitxers més grans que el límit que li hem establert.
+<img width="566" height="393" alt="image" src="https://github.com/user-attachments/assets/d0579377-0aa4-41d1-b82d-28480a3bdcb0" />
+
+## Fase 3 – Script de còpia i automatització
+### Pas 10 – Afegir tercer disc virtual, formatar-lo en NTFS com a Backups
+Afegirem un 3r disc, i el canviarem a format NTFS per a backups.
+<img width="1011" height="608" alt="image" src="https://github.com/user-attachments/assets/b39bd72e-0348-467d-8430-e958cb89a06b" />
+
+**Creen un nou volum simple dintre del 3r disc**.
+<img width="854" height="188" alt="image" src="https://github.com/user-attachments/assets/22c79680-90c5-45f4-b8d8-fc830fcb3ab0" />
+
+Format NTFS, amb el nom **Backups**.
+<img width="495" height="390" alt="image" src="https://github.com/user-attachments/assets/d7447d22-8534-453d-8457-b4914835611f" />
+
+### Pas 11 – Crear carpeta CòpiesUsuaris dins Backups
+Creem la carpeta dintre de **Backups**.
+<img width="786" height="593" alt="image" src="https://github.com/user-attachments/assets/fddf978f-0a40-46c9-86e1-391167a95250" />
+
+### Pas 12 – Crear un script .bat que copiï C:\Users%USERNAME% a B:\CòpiesUsuaris%USERNAME%
+
+**Explicació de l'script**.
+**@echo off**:	Silencia la sortida de les comandes a la consola
+**xcopy**:	Copia fitxers i directoris (inclou subdirectoris)
+**%USERNAME%**:	Variable d'entorn que s'expandeix automàticament amb el nom de l'usuari actiu
+**/E**:	Copia tots els subdirectoris, fins i tot els buits
+**/I**:	Si la destinació no existeix, la crea com a directori
+**/Y**:	Sobreescriu fitxers existents sense demanar confirmació
+
+<img width="751" height="132" alt="image" src="https://github.com/user-attachments/assets/18f92808-56b7-41d9-abb4-68da25eaf03f" />
+
+### Pas 13 – Obrir gpedit.msc → Configuració d'usuari → Scripts → Inici de sessió
+Ara, farem que el sistema executi l'script automàticament quan s'inicia sessió.
+<img width="397" height="207" alt="image" src="https://github.com/user-attachments/assets/c6b449cf-8ac7-42ae-9a26-5cb90b5b9820" />
