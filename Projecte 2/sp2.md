@@ -51,3 +51,19 @@ La comanda ens mostra:
  - El disc sobre el que estem treballant, amb la partició **Dades** (3MB, format NTFS) i la partició **Portable** (2102 MB, format FAT32)
 
 <img width="648" height="629" alt="image" src="https://github.com/user-attachments/assets/42464277-fccb-468e-a0e3-ebe75831ae2d" />
+
+## Fase 2 – Quotes i usuaris
+### Pas 5. Activar quotes de disc a la partició Dades (NTFS)
+Farem servir les quotes d'usuari per a limitar l'espaiq ue cada usuari pot usar dins d'una partició NTFS.
+<img width="548" height="414" alt="image" src="https://github.com/user-attachments/assets/0bb6a257-65e5-46c8-83b2-a031148ebd3d" />
+
+<img width="583" height="550" alt="image" src="https://github.com/user-attachments/assets/291c94b0-ffa7-4ee8-8215-add1e5cc52c9" />
+
+### Pas 6. Establir límit de 300 MB per usuari, amb notificació d’advertència
+<img width="610" height="556" alt="image" src="https://github.com/user-attachments/assets/6c54d7fa-12c4-4404-807e-12b4c355baf4" />
+
+### Pas 7. Crear dos usuaris locals: alumne1 i alumne2
+
+### Pas 8. Afegir-los a un grup nou anomenat Limitats
+
+### Pas 9. Provar la còpia de fitxers dins Dades per veure com actuen les quotes (superar límit)
