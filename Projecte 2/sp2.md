@@ -144,3 +144,33 @@ Farem servir **taskkill** per a eliminar el procés OneDrive.
 ### Pas 22 – Automatitzar-ho a l'inici de sessió
 Ara, modificarem l'script que hem creat a la fase anterior, afegint les comandes del pas anterior per a que, de manera automàtica cada vegada que es faci un inici de sessió, es mati el procés de **OneDrive** i **Teams**.
 <img width="740" height="154" alt="image" src="https://github.com/user-attachments/assets/c34ca5e2-dd5b-4b4a-9fd6-a8bfc20990ef" />
+
+Comprovem que el procés ha sigut matat quan iniciem sessió amb **alumne1**.
+<img width="1031" height="251" alt="image" src="https://github.com/user-attachments/assets/177fa6c2-9516-4298-9130-a61b4b8696c7" />
+
+### Pas 23 – Documentació: tasklist, anàlisi de processos crítics i rendiment
+
+**Què passa si mates un procés crític com explorer.exe?**
+ - L'escriptori desapareix (la barra de tasques, les icones i fins i tot el fons).
+ - No es poden obrir finestres noves, ni accedir als fitxers.
+ - El sistema es manté funcional, no tenim kernel panick, tot i que fallin coses.
+ - Per recuperar-lo: Ctrl + Alt + Supr → Administrador de tasques → Arxiu → Executar nova tasca → explorer.exe
+
+## Fase 6 – Gestió de permisos (ACLs)
+**Què són les ACLs i com funcionen a Windows**
+
+A Windows, cada fitxer i carpeta disposa d’una ACL (Access Control List), que és la llista encarregada d’establir quins usuaris o grups poden interactuar amb aquell recurs i de quina manera.
+
+Cada element dins d’una ACL s’anomena ACE (Access Control Entry), i especifica:
+ - Quina identitat (usuari o grup) rep l’aplicació del permís
+ - Quins permisos té assignats (lectura, escriptura, execució, control total, etc.)
+ - Si el permís està configurat com a Permetre o Denegar
+
+| Permís                  | Descripció                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| Control total (F)      | Permet totes les accions: llegir, escriure, modificar, eliminar i gestionar permisos |
+| Modificar (M)          | Autoritza llegir, escriure i eliminar fitxers, però no modificar permisos   |
+| Lectura i execució (RX)| Permet obrir fitxers i executar aplicacions                                |
+| Mostrar contingut      | Permet visualitzar els elements dins d’una carpeta                         |
+| Lectura (R)            | Permet accedir als fitxers només en mode lectura                           |
+| Escriptura (W)         | Permet crear nous fitxers i subcarpetes                                    |
