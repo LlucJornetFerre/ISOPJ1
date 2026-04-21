@@ -174,3 +174,24 @@ Cada element dins d’una ACL s’anomena ACE (Access Control Entry), i especifi
 | Mostrar contingut      | Permet visualitzar els elements dins d’una carpeta                         |
 | Lectura (R)            | Permet accedir als fitxers només en mode lectura                           |
 | Escriptura (W)         | Permet crear nous fitxers i subcarpetes                                    |
+
+### Pas 24 – Crear la carpeta Projectes
+Iniciem sessió com a administrador i creem la carpeta Projectes dins de la partició Dades (E:). La carpeta s'ha creat correctament a E:\Projectes.
+<img width="792" height="399" alt="image" src="https://github.com/user-attachments/assets/f4a6b2c0-951c-4dde-b5b4-9d934629e789" />
+
+### Pas 25 – Assignar permisos normals al grup Limitats
+Fem clic amb el botó dret a E:\Projectes, seleccionem Propietats i entrem a la pestanya Seguretat. Allà podem veure els permisos que hi ha configurats actualment, que són els que s’hereten de **E:**: Usuaris autenticats, SYSTEM, Administradors i Usuaris.
+
+A continuació, seleccionem Opciones avanzadas per accedir a la configuració detallada dels permisos.
+<img width="792" height="639" alt="image" src="https://github.com/user-attachments/assets/2c24dd9e-aecb-4e76-bddc-d6d5fe4261ea" />
+
+A la finestra d’opcions avançades, es pot observar que els permisos provenen de **E:**, tal com indica la columna “Heredada de”. Per poder gestionar-los de manera independent, seleccionem Deshabilitar herencia, cosa que permet trencar la relació amb els permisos heretats i configurar-los manualment.
+<img width="792" height="639" alt="image" src="https://github.com/user-attachments/assets/ab35b04d-f5d2-47d8-8c1e-17642240852f" />
+
+Ara afegim el grup Limitats amb permisos de Control total. Fem clic a Agregar, escrivim Limitats i seleccionem tots els permisos bàsics disponibles: Control total, Modificar, Lectura i execució, Mostrar el contingut de la carpeta, Lectura i Escriptura.
+El tipus de permís es defineix com a Permitir i s’aplica a Esta carpeta, subcarpetas y archivos, assegurant així que els permisos s’heretin també als elements continguts dins de la carpeta.
+<img width="942" height="593" alt="image" src="https://github.com/user-attachments/assets/57145d08-5a36-4636-9cd5-b5e573d4f1f5" />
+
+La captura de la configuració avançada final mostra el resultat: la columna "Heredada de" ara diu "Ninguno" per a totes les entrades, confirmant que la herència s'ha desactivat. El grup Limitats apareix amb Control total.
+<img width="942" height="593" alt="image" src="https://github.com/user-attachments/assets/d99a01bd-b007-4400-a29e-ac6b417cbd33" />
+
