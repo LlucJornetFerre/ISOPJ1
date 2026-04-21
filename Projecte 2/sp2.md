@@ -195,3 +195,29 @@ El tipus de permís es defineix com a Permitir i s’aplica a Esta carpeta, subc
 La captura de la configuració avançada final mostra el resultat: la columna "Heredada de" ara diu "Ninguno" per a totes les entrades, confirmant que la herència s'ha desactivat. El grup Limitats apareix amb Control total.
 <img width="942" height="593" alt="image" src="https://github.com/user-attachments/assets/d99a01bd-b007-4400-a29e-ac6b417cbd33" />
 
+### Pas 26 – Comprovar accés amb alumne1
+Iniciem la sessió amb l’usuari alumne1, que forma part del grup Limitats. Des d’aquest compte, creem un fitxer de text anomenat exemple.txt dins de E:\Projectes i hi escrivim.
+
+La captura mostra que l’usuari alumne1 ha pogut crear i modificar el fitxer sense incidències, tal com s’esperava, ja que disposa de permisos de Control total heretats del grup Limitats.
+<img width="1016" height="726" alt="image" src="https://github.com/user-attachments/assets/4abbffc8-412f-481c-8ce4-ed4f6f39bd09" />
+
+### Pas 27 – Aplicar excepció per alumne2 (només lectura)
+Tornem a iniciar sessió com a administrador, obrim un **CMD**, i executem la comanda **icacls**.
+<img width="579" height="165" alt="image" src="https://github.com/user-attachments/assets/e0922d82-3a71-4eba-b974-edaa02299496" />
+
+### Pas 28 – Comprovar l'excepció amb alumne2
+Iniciem la sessió amb l’usuari alumne2 i accedim a E:\Projectes. La captura indica que la carpeta es mostra buida per a aquest usuari, és a dir, no pot veure el fitxer creat per alumne1 (o el contingut ha canviat entre captures).
+
+Quan alumne2 intenta crear un fitxer nou o modificar-ne algun d’existent, el sistema retorna un missatge de denegació d’accés, impedint-li realitzar aquestes operacions per falta de permisos.
+<img width="787" height="595" alt="image" src="https://github.com/user-attachments/assets/41dd0d9d-6e06-46ce-9ea8-662ce0a6d14c" />
+
+### Pas 29 – Consultar els permisos aplicats amb icacls
+Executem la comanda des de la consola amb privilegis d’administrador per consultar l’estat final dels permisos de E:\Projectes, i així verificar la configuració actual de seguretat del directori.
+<img width="600" height="241" alt="image" src="https://github.com/user-attachments/assets/88d478b3-5ba9-4ea3-b1bc-2ca1b8168fb9" />
+
+| Codi | Significat |
+|------|------------|
+| (OI) | Object Inherit – el permís s’hereta als fitxers que es creïn dins de la carpeta |
+| (CI) | Container Inherit – el permís s’hereta a les subcarpetes |
+| (F)  | Full Control – permet control complet sobre el recurs |
+| (R)  | Read – només permet accés de lectura |
