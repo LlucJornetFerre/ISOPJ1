@@ -107,3 +107,40 @@ Creem la carpeta dintre de **Backups**.
 ### Pas 13 – Obrir gpedit.msc → Configuració d'usuari → Scripts → Inici de sessió
 Ara, farem que el sistema executi l'script automàticament quan s'inicia sessió.
 <img width="397" height="207" alt="image" src="https://github.com/user-attachments/assets/c6b449cf-8ac7-42ae-9a26-5cb90b5b9820" />
+
+<img width="636" height="311" alt="image" src="https://github.com/user-attachments/assets/1dc26de5-29f1-45e2-9636-5f114e06c17f" />
+
+### Pas 14 – Assignar l'script perquè s'executi automàticament en iniciar sessió
+Afegim la ruta de l'script a la pestanya **Iniciar Sessió**.
+<img width="639" height="321" alt="image" src="https://github.com/user-attachments/assets/9e3f3e89-338f-4047-b933-22e6fd5f6a90" />
+
+## Fase 4 – Verificació i documentació
+### Pas 15 – Comprovació: l'script fa la còpia a Backups
+Iniciem sessió amb **alumne1** per a que s'executi l'script, i comprovem que les carpetes s'han copiat correctament a **Backups**.
+<img width="785" height="412" alt="image" src="https://github.com/user-attachments/assets/26ca07c4-f98a-4ab0-8585-08720e370f7f" />
+
+## Fase 5 – Gestió de processos i serveis
+### Pas 19 – Llistar processos actius
+Podem veure tots els processos actius amb la comanda **tasklist**, executada al **CMD**.
+<img width="631" height="714" alt="image" src="https://github.com/user-attachments/assets/1291cfe7-4ea3-40ee-84b1-fb2f0cd3a713" />
+
+Podem redirigim la sortida de la comanda a un fitxer de text amb la comanda tasklist > C:\Users\alumne1\processos_inici.txt
+
+<img width="519" height="62" alt="image" src="https://github.com/user-attachments/assets/21fd6779-7149-4295-bd95-eee238e323ac" />
+
+<img width="1013" height="703" alt="image" src="https://github.com/user-attachments/assets/5615a767-e159-45ce-8407-783263eefa9a" />
+
+Filtre els processos que volem usant **findstr** per filtrar del fitxer guardat:
+<img width="627" height="166" alt="image" src="https://github.com/user-attachments/assets/291d5848-7ef3-4e74-a3b7-151704d947c7" />
+
+### Pas 20 – Identificar processos prescindibles
+Filtrarem tasklist per a trobar els processos no essencials per a l'usuari en un entorn "educatiu".
+<img width="617" height="75" alt="image" src="https://github.com/user-attachments/assets/82df2252-f834-4c37-b870-619208df42f7" />
+
+### Pas 21 – Eliminar processos manualment
+Farem servir **taskkill** per a eliminar el procés OneDrive.
+<img width="489" height="75" alt="image" src="https://github.com/user-attachments/assets/ece40f27-8648-42e9-a481-bbd5e844fc48" />
+
+### Pas 22 – Automatitzar-ho a l'inici de sessió
+Ara, modificarem l'script que hem creat a la fase anterior, afegint les comandes del pas anterior per a que, de manera automàtica cada vegada que es faci un inici de sessió, es mati el procés de **OneDrive** i **Teams**.
+<img width="740" height="154" alt="image" src="https://github.com/user-attachments/assets/c34ca5e2-dd5b-4b4a-9fd6-a8bfc20990ef" />
