@@ -1,3 +1,5 @@
+# Sprint 1
+
 # Fase 1 - Instal·lació del sistema operatiu
 ## Pas 1 - Crear màquina virtual amb VirtualBox
 
