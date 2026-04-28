@@ -14,6 +14,6 @@ Este repositori conté contingut del curs d'implantació de sistemes operatius p
 
 ## Projecte 2
 
-### [Sprint 1](Projecte2/sp1.md)
+### [Sprint 2](Projecte%202/sp1.md)
 
-### [Sprint 2](Projecte2/sp2.md)
+### [Sprint 2](Projecte%202/sp2.md)
