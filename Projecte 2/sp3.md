@@ -63,3 +63,11 @@ Posem les credencials de l'usuari administrador del servidor.
 L'usuari que hem creat abans.
 <img width="1021" height="731" alt="image" src="https://github.com/user-attachments/assets/d94da680-eac8-4aee-af49-56d713705b11" />
 
+I ens demana reiniciar.
+<img width="1021" height="731" alt="image" src="https://github.com/user-attachments/assets/f0f56fce-ac5b-454e-bc92-b21575a71f5d" />
+
+Finalment, confirmem que la connexió s'ha realitzat correctament.
+<img width="1021" height="769" alt="image" src="https://github.com/user-attachments/assets/d3ba855b-a722-41fd-82cb-21a82a866b84" />
+
+<img width="1021" height="769" alt="image" src="https://github.com/user-attachments/assets/bae026c4-c203-4843-ba8b-31562d4c789f" />
+
