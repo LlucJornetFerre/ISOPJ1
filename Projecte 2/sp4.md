@@ -31,26 +31,26 @@ A la captura es pot veure com queden els tres discos afegits al controlador SATA
 ### 2. Obrir el Gestor de discos
 Un cop iniciada la màquina, premem Windows + R per obrir el diàleg d'execució i escrivim diskmgmt.msc. Premem Acceptar per obrir l'Administrador de discos lògics.
 
-Windows + R → diskmgmt.msc per obrir el Gestor de discos
+<img width="425" height="248" alt="image" src="https://github.com/user-attachments/assets/8047966f-760e-4a01-aabc-6932e6e59325" />
 
 ### 3. Inicialitzar els 3 discos nous
 En obrir el Gestor de discos, apareix automàticament l'assistent per inicialitzar els discos nous. Seleccionem els tres discos (Disco 1, Disco 2, Disco 3) i triem l'estil de partició GPT (GUID Partition Table), recomanat per a sistemes moderns i discos de més de 2 TB. Fem clic a Aceptar.
 
-Inicialitzar discos - Selecció Disco 1, 2, 3 amb estil GPT
+<img width="1063" height="612" alt="image" src="https://github.com/user-attachments/assets/46bd792c-3dfe-44ed-be37-8ad77277a616" />
 
 ### 4. Verificació: discos inicialitzats sense assignar
 Després de la inicialització, el Gestor de discos mostra els tres discos com a Bàsic, amb 9,98 GB cadascun i tot l'espai com a No asignat. Encara no s'ha creat cap partició ni volum.
 
-Disk Management - Disco 1, 2, 3 inicialitzats com a Bàsic i No asignat
+<img width="1919" height="389" alt="image" src="https://github.com/user-attachments/assets/010f53a9-c374-4bd3-b0bd-0e3ea0eb414a" />
 
 ### 5. Convertir els discos a dinàmics
 Per poder crear un volum RAID 5 amb el Gestor de discos de Windows, els discos han de ser de tipus Dinàmic. Fem clic dret sobre el Disco 1 i seleccionem Convertir en disco dinámico...
 
-Clic dret sobre Disco 1 → Convertir en disco dinámico
+<img width="1919" height="389" alt="image" src="https://github.com/user-attachments/assets/dadfe37f-2e4a-4c23-98d4-bed3cb4bda56" />
 
 Al diàleg que apareix, marquem els tres discos (Disco 1, Disco 2, Disco 3) i fem clic a Aceptar per convertir-los tots d'un sol cop.
 
-Selecció dels 3 discos per convertir a dinàmics
+<img width="350" height="226" alt="image" src="https://github.com/user-attachments/assets/7916cd0b-78dc-4f71-8e31-54431f18270c" />
 
 ### 6. Verificació: discos ara dinàmics
 Després de la conversió, el Gestor de discos mostra els tres discos amb l'etiqueta Dinámico i tot l'espai segueix com a No asignat. Ja estan preparats per crear el RAID 5.
