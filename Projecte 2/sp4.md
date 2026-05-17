@@ -55,12 +55,12 @@ Al diàleg que apareix, marquem els tres discos (Disco 1, Disco 2, Disco 3) i fe
 ### 6. Verificació: discos ara dinàmics
 Després de la conversió, el Gestor de discos mostra els tres discos amb l'etiqueta Dinámico i tot l'espai segueix com a No asignat. Ja estan preparats per crear el RAID 5.
 
-Disk Management - Disco 1, 2, 3 ara com a Dinámico i No asignat
+<img width="360" height="401" alt="image" src="https://github.com/user-attachments/assets/ab944208-2d9c-4cde-be40-17d018b7c95c" />
 
 ### 7. Crear el volum RAID 5
 Fem clic dret sobre l'espai no assignat del Disco 1 i seleccionem Nuevo volumen RAID-5... per iniciar l'assistent de creació.
 
-Clic dret → Nuevo volumen RAID-5...
+<img width="563" height="401" alt="image" src="https://github.com/user-attachments/assets/977f2dd4-b01b-4833-858b-10649cd921d3" />
 
 ### 8. Selecció dels discos per al RAID 5
 A l'assistent, afegim els tres discos (Disco 1, Disco 2, Disco 3) a la columna de seleccionats. El sistema calcula automàticament:
@@ -69,12 +69,12 @@ Tamaño total del volumen: 20.444 MB (~20 GB)
 Espacio máximo disponible: 10.222 MB per disc
 Recordem que en RAID 5 la capacitat útil és (N-1) × mida_disc = 2 × 10 GB = 20 GB.
 
-Selecció dels 3 discos pel RAID 5 - capacitat útil 20.444 MB
+<img width="498" height="412" alt="image" src="https://github.com/user-attachments/assets/2a3b83c8-2dca-4a3a-8194-d93205e0d04d" />
 
 ### 9. Assignar lletra d'unitat
 Assignem la lletra R: al nou volum RAID 5, que és la lletra que utilitzarem per accedir als fitxers del RAID des de l'explorador d'arxius.
 
-Assignació de la lletra R: al volum RAID 5
+<img width="498" height="412" alt="image" src="https://github.com/user-attachments/assets/6e792190-8e6a-4db5-8dbe-46fab0f0d124" />
 
 ### 10. Formatar el volum RAID 5
 Configurem el format del volum:
@@ -84,7 +84,7 @@ Mida de la unitat d'assignació: Predeterminada
 Etiqueta del volum: RAID5-Astro
 Fem clic a Siguiente per continuar.
 
-Formatant el volum RAID 5 amb NTFS i etiqueta RAID5-Astro
+<img width="498" height="412" alt="image" src="https://github.com/user-attachments/assets/02a8906c-b19b-4191-9b7c-7c5bae92f304" />
 
 ### 11. Resum final de l'assistent
 L'assistent mostra el resum de la configuració seleccionada abans de finalitzar:
@@ -97,7 +97,7 @@ Sistema de fitxers: NTFS
 Etiqueta: RAID5-Astro
 Fem clic a Finalizar per crear el RAID.
 
-Resum final de la configuració RAID 5 - Finalitzar
+<img width="498" height="412" alt="image" src="https://github.com/user-attachments/assets/a13f22aa-88f8-4975-9d41-ad11de30f8a1" />
 
 ### 12. Procés de format en curs
 El Gestor de discos mostra els tres discos mentre s'estan formatant. El progrés indica que el format està al 92%. Els tres discos estan sincronitzant les dades i la paritat.
