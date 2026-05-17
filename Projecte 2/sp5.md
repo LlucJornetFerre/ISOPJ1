@@ -395,7 +395,7 @@ Premem **Ctrl + Shift + Esc** per obrir l'**Administrador de tasques**. A la pes
 - **Aplicaciones (2):** `Administrador de tareas` (17,3 MB) i `Server Manager` (70,1 MB)
 - **Procesos en segundo plano (35):** serveis del sistema operatiu com `AggregatorHost.exe`, `AntiMalware Definition Update`, `Experiencia de entrada de Windows`, etc.
 
-En el moment de la captura, el sistema presenta un **ús de CPU del 65%** i un **consum de memòria del 42%**. Això indica que el servidor té una càrrega moderada-alta. El procés `Server Manager` és el que consumeix més memòria entre les aplicacions obertes (62,6 MB).
+En el moment de la captura, el sistema presenta un **ús de CPU de l'1%** i un **consum de memòria del 48%**. Això indica que el servidor té una càrrega baixa-moderada. El procés `Server Manager` és el que consumeix més memòria entre les aplicacions obertes (70,1 MB).
 
 <img width="551" height="853" alt="image" src="https://github.com/user-attachments/assets/48ac43ad-1d89-407a-8e00-ebb24503380f" />
 
@@ -406,18 +406,18 @@ En el moment de la captura, el sistema presenta un **ús de CPU del 65%** i un *
 Anem a la pestanya **Rendimiento → CPU**. El gràfic mostra l'evolució de l'ús del processador en els darrers 60 segons.
 
 Dades observades:
-- **Processador:** Intel(R) Core(TM) i7-10700 @ 2,90 GHz
-- **Ús actual:** 9%
-- **Velocitat:** 2,90 GHz
-- **Processos actius:** 119
-- **Subprocessos (fils):** 1.398
-- **Identificadors:** 51.610
-- **Temps d'activitat:** 0:00:03:23
-- **Processadors virtuals:** 2 (màquina virtual: Sí)
+- **Processador:** AMD Ryzen 7 5800X 8-Core Processor
+- **Ús actual:** 2%
+- **Velocitat:** 3,80 GHz
+- **Processos actius:** 108
+- **Subprocessos (fils):** 1054
+- **Identificadors:** 45928
+- **Temps d'activitat:** 0:00:05:38
+- **Processadors virtuals:** 4 (màquina virtual: Sí)
 
-La CPU mostra el percentatge d'ús del processador. El gràfic amb pics indica que el sistema ha tingut moments de càrrega alta però en el moment actual es troba en un ús baix (9%). Si un procés utilitza molta CPU durant molt de temps, pot indicar una sobrecàrrega o un problema en el sistema.
+La CPU mostra el percentatge d'ús del processador. El gràfic amb pics indica que el sistema ha tingut moments de càrrega alta però en el moment actual es troba en un ús baix (2%). Si un procés utilitza molta CPU durant molt de temps, pot indicar una sobrecàrrega o un problema en el sistema.
 
-![Administrador de tasques - Rendiment CPU: Intel i7-10700, 9% ús, 119 processos](monitoritzaciowindows/2.png)
+<img width="1151" height="649" alt="image" src="https://github.com/user-attachments/assets/f3cb782f-fddf-489d-a825-b1fd2ffb24b2" />
 
 ---
 
@@ -427,16 +427,16 @@ Anem a **Rendimiento → Memoria**. El gràfic mostra l'ús de la memòria en el
 
 Dades observades:
 - **Memòria total instal·lada:** 4,0 GB
-- **En ús (comprimida):** 1,6 GB (40%)
-- **Disponible:** 2,4 GB
-- **Confirmada:** 1,6 / 5,4 GB
-- **En caché:** 1,9 GB
-- **Bloque paginado:** 120 MB
-- **Bloque no paginado:** 97,4 MB
+- **En ús (comprimida):** 1,6 GB (42%)
+- **Disponible:** 2,3 GB
+- **Confirmada:** 1,7 / 4,7 GB
+- **En caché:** 885 MB
+- **Bloque paginado:** 87,3 MB
+- **Bloque no paginado:** 101 MB
 
-La memòria RAM indica quanta memòria està utilitzant el sistema i quanta queda disponible. En aquest cas, el 40% d'ús (1,6 GB de 4 GB) és un valor acceptable. La memòria en caché (1,9 GB) indica que Windows reserva una bona part per accelerar l'accés a dades freqüentment usades. Si la memòria disponible fos molt baixa, el sistema hauria de recórrer al fitxer de paginació al disc, cosa que reduiria significativament el rendiment.
+La memòria RAM indica quanta memòria està utilitzant el sistema i quanta queda disponible. En aquest cas, el 42% d'ús (1,7 GB de 4 GB) és un valor acceptable. La memòria en caché (885 MB) indica que Windows reserva una bona part per accelerar l'accés a dades freqüentment usades. Si la memòria disponible fos molt baixa, el sistema hauria de recórrer al fitxer de paginació al disc, cosa que reduiria significativament el rendiment.
 
-![Administrador de tasques - Rendiment Memòria: 1,6/4,0 GB en ús (40%), 2,4 GB disponibles](monitoritzaciowindows/3.png)
+<img width="1146" height="625" alt="image" src="https://github.com/user-attachments/assets/2d15f7ad-a639-4394-88cf-20f1aa9489bc" />
 
 ---
 
@@ -455,7 +455,7 @@ Dades observades:
 
 La xarxa mostra les dades enviades i rebudes pel servidor. S'observa que la recepció (9,2 Mbps) és molt superior a l'enviament (80 Kbps), cosa típica en un servidor que descarrega actualitzacions o rep dades de clients. El pic en el gràfic indica un moment de trànsit intens. Amb aquesta informació es pot detectar si alguna aplicació fa un ús excessiu de la connexió.
 
-![Administrador de tasques - Rendiment Ethernet: E: 80 Kbps, R: 9,2 Mbps, IP 10.0.2.17](monitoritzaciowindows/5.png)
+<img width="752" height="454" alt="image" src="https://github.com/user-attachments/assets/57b8cf40-f1f2-435f-86ed-9ee6cde1e3a7" />
 
 ---
 
