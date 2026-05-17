@@ -100,31 +100,31 @@ Fem clic a Finalizar per crear el RAID.
 <img width="498" height="412" alt="image" src="https://github.com/user-attachments/assets/a13f22aa-88f8-4975-9d41-ad11de30f8a1" />
 
 ### 12. Procés de format en curs
-El Gestor de discos mostra els tres discos mentre s'estan formatant. El progrés indica que el format està al 86%. Els tres discos estan sincronitzant les dades i la paritat.
+El Gestor de discos mostra els tres discos mentre s'estan formatant. El progrés indica que el format està al 87%. Els tres discos estan sincronitzant les dades i la paritat.
 
 <img width="1916" height="402" alt="image" src="https://github.com/user-attachments/assets/209220d0-34be-4cff-9a62-18bb1b9a0a0e" />
 
 ### 13. RAID 5 creat i operatiu
 Un cop completat el format, els tres discos mostren el volum RAID5-Astro amb estat Correcto. El RAID 5 ja és completament funcional.
 
-Disk Management - RAID5-Astro en estat Correcto als 3 discos
+<img width="1916" height="402" alt="image" src="https://github.com/user-attachments/assets/67a82d57-a0d3-4ee3-9ce7-2b445832a5df" />
 
 ### 14. El RAID 5 visible a l'Explorador d'arxius
-Obrim l'Explorador d'arxius i podem veure que el nou volum RAID5-Astro (R:) apareix com a unitat del sistema amb 19,9 GB disponibles. Confirma que el sistema operatiu reconeix i pot accedir al RAID 5.
+Obrim l'Explorador d'arxius i podem veure que el nou volum RAID_5_LJF (D:) apareix com a unitat del sistema amb 19,9 GB disponibles. Confirma que el sistema operatiu reconeix i pot accedir al RAID 5.
 
-Explorador d'arxius - RAID5-Astro (R:) amb 19.9 GB disponibles
+<img width="1116" height="470" alt="image" src="https://github.com/user-attachments/assets/046cf903-a1a9-460c-a9a0-86f32861e01d" />
 
 ### 15. Crear una carpeta de prova al RAID
-Entrem a la unitat R:\ i creem la carpeta Prova-Raid5Astro per provar que podem escriure dades al volum RAID 5.
+Entrem a la unitat R:\ i creem la carpeta RAID_Prova1 per provar que podem escriure dades al volum RAID 5.
 
-Carpeta Prova-Raid5Astro creada a R:\
+<img width="1116" height="529" alt="image" src="https://github.com/user-attachments/assets/5f58f4e8-d063-4390-99a5-f3c4285d0545" />
 
 ### 16. Copiar fitxers al RAID
-Copiem fitxers dins de la carpeta Prova-Raid5Astro. En aquest cas s'han copiat diverses aplicacions i carpetes de dotnet. Comprovem que tots els fitxers s'han copiat correctament i es poden obrir.
+Copiem fitxers dins de la carpeta RAID_Prova1. En aquest cas s'han copiat diverses aplicacions i carpetes de dotnet. Comprovem que tots els fitxers s'han copiat correctament i es poden obrir.
 
-Fitxers copiats correctament dins de R:\Prova-Raid5Astro
+<img width="1116" height="529" alt="image" src="https://github.com/user-attachments/assets/d809fc37-833f-4fe4-8516-d1727506c207" />
 
-Simulació de fallades
+## Simulació de fallades
 ### 17. Primera fallada: posar el Disco 1 fora de línia
 Tornem al Gestor de discos. Fem clic dret sobre el Disco 1 i seleccionem Sin conexión per simular la fallada física d'un disc del RAID.
 
