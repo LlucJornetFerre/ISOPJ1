@@ -469,19 +469,14 @@ Des de l'Administrador de tasques, fem clic a **Abrir el Monitor de recursos** (
 
 Dins del **Monitor de recursos**, anem a la pestanya **CPU**. Veiem dues seccions:
 
-**Processos** (Ús de CPU: 35%):
-- `svchost.exe (netsvcs -p)` — PID 2664, 23 subprocessos, **9,63% CPU**
-- `perfmon.exe` — PID 5816, monitor de rendiment actiu, 7,28% CPU
-- `svchost.exe (LocalServiceNo...)` — PID 1264, 1,06% CPU
-- `SearchApp.exe` i `ShellExperienceHost.exe` — suspesos (0% CPU)
-
-**Serveis associats** (Ús de CPU: 23%):
-- `wuauserv` (Windows Update) — PID 2664, **9,63% CPU** — és el servei que més CPU consumeix
-- `mpssvc` (Firewall de Windows) — PID 1264, 1,06% CPU
+**Processos** (Ús de CPU: 3%):
+- `svchost.exe` — PID 1400, 14 subprocessos, 0.00% CPU
+- `perfmon.exe` — PID 1940, monitor de rendiment actiu, **3,48% CPU**
+- `SearchApp.exe` — suspès (0% CPU)
 
 El Monitor de recursos permet veure quins serveis concrets estan associats a cada procés `svchost.exe`, cosa que no és possible amb l'Administrador de tasques. En aquest cas, queda clar que **Windows Update** és el responsable del consum elevat de CPU.
 
-![Monitor de recursos - CPU: svchost/wuauserv al 9,63% CPU, 35% ús total](monitoritzaciowindows/8.png)
+<img width="1138" height="548" alt="image" src="https://github.com/user-attachments/assets/6fb3e637-11f6-4f32-b06a-607c6fa30d0b" />
 
 ---
 
@@ -490,21 +485,21 @@ El Monitor de recursos permet veure quins serveis concrets estan associats a cad
 Anem a la pestanya **Memoria** del Monitor de recursos.
 
 **Processos per consum de RAM (Privada):**
-- `MsMpEng.exe` (Windows Defender) — 270.448 KB assignats, **161.508 KB privada**
-- `dns.exe` (servei DNS) — 130.892 KB assignats, 120.676 KB privada
-- `lsass.exe` (autenticació) — 56.672 KB assignats, 32.840 KB privada
-- `dwm.exe` (gestor finestres) — 35.420 KB assignats, 31.460 KB privada
+- `MsMpEng.exe` (Windows Defender) — 71.324 KB assignats, 55.168 KB privada
+- `dns.exe` (servei DNS) — 250.968 KB assignats, **235.168 KB privada**
+- `lsass.exe` (autenticació) — 57.564 KB assignats, 34.032 KB privada
+- `dwm.exe` (gestor finestres) — 26.848 KB assignats, 22.812 KB privada
 
 **Resum de memòria física:**
-- **Total instal·lada:** 4.076 MB
-- **En ús:** 1.526 MB
-- **Disponible:** 2.483 MB
-- **En caché:** 2.135 MB
-- **En espera:** 2.068 MB | **Lliure:** 415 MB
+- **Total instal·lada:** 4.0 MB
+- **En ús:** 1.701 MB
+- **Disponible:** 2357 MB
+- **En caché:** 1257 MB
+- **En espera:** 1220 MB | **Lliure:** 1137 GB
 
-El procés que més memòria privada consumeix és `MsMpEng.exe` (Windows Defender), amb 161 MB. Això és normal en un servidor amb protecció antivirus activa. Els 2.483 MB disponibles indiquen que el servidor té marge de memòria suficient per a les tasques actuals.
+El procés que més memòria privada consumeix és `dns.exe` (servei DNS).
 
-![Monitor de recursos - Memòria: 37% usada, 1526 MB en ús, 2483 MB disponibles](monitoritzaciowindows/9.png)
+<img width="1138" height="538" alt="image" src="https://github.com/user-attachments/assets/d322324a-b16a-4388-a47d-18df307a84e8" />
 
 ---
 
@@ -513,19 +508,16 @@ El procés que més memòria privada consumeix és `MsMpEng.exe` (Windows Defend
 Anem a la pestanya **Disco** del Monitor de recursos.
 
 **Processos amb activitat de disc:**
-- `System` — PID 4, Lectura: **41.062 B/s**, Escriptura: **898.662 B/s**, Total: 939.725 B/s
-- `perfmon.exe` — PID 5816, Lectura: 185.958 B/s (monitorització activa)
-- `svchost.exe (LocalSystemNet...)` — PID 3880, Lectura: 106.496 B/s
-- `fontdrvhost.exe` — 100.864 B/s de lectura
+- `System` — PID 4, Lectura: 0 B/s, Escriptura: 4865 B/s
+- `perfmon.exe` — PID 1940, Lectura: **6554 B/s**, Escriptura: **0 B/s**, Total: 6554 B/s  (monitorització activa)
+- `svchost.exe (LocalSystemNet...)` — PID 6700, Lectura: 273 B/s
+- `lsass.exe` — PID 702, Lectura 496 B/s
 
-**Activitat de disc global:** 139.264 B/s | 5% de temps actiu
+**Activitat de disc global:** 0 B/s | 0% de temps actiu
 
-**Emmagatzematge:**
-- Disc lògic `C:` — Temps de resposta: **4,72 ms** | Espai usat: 68,1 GB | Espai total: 81,2 GB
+L'apartat de disc permet veure si algun procés està llegint o escrivint moltes dades. En aquest cas, el procés `perfmon.exe` és el que més escriu (486 KB/s), probablement per operacions del sistema de fitxers i la memòria virtual. El temps de resposta de 4,72 ms és acceptable per a un disc virtual.
 
-L'apartat de disc permet veure si algun procés està llegint o escrivint moltes dades. En aquest cas, el procés `System` és el que més escriu (898 KB/s), probablement per operacions del sistema de fitxers i la memòria virtual. El temps de resposta de 4,72 ms és acceptable per a un disc virtual.
-
-![Monitor de recursos - Disco: System 939 KB/s, perfmon 185 KB/s, disc C 81 GB total](monitoritzaciowindows/4.png)
+<img width="1138" height="402" alt="image" src="https://github.com/user-attachments/assets/2ec5e71f-e602-47a3-8d47-d8b952bf08ce" />
 
 ---
 
@@ -534,19 +526,17 @@ L'apartat de disc permet veure si algun procés està llegint o escrivint moltes
 Anem a la pestanya **Red** del Monitor de recursos. Aquesta és la vista més completa de l'activitat de xarxa.
 
 **Processos amb activitat de xarxa:**
-- `svchost.exe (NetworkService...)` — PID 5760, Recepció: **1.103.428 B/s** — màxim consum
-- `lsass.exe` — PID 676, 749 B/s enviat, 2.449 B/s rebut (autenticació AD)
-- `Microsoft.ActiveDirectory.W...` — PID 2980, trànsit bidireccional
-- `dns.exe` — PID 3044, 7 B/s enviat, 9 B/s rebut
+- `svchost.exe (NetworkService...)` — PID 1160, Recepció: **117 B/s**
+- `lsass.exe` — PID 704, 24 B/s enviat, 44 B/s rebut (autenticació AD)
+- `Microsoft.ActiveDirectory.W...` — PID 2984, trànsit bidireccional
+- `dns.exe` — PID 2844, 1 B/s enviat, 2 B/s rebut
 
-**Activitat de xarxa global:** E/S de xarxa: 8 Mbps | 0% de percentatge d'ús
+**Activitat de xarxa global:** E/S de xarxa: 0 Mbps | 0% de percentatge d'ús
 
 **Connexions TCP actives:**
-- `svchost.exe` (PID 5760) — múltiples connexions cap a `193.5.x.x:80` (actualitzacions de Windows)
+- `lsass.exe` (PID 704) — múltiples connexions cap a `fe80:b452:4fc4:2e81:` (actualitzacions de Windows)
 
-La pestanya Red permet detectar quins processos estan fent ús de la xarxa i cap a quines IPs es connecten. El `svchost.exe` amb 1,1 MB/s de recepció correspon al servei de Windows Update descarregant actualitzacions. Les connexions cap al port 80 de servidors Microsoft ho confirmen.
-
-![Monitor de recursos - Red: svchost 1.1 MB/s, connexions TCP actives cap a servidors Microsoft](monitoritzaciowindows/6.png)
+<img width="1138" height="549" alt="image" src="https://github.com/user-attachments/assets/36631e4a-b4e1-453b-9996-c7f24730d241" />
 
 ---
 
@@ -554,16 +544,16 @@ La pestanya Red permet detectar quins processos estan fent ús de la xarxa i cap
 
 A la secció inferior de la pestanya **Red** del Monitor de recursos, veiem els **Puertos de escucha**, que indiquen quins ports té oberts el servidor esperant connexions entrants:
 
-- `dns.exe` (PID 3044) — Port **53** TCP i UDP per IPv4 i IPv6 (servei DNS)
-- `lsass.exe` (PID 676) — Port **88** TCP (Kerberos, autenticació del domini)
+- `dns.exe` (PID 2844) — Port **53** TCP i UDP per IPv4 i IPv6 (servei DNS)
+- `lsass.exe` (PID 704) — Port **88** TCP (Kerberos, autenticació del domini)
 
 Aquests ports oberts corresponen als serveis normals d'un controlador de domini Active Directory. El port 53 és el DNS i el port 88 és Kerberos. En un anàlisi de seguretat, aquesta llista permet detectar ports oberts inesperats que podrien indicar programari maliciós o configuració incorrecta.
 
-![Monitor de recursos - Puertos de escucha: dns.exe port 53, lsass port 88](monitoritzaciowindows/7.png)
+<img width="914" height="224" alt="image" src="https://github.com/user-attachments/assets/a18519a2-5fcd-4f3f-aa5e-2a6c8f7a49ef" />
 
 ---
 
-## Conclusions de la monitorització
+## Reflexió de la monitorització
 
 Amb aquesta pràctica hem après a utilitzar l'**Administrador de tasques** i el **Monitor de recursos** de Windows per analitzar el consum de CPU, memòria RAM, disc i xarxa. Aquestes eines són imprescindibles per a qualsevol administrador de sistemes.
 
@@ -571,23 +561,11 @@ Amb aquesta pràctica hem après a utilitzar l'**Administrador de tasques** i el
 
 | Recurs | Eina | Valor observat | Valoració |
 |--------|------|----------------|-----------|
-| CPU | Administrador de tasques | 9% (Intel i7-10700) | ✅ Baix |
-| Memòria RAM | Administrador de tasques | 1,6 / 4,0 GB (40%) | ✅ Acceptable |
-| Xarxa (Ethernet) | Administrador de tasques | R: 9,2 Mbps / E: 80 Kbps | ⚠️ Descàrrega activa |
-| CPU (detall) | Monitor de recursos | 35%, wuauserv 9,63% | ⚠️ Windows Update actiu |
-| Memòria (detall) | Monitor de recursos | 37%, MsMpEng 161 MB | ✅ Acceptable |
-| Disc | Monitor de recursos | System 939 KB/s, 5% actiu | ✅ Normal |
-| Xarxa (detall) | Monitor de recursos | svchost 1,1 MB/s rebut | ⚠️ Actualitzacions |
-| Ports oberts | Monitor de recursos | 53 (DNS), 88 (Kerberos) | ✅ Normals per AD |
-
-### Observacions clau
-
-- **L'Administrador de tasques ofereix una visió ràpida** però no permet identificar quin servei concret dins de `svchost.exe` és el responsable del consum. Per això cal el Monitor de recursos.
-
-- **Windows Update** (`wuauserv`) era la causa principal del consum de CPU i xarxa en el moment de la monitorització: descarregava i instal·lava actualitzacions, consumint CPU (9,63%) i ample de banda (9,2 Mbps de recepció).
-
-- **Windows Defender** (`MsMpEng.exe`) és el procés que més memòria privada consumeix (161 MB), cosa completament normal en un servidor amb protecció antivirus.
-
-- **Els ports oberts** (53 i 88) corresponen exactament als serveis esperats d'un controlador de domini Active Directory, sense ports inesperats que puguin indicar amenaces.
-
-- **La monitorització és proactiva, l'auditoria és reactiva:** El Monitor de recursos ens diu l'estat actual del sistema; el Visor d'esdeveniments ens diu el que ha passat. Ambdues eines juntes proporcionen una visió completa de la salut i la seguretat del servidor.
+| CPU | Administrador de tasques | 9% (Intel i7-10700) | Baix |
+| Memòria RAM | Administrador de tasques | 1,6 / 4,0 GB (40%) | Acceptable |
+| Xarxa (Ethernet) | Administrador de tasques | R: 9,2 Mbps / E: 80 Kbps | Descàrrega activa |
+| CPU (detall) | Monitor de recursos | 35%, wuauserv 9,63% | Windows Update actiu |
+| Memòria (detall) | Monitor de recursos | 37%, MsMpEng 161 MB | Acceptable |
+| Disc | Monitor de recursos | System 939 KB/s, 5% actiu | Normal |
+| Xarxa (detall) | Monitor de recursos | svchost 1,1 MB/s rebut | Actualitzacions |
+| Ports oberts | Monitor de recursos | 53 (DNS), 88 (Kerberos) | Normals per AD |
