@@ -246,23 +246,23 @@ Al Visor d'esdeveniments, filtrem per l'Event ID **4720** per verificar que la c
 L'Event **4720** confirma:
 
 - **"Se creó una cuenta de usuario"**
-- Firmant (qui l'ha creat): `ASTRO\Administrador`
-- **Nova compte: `ASTRO\testt`**
-- Nom de compte SAM: `testt`
-- Principal d'usuari: `testt@eros.cat`
+- Firmant (qui l'ha creat): `JORNET\Administrador`
+- **Nova compte: `ASTRO\prova`**
+- Nom de compte SAM: `prova`
+- Principal d'usuari: `prova@jornet.cat`
 - Categoria de tasca: **User Account Management**
 
 Queda registrat qui va crear el compte, quan i amb quins atributs.
 
-![Event ID 4720 - Usuari testt creat per l'Administrador](imatges-windows/21.png)
+<img width="1327" height="835" alt="image" src="https://github.com/user-attachments/assets/ad88e025-7c3d-450b-ab9a-f74f81c36190" />
 
 ---
 
 ### 22. Deshabilitar el compte d'usuari
 
-Tornem a la consola d'AD. Fem clic dret sobre l'usuari **testt** i seleccionem **Deshabilitar cuenta** per simular la desactivació temporal d'un compte.
+Tornem a la consola d'AD. Fem clic dret sobre l'usuari **prova** i seleccionem **Deshabilitar cuenta** per simular la desactivació temporal d'un compte.
 
-![Clic dret sobre testt → Deshabilitar cuenta](imatges-windows/22.png)
+<img width="746" height="445" alt="image" src="https://github.com/user-attachments/assets/392db9f4-cb2d-43e1-a234-3b3e0e21d214" />
 
 ---
 
@@ -270,7 +270,7 @@ Tornem a la consola d'AD. Fem clic dret sobre l'usuari **testt** i seleccionem *
 
 AD mostra el missatge de confirmació: **"El objeto testt ha sido deshabilitado"**. Acceptem.
 
-![Confirmació: El objeto testt ha sido deshabilitado](imatges-windows/23.png)
+<img width="286" height="149" alt="image" src="https://github.com/user-attachments/assets/07270fd0-1ad9-4f08-abf0-6c354d6bfbce" />
 
 ---
 
@@ -278,7 +278,7 @@ AD mostra el missatge de confirmació: **"El objeto testt ha sido deshabilitado"
 
 Al Visor d'esdeveniments, filtrem per l'Event ID **4725** per verificar que la deshabilitació s'ha registrat.
 
-![Filtrar el registre de Seguridad per l'Event ID 4725](imatges-windows/24.png)
+<img width="539" height="548" alt="image" src="https://github.com/user-attachments/assets/7574dd9d-a869-4c95-8629-20af253b4e78" />
 
 ---
 
@@ -287,14 +287,14 @@ Al Visor d'esdeveniments, filtrem per l'Event ID **4725** per verificar que la d
 L'Event **4725** mostra:
 
 - **"Se deshabilitó una cuenta de usuario"**
-- Firmant: `ASTRO\Administrador`
-- **Compte de destí: `ASTRO\testt`**
+- Firmant: `JORNET\Administrador`
+- **Compte de destí: `JORNET\prova`**
 - Registrat a les `21:27:10`
 - Categoria: **User Account Management**
 
 El registre permet saber exactament quan i qui va deshabilitar el compte.
 
-![Event ID 4725 - Usuari testt deshabilitat per l'Administrador](imatges-windows/25.png)
+<img width="608" height="844" alt="image" src="https://github.com/user-attachments/assets/4cc9560f-5949-4766-90e4-31c39dd08aa9" />
 
 ---
 
@@ -302,7 +302,7 @@ El registre permet saber exactament quan i qui va deshabilitar el compte.
 
 Tornem a la consola d'AD. Fem clic dret sobre l'usuari **testt** i seleccionem **Eliminar** per suprimir definitivament el compte del domini.
 
-![Clic dret sobre testt → Eliminar per suprimir el compte](imatges-windows/26.png)
+<img width="370" height="339" alt="image" src="https://github.com/user-attachments/assets/2a547595-af13-4d59-aa1a-8b50ae3ade66" />
 
 ---
 
@@ -310,7 +310,7 @@ Tornem a la consola d'AD. Fem clic dret sobre l'usuari **testt** i seleccionem *
 
 Al Visor d'esdeveniments, filtrem per l'Event ID **4726** per verificar que l'eliminació del compte ha quedat registrada.
 
-![Filtrar el registre de Seguridad per l'Event ID 4726](imatges-windows/27.png)
+<img width="547" height="548" alt="image" src="https://github.com/user-attachments/assets/2b8bd9c0-6338-4ced-9f0c-1dbcb012838b" />
 
 ---
 
@@ -319,14 +319,14 @@ Al Visor d'esdeveniments, filtrem per l'Event ID **4726** per verificar que l'el
 L'Event **4726** confirma:
 
 - **"Se eliminó una cuenta de usuario"**
-- Firmant: `ASTRO\Administrador`
-- **Compte eliminat: `ASTRO\testt`**
+- Firmant: `JORNET\Administrador`
+- **Compte eliminat: `JORNET\prova`**
 - Registrat a les `21:27:58`
 - Categoria: **User Account Management**
 
-Amb aquest darrer event, el cicle de vida complet del compte `testt` queda documentat al registre de seguretat: creació (4720) → deshabilitació (4725) → eliminació (4726).
+Amb aquest darrer event, el cicle de vida complet del compte `prova` queda documentat al registre de seguretat: creació (4720) → deshabilitació (4725) → eliminació (4726).
 
-![Event ID 4726 - Usuari testt eliminat per l'Administrador](imatges-windows/28.png)
+<img width="598" height="833" alt="image" src="https://github.com/user-attachments/assets/e9f452e3-c5f0-4ec5-90d6-e9582fede8cf" />
 
 ---
 
