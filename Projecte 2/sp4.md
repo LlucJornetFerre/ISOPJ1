@@ -174,24 +174,17 @@ El Gestor de discos mostra els tres discos amb l'estat "Volviendo a sincronizar:
 <img width="381" height="300" alt="image" src="https://github.com/user-attachments/assets/8910b4ea-641f-4711-8b28-20220ac83866" />
 
 ### 26. RAID 5 totalment recuperat
-Un cop finalitzada la resincronització, els tres discos tornen a mostrar l'estat Correcto. El volum RAID5-Astro ha recuperat tota la seva redundància i funciona completament.
+Un cop finalitzada la resincronització, els tres discos tornen a mostrar l'estat Correcto. El volum RAID_5_LJF ha recuperat tota la seva redundància i funciona completament.
 
-Disk Management - Tots els discos en estat Correcto després de la recuperació
+<img width="459" height="300" alt="image" src="https://github.com/user-attachments/assets/f92c6724-9c65-4ae6-806f-68cc3a7a3b40" />
 
 ### 27. Verificació final: fitxers intactes
-Comprovem que tots els fitxers de R:\Prova-Raid5Astro segueixen intactes i accessibles. La vista dividida mostra el Gestor de discos (tots Correcto) i l'Explorador d'arxius amb tots els fitxers originals presents i en perfecte estat.
+Comprovem que tots els fitxers del RAID segueixen intactes i accessibles. La vista dividida mostra el Gestor de discos (tots Correcto) i l'Explorador d'arxius amb tots els fitxers originals presents i en perfecte estat.
 
-Verificació final - RAID recuperat i fitxers intactes a R:\Prova-Raid5Astro
+<img width="1126" height="501" alt="image" src="https://github.com/user-attachments/assets/783cf297-e7bb-4fba-8a70-a798e01d445d" />
 
-Conclusions i Observacions
-Resultats de la pràctica
-Pas	Situació	Estat del RAID	Accés a fitxers
-Inicial	3 discos operatius	✅ Correcto	✅ Accessible
-1 disc fora de línia	Mode degradat	⚠️ Error de redundancia	✅ Accessible
-2 discos fora de línia	RAID col·lapsat	❌ Error total	❌ Inaccessible
-1 disc recuperat	Recuperació parcial	⚠️ Error de redundancia	✅ Accessible
-2 discos recuperats + resync	Recuperació completa	✅ Correcto	✅ Accessible
-Observacions tècniques
+
+### Observacions
 El RAID 5 distribueix la paritat entre tots els discos: No hi ha un disc dedicat exclusivament a paritat (com en RAID 3/4), sinó que la paritat es reparteix cíclicament, cosa que equilibra la càrrega d'escriptura.
 
 Tolerància a una sola fallada: Tal com hem comprovat, el RAID 5 pot continuar funcionant i servint dades amb un disc fora de línia, gràcies al càlcul de paritat. Amb dos discos fallats, la paritat ja no és suficient per reconstruir tota la informació.
@@ -204,12 +197,13 @@ El RAID 5 NO substitueix una còpia de seguretat: Protegeix contra la fallada f�
 
 Windows Server implementa RAID per programari: En entorns professionals és preferible usar controladores RAID per maquinari per aconseguir millor rendiment i gestió independent del sistema operatiu.
 
-Quan és adequat el RAID 5?
+### Quan ens interessa fer un RAID 5?
 El RAID 5 és una bona opció per a:
 
 Servidors de fitxers que requereixen accés continu amb un cert nivell de seguretat.
 Entorns amb pressupost limitat que necessiten redundància.
 Sistemes on les lectures són més freqüents que les escriptures.
+
 No és adequat per a:
 
 Entorns on es requereix la màxima disponibilitat (preferir RAID 6 o RAID 10).
