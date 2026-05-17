@@ -150,30 +150,27 @@ Ara simulem una segona fallada simultània posant el Disco 2 també fora de lín
 ### 21. RAID col·lapsat (2 discos fallats)
 Amb dos discos fora de línia, el Gestor de discos mostra tots els membres amb estat "Error". El Disco 1 i el Disco 2 figuren com a Desactivada, i apareixen dos membres addicionals marcats com a Falta. El RAID 5 ja no és capaç de reconstruir les dades i el volum R:\ ha deixat de ser accessible.
 
-El RAID 5 només tolera la fallada d'UN disc. Amb dos discos fallats, es perd l'accés a totes les dades.
+<img width="1639" height="507" alt="image" src="https://github.com/user-attachments/assets/4b50abb2-ff08-4043-9c4f-cf36f0005f40" />
 
-RAID 5 col·lapsat - Disco 1 i Disco 2 desactivats, estat Error a tots
-
-Recuperació
+## Recuperació
 ### 22. Tornar a posar el Disco 1 en línia
 Per recuperar el RAID, tornem a posar els discos en línia. Fem clic dret sobre el Disco 1 (en estat "Desactivada") i seleccionem En línea.
 
-Clic dret Disco 1 → En línea per iniciar la recuperació
+<img width="243" height="196" alt="image" src="https://github.com/user-attachments/assets/9206bdce-d2bf-4c28-a19f-51403cba2db9" />
 
 ### 23. RAID parcialment recuperat
-Després de posar el Disco 1 en línia, el Gestor de discos mostra el Disco 1 i el Disco 3 en pantalla (operatius), però el Disco 2 encara figura amb avís. L'estat dels discos segueix mostrant "Error de redundancia" perquè el Disco 2 encara no s'ha resincronitzat.
+Després de posar el Disco 1 en línia, el Gestor de discos mostra el Disco 3 en pantalla (operatiu), però el Disco 2 i Disc 1 encara figuren amb avís. L'estat dels discos segueix mostrant "Error de redundancia" perquè el Disco 2 i Disc 1 encara no s'han resincronitzat.
 
-Disco 1 en línia - RAID parcial, Disco 2 encara amb advertència
+<img width="405" height="301" alt="image" src="https://github.com/user-attachments/assets/20cb17aa-6989-4ce5-926b-d1edcb83f6a0" />
 
 ### 24. Reactivar el Disco 2
 Per completar la recuperació, fem clic dret sobre el Disco 2 i seleccionem Reactivar disco. Això ordena a Windows que torni a sincronitzar la paritat i les dades del disc recuperat amb la resta del RAID.
 
-Clic dret Disco 2 → Reactivar disco per completar la recuperació
+<img width="345" height="344" alt="image" src="https://github.com/user-attachments/assets/5edbc48a-bd26-41a9-907e-1301e4293650" />
 
 ### 25. Resincronització en curs
-El Gestor de discos mostra els tres discos amb l'estat "Volviendo a sincronizar: (63%)". Windows Server està recalculant la paritat i verificant la coherència de les dades entre els tres discos. Aquest procés pot trigar uns minuts depenent de la mida del RAID.
+El Gestor de discos mostra els tres discos amb l'estat "Volviendo a sincronizar: (5%)". Windows Server està recalculant la paritat i verificant la coherència de les dades entre els tres discos. Aquest procés pot trigar uns minuts depenent de la mida del RAID.
 
-Resincronització del RAID 5 al 63%
 
 ### 26. RAID 5 totalment recuperat
 Un cop finalitzada la resincronització, els tres discos tornen a mostrar l'estat Correcto. El volum RAID5-Astro ha recuperat tota la seva redundància i funciona completament.
