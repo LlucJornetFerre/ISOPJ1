@@ -330,23 +330,24 @@ Amb aquest darrer event, el cicle de vida complet del compte `prova` queda docum
 
 ---
 
-## Resum dels Event IDs treballats
+## IDs de procés fets servir durant les proves
 
 | Event ID | Categoria | Descripció | Activat per... |
 |----------|-----------|------------|----------------|
-| **4624** | Logon | Inici de sessió correcte | Auditar eventos de inicio de sesión |
+| **4689** | Process Termination | Procés finalitzat | Auditar el seguimiento de procesos |
 | **4625** | Logon | Inici de sessió fallit | Auditar eventos de inicio de sesión |
+| **4726** | User Account Management | Compte d'usuari eliminat | Auditar la administración de cuentas |
+| **4722** | User Account Management | Compte d'usuari activat | Auditar la administración de cuentas |
 | **4663** | File System | Accés a un objecte (fitxer/carpeta) | Auditar el acceso a objetos + config. carpeta |
 | **4688** | Process Creation | Nou procés creat | Auditar el seguimiento de procesos |
-| **4689** | Process Termination | Procés finalitzat | Auditar el seguimiento de procesos |
+| **4624** | Logon | Inici de sessió correcte | Auditar eventos de inicio de sesión |
 | **4720** | User Account Management | Compte d'usuari creat | Auditar la administración de cuentas |
-| **4722** | User Account Management | Compte d'usuari activat | Auditar la administración de cuentas |
 | **4725** | User Account Management | Compte d'usuari deshabilitat | Auditar la administración de cuentas |
-| **4726** | User Account Management | Compte d'usuari eliminat | Auditar la administración de cuentas |
+
 
 ---
 
-## Conclusions i Observacions
+## Reflexió final
 
 ### Conclusions generals
 
