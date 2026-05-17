@@ -72,7 +72,7 @@ Recordem que en RAID 5 la capacitat útil és (N-1) × mida_disc = 2 × 10 GB = 
 <img width="498" height="412" alt="image" src="https://github.com/user-attachments/assets/2a3b83c8-2dca-4a3a-8194-d93205e0d04d" />
 
 ### 9. Assignar lletra d'unitat
-Assignem la lletra R: al nou volum RAID 5, que és la lletra que utilitzarem per accedir als fitxers del RAID des de l'explorador d'arxius.
+Assignem la lletra D: al nou volum RAID 5, que és la lletra que utilitzarem per accedir als fitxers del RAID des de l'explorador d'arxius.
 
 <img width="498" height="412" alt="image" src="https://github.com/user-attachments/assets/6e792190-8e6a-4db5-8dbe-46fab0f0d124" />
 
@@ -81,7 +81,7 @@ Configurem el format del volum:
 
 Sistema de fitxers: NTFS
 Mida de la unitat d'assignació: Predeterminada
-Etiqueta del volum: RAID5-Astro
+Etiqueta del volum: RAID_5_LJF
 Fem clic a Siguiente per continuar.
 
 <img width="498" height="412" alt="image" src="https://github.com/user-attachments/assets/02a8906c-b19b-4191-9b7c-7c5bae92f304" />
@@ -92,7 +92,7 @@ L'assistent mostra el resum de la configuració seleccionada abans de finalitzar
 Tipus de volum: RAID-5
 Discos seleccionats: Disco 1, Disco 2, Disco 3
 Tamany del volum: 20.444 MB
-Lletra d'unitat: R:
+Lletra d'unitat: D:
 Sistema de fitxers: NTFS
 Etiqueta: RAID_5_LJF
 Fem clic a Finalizar per crear el RAID.
@@ -105,7 +105,7 @@ El Gestor de discos mostra els tres discos mentre s'estan formatant. El progrés
 <img width="1916" height="402" alt="image" src="https://github.com/user-attachments/assets/209220d0-34be-4cff-9a62-18bb1b9a0a0e" />
 
 ### 13. RAID 5 creat i operatiu
-Un cop completat el format, els tres discos mostren el volum RAID5-Astro amb estat Correcto. El RAID 5 ja és completament funcional.
+Un cop completat el format, els tres discos mostren el volum RAID_5_LJF amb estat Correcto. El RAID 5 ja és completament funcional.
 
 <img width="1916" height="402" alt="image" src="https://github.com/user-attachments/assets/67a82d57-a0d3-4ee3-9ce7-2b445832a5df" />
 
@@ -115,7 +115,7 @@ Obrim l'Explorador d'arxius i podem veure que el nou volum RAID_5_LJF (D:) apare
 <img width="1116" height="470" alt="image" src="https://github.com/user-attachments/assets/046cf903-a1a9-460c-a9a0-86f32861e01d" />
 
 ### 15. Crear una carpeta de prova al RAID
-Entrem a la unitat R:\ i creem la carpeta RAID_Prova1 per provar que podem escriure dades al volum RAID 5.
+Entrem a la unitat D:\ i creem la carpeta RAID_Prova1 per provar que podem escriure dades al volum RAID 5.
 
 <img width="1116" height="529" alt="image" src="https://github.com/user-attachments/assets/5f58f4e8-d063-4390-99a5-f3c4285d0545" />
 
@@ -131,14 +131,14 @@ Tornem al Gestor de discos. Fem clic dret sobre el Disco 1 i seleccionem Sin con
 <img width="243" height="311" alt="image" src="https://github.com/user-attachments/assets/c6c031e0-9048-40f5-b2e8-a76b4111cbde" />
 
 ### 18. RAID en estat degradat (1 disc fallat)
-Amb el Disco 1 desactivat, el Gestor de discos mostra tots els membres del RAID amb l'estat "Error de redundancia". El sistema detecta que ha perdut un disc i opera en mode degradat. A la llista superior es pot veure que el volum RAID5-Astro (R:) figura com a Error de re... (redundàncies).
+Amb el Disco 1 desactivat, el Gestor de discos mostra tots els membres del RAID amb l'estat "Error de redundancia". El sistema detecta que ha perdut un disc i opera en mode degradat. A la llista superior es pot veure que el volum RAID_5_LJF (D:) figura com a Error de re... (redundàncies).
 
 <img width="103" height="396" alt="image" src="https://github.com/user-attachments/assets/7f4d6413-7155-4301-ae51-590301583e7f" />
 
 <img width="1553" height="391" alt="image" src="https://github.com/user-attachments/assets/6141b083-dc37-4ed2-8526-711a6ee0588c" />
 
 ### 19. Verificació: els fitxers segueixen accessibles
-Amb un disc fora de línia, comprovem que podem accedir a R:\Prova-Raid5Astro i obrir els fitxers sense cap problema. La vista dividida mostra el Gestor de discos (amb errors de redundància) i l'Explorador d'arxius (amb els fitxers accessibles). Això demostra la tolerància a fallades del RAID 5.
+Amb un disc fora de línia, comprovem que podem accedir a D:\RAID5_Prova1 i obrir els fitxers sense cap problema. La vista dividida mostra el Gestor de discos (amb errors de redundància) i l'Explorador d'arxius (amb els fitxers accessibles). Això demostra la tolerància a fallades del RAID 5.
 
 <img width="1111" height="574" alt="image" src="https://github.com/user-attachments/assets/ff2996f2-3e8c-4d2f-ac56-04f9aef5bdc5" />
 
