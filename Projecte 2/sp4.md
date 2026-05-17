@@ -17,32 +17,33 @@ No tolera la fallada de 2 o més discos simultàniament.
 
 ## RAID 5 pas a pas amb Windows Server 2022
 
-1. Preparació: Afegir 3 discos nous a la màquina virtual
+### 1. Preparació: Afegir 3 discos nous a la màquina virtual
 Abans d'iniciar Windows Server, apaguem completament la màquina virtual i anem a Configuració → Emmagatzematge a VirtualBox. Afegim 3 nous discos durs virtuals de 10 GB cadascun, en format VDI amb reserva dinàmica:
 
 W2022_1.vdi — 10 GB
 W2022_2.vdi — 10 GB
 W2022_3.vdi — 10 GB
+
 A la captura es pot veure com queden els tres discos afegits al controlador SATA de la màquina virtual, tots amb una mida virtual de 10,00 GB.
 
-Configuració VirtualBox - 3 discos nous afegits de 10GB cadascun
+<img width="315" height="190" alt="image" src="https://github.com/user-attachments/assets/fab86451-d2cb-42fe-b9c5-ff7a3cb6166b" />
 
-2. Obrir el Gestor de discos
+### 2. Obrir el Gestor de discos
 Un cop iniciada la màquina, premem Windows + R per obrir el diàleg d'execució i escrivim diskmgmt.msc. Premem Acceptar per obrir l'Administrador de discos lògics.
 
 Windows + R → diskmgmt.msc per obrir el Gestor de discos
 
-3. Inicialitzar els 3 discos nous
+### 3. Inicialitzar els 3 discos nous
 En obrir el Gestor de discos, apareix automàticament l'assistent per inicialitzar els discos nous. Seleccionem els tres discos (Disco 1, Disco 2, Disco 3) i triem l'estil de partició GPT (GUID Partition Table), recomanat per a sistemes moderns i discos de més de 2 TB. Fem clic a Aceptar.
 
 Inicialitzar discos - Selecció Disco 1, 2, 3 amb estil GPT
 
-4. Verificació: discos inicialitzats sense assignar
+### 4. Verificació: discos inicialitzats sense assignar
 Després de la inicialització, el Gestor de discos mostra els tres discos com a Bàsic, amb 9,98 GB cadascun i tot l'espai com a No asignat. Encara no s'ha creat cap partició ni volum.
 
 Disk Management - Disco 1, 2, 3 inicialitzats com a Bàsic i No asignat
 
-5. Convertir els discos a dinàmics
+### 5. Convertir els discos a dinàmics
 Per poder crear un volum RAID 5 amb el Gestor de discos de Windows, els discos han de ser de tipus Dinàmic. Fem clic dret sobre el Disco 1 i seleccionem Convertir en disco dinámico...
 
 Clic dret sobre Disco 1 → Convertir en disco dinámico
@@ -51,17 +52,17 @@ Al diàleg que apareix, marquem els tres discos (Disco 1, Disco 2, Disco 3) i fe
 
 Selecció dels 3 discos per convertir a dinàmics
 
-6. Verificació: discos ara dinàmics
+### 6. Verificació: discos ara dinàmics
 Després de la conversió, el Gestor de discos mostra els tres discos amb l'etiqueta Dinámico i tot l'espai segueix com a No asignat. Ja estan preparats per crear el RAID 5.
 
 Disk Management - Disco 1, 2, 3 ara com a Dinámico i No asignat
 
-7. Crear el volum RAID 5
+### 7. Crear el volum RAID 5
 Fem clic dret sobre l'espai no assignat del Disco 1 i seleccionem Nuevo volumen RAID-5... per iniciar l'assistent de creació.
 
 Clic dret → Nuevo volumen RAID-5...
 
-8. Selecció dels discos per al RAID 5
+### 8. Selecció dels discos per al RAID 5
 A l'assistent, afegim els tres discos (Disco 1, Disco 2, Disco 3) a la columna de seleccionats. El sistema calcula automàticament:
 
 Tamaño total del volumen: 20.444 MB (~20 GB)
@@ -70,12 +71,12 @@ Recordem que en RAID 5 la capacitat útil és (N-1) × mida_disc = 2 × 10 GB = 
 
 Selecció dels 3 discos pel RAID 5 - capacitat útil 20.444 MB
 
-9. Assignar lletra d'unitat
+### 9. Assignar lletra d'unitat
 Assignem la lletra R: al nou volum RAID 5, que és la lletra que utilitzarem per accedir als fitxers del RAID des de l'explorador d'arxius.
 
 Assignació de la lletra R: al volum RAID 5
 
-10. Formatar el volum RAID 5
+### 10. Formatar el volum RAID 5
 Configurem el format del volum:
 
 Sistema de fitxers: NTFS
@@ -85,7 +86,7 @@ Fem clic a Siguiente per continuar.
 
 Formatant el volum RAID 5 amb NTFS i etiqueta RAID5-Astro
 
-11. Resum final de l'assistent
+### 11. Resum final de l'assistent
 L'assistent mostra el resum de la configuració seleccionada abans de finalitzar:
 
 Tipus de volum: RAID-5
@@ -98,55 +99,55 @@ Fem clic a Finalizar per crear el RAID.
 
 Resum final de la configuració RAID 5 - Finalitzar
 
-12. Procés de format en curs
+### 12. Procés de format en curs
 El Gestor de discos mostra els tres discos mentre s'estan formatant. El progrés indica que el format està al 92%. Els tres discos estan sincronitzant les dades i la paritat.
 
 Disk Management - Format del RAID 5 en curs al 92%
 
-13. RAID 5 creat i operatiu
+### 13. RAID 5 creat i operatiu
 Un cop completat el format, els tres discos mostren el volum RAID5-Astro amb estat Correcto. El RAID 5 ja és completament funcional.
 
 Disk Management - RAID5-Astro en estat Correcto als 3 discos
 
-14. El RAID 5 visible a l'Explorador d'arxius
+### 14. El RAID 5 visible a l'Explorador d'arxius
 Obrim l'Explorador d'arxius i podem veure que el nou volum RAID5-Astro (R:) apareix com a unitat del sistema amb 19,9 GB disponibles. Confirma que el sistema operatiu reconeix i pot accedir al RAID 5.
 
 Explorador d'arxius - RAID5-Astro (R:) amb 19.9 GB disponibles
 
-15. Crear una carpeta de prova al RAID
+### 15. Crear una carpeta de prova al RAID
 Entrem a la unitat R:\ i creem la carpeta Prova-Raid5Astro per provar que podem escriure dades al volum RAID 5.
 
 Carpeta Prova-Raid5Astro creada a R:\
 
-16. Copiar fitxers al RAID
+### 16. Copiar fitxers al RAID
 Copiem fitxers dins de la carpeta Prova-Raid5Astro. En aquest cas s'han copiat diverses aplicacions i carpetes de dotnet. Comprovem que tots els fitxers s'han copiat correctament i es poden obrir.
 
 Fitxers copiats correctament dins de R:\Prova-Raid5Astro
 
 Simulació de fallades
-17. Primera fallada: posar el Disco 1 fora de línia
+### 17. Primera fallada: posar el Disco 1 fora de línia
 Tornem al Gestor de discos. Fem clic dret sobre el Disco 1 i seleccionem Sin conexión per simular la fallada física d'un disc del RAID.
 
 Clic dret sobre Disco 1 → Sin conexión (primera fallada)
 
-18. RAID en estat degradat (1 disc fallat)
+### 18. RAID en estat degradat (1 disc fallat)
 Amb el Disco 1 desactivat, el Gestor de discos mostra tots els membres del RAID amb l'estat "Error de redundancia". El sistema detecta que ha perdut un disc i opera en mode degradat. A la llista superior es pot veure que el volum RAID5-Astro (R:) figura com a Error de re... (redundàncies).
 
 Important: Malgrat el mode degradat, el RAID 5 segueix funcionant gràcies a la paritat distribuïda.
 
 RAID 5 en estat degradat - Error de redundancia amb Disco 1 desactivat
 
-19. Verificació: els fitxers segueixen accessibles
+### 19. Verificació: els fitxers segueixen accessibles
 Amb un disc fora de línia, comprovem que podem accedir a R:\Prova-Raid5Astro i obrir els fitxers sense cap problema. La vista dividida mostra el Gestor de discos (amb errors de redundància) i l'Explorador d'arxius (amb els fitxers accessibles). Això demostra la tolerància a fallades del RAID 5.
 
 Comprovació: fitxers accessibles malgrat la fallada del Disco 1
 
-20. Segona fallada: posar el Disco 2 fora de línia
+### 20. Segona fallada: posar el Disco 2 fora de línia
 Ara simulem una segona fallada simultània posant el Disco 2 també fora de línia. Fem clic dret i seleccionem Sin conexión.
 
 Clic dret sobre Disco 2 → Sin conexión (segona fallada)
 
-21. RAID col·lapsat (2 discos fallats)
+### 21. RAID col·lapsat (2 discos fallats)
 Amb dos discos fora de línia, el Gestor de discos mostra tots els membres amb estat "Error". El Disco 1 i el Disco 2 figuren com a Desactivada, i apareixen dos membres addicionals marcats com a Falta. El RAID 5 ja no és capaç de reconstruir les dades i el volum R:\ ha deixat de ser accessible.
 
 El RAID 5 només tolera la fallada d'UN disc. Amb dos discos fallats, es perd l'accés a totes les dades.
@@ -154,32 +155,32 @@ El RAID 5 només tolera la fallada d'UN disc. Amb dos discos fallats, es perd l'
 RAID 5 col·lapsat - Disco 1 i Disco 2 desactivats, estat Error a tots
 
 Recuperació
-22. Tornar a posar el Disco 1 en línia
+### 22. Tornar a posar el Disco 1 en línia
 Per recuperar el RAID, tornem a posar els discos en línia. Fem clic dret sobre el Disco 1 (en estat "Desactivada") i seleccionem En línea.
 
 Clic dret Disco 1 → En línea per iniciar la recuperació
 
-23. RAID parcialment recuperat
+### 23. RAID parcialment recuperat
 Després de posar el Disco 1 en línia, el Gestor de discos mostra el Disco 1 i el Disco 3 en pantalla (operatius), però el Disco 2 encara figura amb avís. L'estat dels discos segueix mostrant "Error de redundancia" perquè el Disco 2 encara no s'ha resincronitzat.
 
 Disco 1 en línia - RAID parcial, Disco 2 encara amb advertència
 
-24. Reactivar el Disco 2
+### 24. Reactivar el Disco 2
 Per completar la recuperació, fem clic dret sobre el Disco 2 i seleccionem Reactivar disco. Això ordena a Windows que torni a sincronitzar la paritat i les dades del disc recuperat amb la resta del RAID.
 
 Clic dret Disco 2 → Reactivar disco per completar la recuperació
 
-25. Resincronització en curs
+### 25. Resincronització en curs
 El Gestor de discos mostra els tres discos amb l'estat "Volviendo a sincronizar: (63%)". Windows Server està recalculant la paritat i verificant la coherència de les dades entre els tres discos. Aquest procés pot trigar uns minuts depenent de la mida del RAID.
 
 Resincronització del RAID 5 al 63%
 
-26. RAID 5 totalment recuperat
+### 26. RAID 5 totalment recuperat
 Un cop finalitzada la resincronització, els tres discos tornen a mostrar l'estat Correcto. El volum RAID5-Astro ha recuperat tota la seva redundància i funciona completament.
 
 Disk Management - Tots els discos en estat Correcto després de la recuperació
 
-27. Verificació final: fitxers intactes
+### 27. Verificació final: fitxers intactes
 Comprovem que tots els fitxers de R:\Prova-Raid5Astro segueixen intactes i accessibles. La vista dividida mostra el Gestor de discos (tots Correcto) i l'Explorador d'arxius amb tots els fitxers originals presents i en perfecte estat.
 
 Verificació final - RAID recuperat i fitxers intactes a R:\Prova-Raid5Astro
