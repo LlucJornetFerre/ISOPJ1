@@ -94,7 +94,7 @@ Discos seleccionats: Disco 1, Disco 2, Disco 3
 Tamany del volum: 20.444 MB
 Lletra d'unitat: R:
 Sistema de fitxers: NTFS
-Etiqueta: RAID5-Astro
+Etiqueta: RAID_5_LJF
 Fem clic a Finalizar per crear el RAID.
 
 <img width="498" height="412" alt="image" src="https://github.com/user-attachments/assets/a13f22aa-88f8-4975-9d41-ad11de30f8a1" />
@@ -128,24 +128,24 @@ Copiem fitxers dins de la carpeta RAID_Prova1. En aquest cas s'han copiat divers
 ### 17. Primera fallada: posar el Disco 1 fora de línia
 Tornem al Gestor de discos. Fem clic dret sobre el Disco 1 i seleccionem Sin conexión per simular la fallada física d'un disc del RAID.
 
-Clic dret sobre Disco 1 → Sin conexión (primera fallada)
+<img width="243" height="311" alt="image" src="https://github.com/user-attachments/assets/c6c031e0-9048-40f5-b2e8-a76b4111cbde" />
 
 ### 18. RAID en estat degradat (1 disc fallat)
 Amb el Disco 1 desactivat, el Gestor de discos mostra tots els membres del RAID amb l'estat "Error de redundancia". El sistema detecta que ha perdut un disc i opera en mode degradat. A la llista superior es pot veure que el volum RAID5-Astro (R:) figura com a Error de re... (redundàncies).
 
-Important: Malgrat el mode degradat, el RAID 5 segueix funcionant gràcies a la paritat distribuïda.
+<img width="103" height="396" alt="image" src="https://github.com/user-attachments/assets/7f4d6413-7155-4301-ae51-590301583e7f" />
 
-RAID 5 en estat degradat - Error de redundancia amb Disco 1 desactivat
+<img width="1553" height="391" alt="image" src="https://github.com/user-attachments/assets/6141b083-dc37-4ed2-8526-711a6ee0588c" />
 
 ### 19. Verificació: els fitxers segueixen accessibles
 Amb un disc fora de línia, comprovem que podem accedir a R:\Prova-Raid5Astro i obrir els fitxers sense cap problema. La vista dividida mostra el Gestor de discos (amb errors de redundància) i l'Explorador d'arxius (amb els fitxers accessibles). Això demostra la tolerància a fallades del RAID 5.
 
-Comprovació: fitxers accessibles malgrat la fallada del Disco 1
+<img width="1111" height="574" alt="image" src="https://github.com/user-attachments/assets/ff2996f2-3e8c-4d2f-ac56-04f9aef5bdc5" />
 
 ### 20. Segona fallada: posar el Disco 2 fora de línia
 Ara simulem una segona fallada simultània posant el Disco 2 també fora de línia. Fem clic dret i seleccionem Sin conexión.
 
-Clic dret sobre Disco 2 → Sin conexión (segona fallada)
+<img width="293" height="362" alt="image" src="https://github.com/user-attachments/assets/2927dea5-0f52-4b63-aa78-654ab60f6830" />
 
 ### 21. RAID col·lapsat (2 discos fallats)
 Amb dos discos fora de línia, el Gestor de discos mostra tots els membres amb estat "Error". El Disco 1 i el Disco 2 figuren com a Desactivada, i apareixen dos membres addicionals marcats com a Falta. El RAID 5 ja no és capaç de reconstruir les dades i el volum R:\ ha deixat de ser accessible.
