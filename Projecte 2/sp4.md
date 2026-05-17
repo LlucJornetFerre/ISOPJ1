@@ -171,6 +171,7 @@ Per completar la recuperació, fem clic dret sobre el Disco 2 i seleccionem Reac
 ### 25. Resincronització en curs
 El Gestor de discos mostra els tres discos amb l'estat "Volviendo a sincronizar: (5%)". Windows Server està recalculant la paritat i verificant la coherència de les dades entre els tres discos. Aquest procés pot trigar uns minuts depenent de la mida del RAID.
 
+<img width="381" height="300" alt="image" src="https://github.com/user-attachments/assets/8910b4ea-641f-4711-8b28-20220ac83866" />
 
 ### 26. RAID 5 totalment recuperat
 Un cop finalitzada la resincronització, els tres discos tornen a mostrar l'estat Correcto. El volum RAID5-Astro ha recuperat tota la seva redundància i funciona completament.
