@@ -175,7 +175,7 @@ Queda documentat exactament qui ha iniciat el procés, quan i quin executable s'
 
 Tanquem el Bloc de notes. Per comprovar que s'ha registrat la finalització, filtrem per l'Event ID **4689** (procés finalitzat).
 
-![Filtrar el registre de Seguridad per l'Event ID 4689](imatges-windows/14.png)
+<img width="542" height="547" alt="image" src="https://github.com/user-attachments/assets/d2fab32e-baac-4fc6-bba9-85b65b8e2eac" />
 
 ---
 
@@ -184,14 +184,14 @@ Tanquem el Bloc de notes. Per comprovar que s'ha registrat la finalització, fil
 L'Event **4689** confirma:
 
 - **"Se salió de un proceso"**
-- Firmant: `ASTRO\Administrador`
+- Firmant: `JORNET\Administrador`
 - **Nom del procés: `C:\Windows\System32\notepad.exe`**
 - ID del procés: `0x8e0` (el mateix que quan es va crear)
 - **Estat de sortida: `0x0`** (finalització correcta)
 
 Amb els events 4688 i 4689 podem saber exactament quins programes s'han executat al servidor i durant quant de temps.
 
-![Event ID 4689 - Procés finalitzat: notepad.exe](imatges-windows/15.png)
+<img width="594" height="844" alt="image" src="https://github.com/user-attachments/assets/c45a74c9-3739-47de-ab02-505c152c5526" />
 
 ---
 
@@ -199,7 +199,7 @@ Amb els events 4688 i 4689 podem saber exactament quins programes s'han executat
 
 Tornem a `secpol.msc` i activem **Auditar la administración de cuentas** amb **Correcto** i **Erróneo**. Aquesta directiva registra totes les operacions sobre comptes d'usuari: creació, activació, deshabilitació i eliminació.
 
-![secpol.msc → Auditar la administración de cuentas → Correcto i Erróneo activats](imatges-windows/16.png)
+<img width="1199" height="541" alt="image" src="https://github.com/user-attachments/assets/da93dc65-dc90-41c4-81c3-69aa86242ef4" />
 
 ---
 
@@ -207,15 +207,15 @@ Tornem a `secpol.msc` i activem **Auditar la administración de cuentas** amb **
 
 Premem **Windows + R** i escrivim `lusrmgr.msc` per accedir a la consola de gestió de comptes del domini **Usuarios y equipos de Active Directory**.
 
-![Windows + R → lusrmgr.msc per gestionar usuaris](imatges-windows/17.png)
+<img width="409" height="227" alt="image" src="https://github.com/user-attachments/assets/1de515a8-204a-4db2-accc-864734a87a71" />
 
 ---
 
 ### 18. Crear un nou usuari de prova
 
-A la consola d'AD, fem clic dret sobre el contenidor **Users** i seleccionem **Nuevo → Usuario**. Creem un usuari de prova amb el nom `testt`, que serà el compte que utilitzarem per provar la generació d'events d'administració de comptes.
+A la consola d'AD, fem clic dret sobre el contenidor **Users** i seleccionem **Nuevo → Usuario**. Creem un usuari de prova amb el nom `prova`, que serà el compte que utilitzarem per provar la generació d'events d'administració de comptes.
 
-![Crear nou usuari: Nuevo → Usuario a la consola d'AD](imatges-windows/18.png)
+<img width="755" height="559" alt="image" src="https://github.com/user-attachments/assets/1bc8697b-855a-4685-a847-34bf599b8f72" />
 
 ---
 
@@ -223,13 +223,13 @@ A la consola d'AD, fem clic dret sobre el contenidor **Users** i seleccionem **N
 
 Omplim les dades del nou usuari:
 
-- **Nombre de pila:** `testt`
-- **Nombre de inicio de sesión:** `testt@eros.cat`
-- **Nom anterior a Windows 2000:** `ASTRO\testt`
+- **Nombre de pila:** `prova`
+- **Nombre de inicio de sesión:** `prova@jornet.cat`
+- **Nom anterior a Windows 2000:** `JORNET\prova`
 
 Fem clic a **Siguiente** per continuar i finalitzem la creació.
 
-![Dades del nou usuari testt@eros.cat](imatges-windows/19.png)
+<img width="749" height="526" alt="image" src="https://github.com/user-attachments/assets/61e97719-389c-4269-8e9c-bf3c0ff25830" />
 
 ---
 
@@ -237,7 +237,7 @@ Fem clic a **Siguiente** per continuar i finalitzem la creació.
 
 Al Visor d'esdeveniments, filtrem per l'Event ID **4720** per verificar que la creació de l'usuari s'ha registrat.
 
-![Filtrar el registre de Seguridad per l'Event ID 4720](imatges-windows/20.png)
+<img width="545" height="548" alt="image" src="https://github.com/user-attachments/assets/699d817d-729d-4087-88fd-cc0751e6f827" />
 
 ---
 
