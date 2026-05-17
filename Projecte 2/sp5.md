@@ -1,6 +1,6 @@
 # Auditories de Seguretat amb Windows Server 2022
 
-## Contextualització
+## Contextualització: Auditories
 
 En un entorn empresarial, saber **qui ha accedit a quins recursos, quan i des d'on** és fonamental per garantir la seguretat dels sistemes. Les **auditories de seguretat** permeten als administradors de sistemes registrar i monitoritzar totes les activitats rellevants que es produeixen en un servidor o estació de treball: inicis de sessió, accessos a fitxers, canvis de configuració, creació i eliminació de comptes, etc.
 
@@ -219,7 +219,7 @@ A la consola d'AD, fem clic dret sobre el contenidor **Users** i seleccionem **N
 
 ---
 
-### 19. Dades del nou usuari testt
+### 19. Dades del nou usuari prova
 
 Omplim les dades del nou usuari:
 
@@ -247,7 +247,7 @@ L'Event **4720** confirma:
 
 - **"Se creó una cuenta de usuario"**
 - Firmant (qui l'ha creat): `JORNET\Administrador`
-- **Nova compte: `ASTRO\prova`**
+- **Nova compte: `JORNET\prova`**
 - Nom de compte SAM: `prova`
 - Principal d'usuari: `prova@jornet.cat`
 - Categoria de tasca: **User Account Management**
@@ -268,7 +268,7 @@ Tornem a la consola d'AD. Fem clic dret sobre l'usuari **prova** i seleccionem *
 
 ### 23. Confirmació de deshabilitació
 
-AD mostra el missatge de confirmació: **"El objeto testt ha sido deshabilitado"**. Acceptem.
+AD mostra el missatge de confirmació: **"El objeto prova ha sido deshabilitado"**. Acceptem.
 
 <img width="286" height="149" alt="image" src="https://github.com/user-attachments/assets/07270fd0-1ad9-4f08-abf0-6c354d6bfbce" />
 
@@ -300,7 +300,7 @@ El registre permet saber exactament quan i qui va deshabilitar el compte.
 
 ### 26. Eliminar el compte d'usuari
 
-Tornem a la consola d'AD. Fem clic dret sobre l'usuari **testt** i seleccionem **Eliminar** per suprimir definitivament el compte del domini.
+Tornem a la consola d'AD. Fem clic dret sobre l'usuari **prova** i seleccionem **Eliminar** per suprimir definitivament el compte del domini.
 
 <img width="370" height="339" alt="image" src="https://github.com/user-attachments/assets/2a547595-af13-4d59-aa1a-8b50ae3ade66" />
 
@@ -373,7 +373,7 @@ Amb aquest darrer event, el cicle de vida complet del compte `prova` queda docum
 
 # Monitorització del sistema amb Windows Server 2022
 
-## Introducció a la monitorització
+## Contextualització: monitorització
 
 La **monitorització del sistema** consisteix a observar en temps real el comportament dels recursos del servidor: CPU, memòria RAM, disc i xarxa. A diferència de les auditories (que registren *qui* ha fet *què*), la monitorització ens diu *com* es troba el sistema en cada moment i permet detectar problemes de rendiment, colls d'ampolla i processos que consumeixen massa recursos.
 
@@ -392,12 +392,12 @@ Windows Server ofereix dues eines principals per a aquesta tasca:
 
 Premem **Ctrl + Shift + Esc** per obrir l'**Administrador de tasques**. A la pestanya **Procesos** podem veure tots els processos actius del sistema agrupats per categoria:
 
-- **Aplicaciones (2):** `Administrador de tareas` (17,4 MB) i `Server Manager` (62,6 MB)
-- **Procesos en segundo plano (36):** serveis del sistema operatiu com `AggregatorHost.exe`, `AntiMalware Definition Update`, `Experiencia de entrada de Windows`, etc.
+- **Aplicaciones (2):** `Administrador de tareas` (17,3 MB) i `Server Manager` (70,1 MB)
+- **Procesos en segundo plano (35):** serveis del sistema operatiu com `AggregatorHost.exe`, `AntiMalware Definition Update`, `Experiencia de entrada de Windows`, etc.
 
 En el moment de la captura, el sistema presenta un **ús de CPU del 65%** i un **consum de memòria del 42%**. Això indica que el servidor té una càrrega moderada-alta. El procés `Server Manager` és el que consumeix més memòria entre les aplicacions obertes (62,6 MB).
 
-![Administrador de tasques - Pestanya Processos amb CPU 65% i Memòria 42%](monitoritzaciowindows/1.png)
+<img width="551" height="853" alt="image" src="https://github.com/user-attachments/assets/48ac43ad-1d89-407a-8e00-ebb24503380f" />
 
 ---
 
