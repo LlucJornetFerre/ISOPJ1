@@ -100,9 +100,9 @@ Fem clic a Finalizar per crear el RAID.
 <img width="498" height="412" alt="image" src="https://github.com/user-attachments/assets/a13f22aa-88f8-4975-9d41-ad11de30f8a1" />
 
 ### 12. Procés de format en curs
-El Gestor de discos mostra els tres discos mentre s'estan formatant. El progrés indica que el format està al 92%. Els tres discos estan sincronitzant les dades i la paritat.
+El Gestor de discos mostra els tres discos mentre s'estan formatant. El progrés indica que el format està al 86%. Els tres discos estan sincronitzant les dades i la paritat.
 
-Disk Management - Format del RAID 5 en curs al 92%
+<img width="1916" height="402" alt="image" src="https://github.com/user-attachments/assets/209220d0-34be-4cff-9a62-18bb1b9a0a0e" />
 
 ### 13. RAID 5 creat i operatiu
 Un cop completat el format, els tres discos mostren el volum RAID5-Astro amb estat Correcto. El RAID 5 ja és completament funcional.
